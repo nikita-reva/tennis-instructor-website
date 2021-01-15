@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Logo from './images/logo.png'
 const AniketosNavLogo = styled.img`
-	height: 8vh;
+	height: 10vh;
 	padding: 1vh;
 `
 

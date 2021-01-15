@@ -6,18 +6,15 @@ import Navbar from './Navbar'
 import NavItem from './NavItem'
 import NavLink from './NavLink'
 import NavLogo from './NavLogo'
+import SocialMediaBar from './SocialMediaBar'
+import SocialMediaBarItem from './SocialMediaBarItem'
 
 const HeaderUnit = () => {
 	return (
 		<Header>
 			<NavContainer>
 				<Navbar>
-					<NavItem>
-						<NavLogo
-							to="/"
-							src={require('./logo-web-transparent.png')}
-						/>
-					</NavItem>
+					<NavLogo to="/" />
 					<NavItem>
 						<NavLink to="/" title="Home"></NavLink>
 					</NavItem>
@@ -34,6 +31,10 @@ const HeaderUnit = () => {
 						<NavLink to="/" title="Kontakt"></NavLink>
 					</NavItem>
 				</Navbar>
+				<SocialMediaBar>
+					<SocialMediaBarItem icon="instagram" />
+					<SocialMediaBarItem icon="facebook-square" />
+				</SocialMediaBar>
 			</NavContainer>
 		</Header>
 	)

@@ -8,10 +8,6 @@ const AniketosLink = styled.div`
 		font-weight: 600;
 		letter-spacing: 0.1rem;
 		color: var(--primary-color);
-
-		&:hover {
-			background: rgba(0, 0, 0, 0.1);
-		}
 	}
 `
 
