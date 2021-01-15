@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/nikita-reva/tennis-academy-yasar-website.git/static/css/main.84f23fa4.chunk.css",
+    "main.js": "/nikita-reva/tennis-academy-yasar-website.git/static/js/main.454f68c7.chunk.js",
+    "main.js.map": "/nikita-reva/tennis-academy-yasar-website.git/static/js/main.454f68c7.chunk.js.map",
+    "runtime-main.js": "/nikita-reva/tennis-academy-yasar-website.git/static/js/runtime-main.6f7c6138.js",
+    "runtime-main.js.map": "/nikita-reva/tennis-academy-yasar-website.git/static/js/runtime-main.6f7c6138.js.map",
+    "static/js/2.8406db18.chunk.js": "/nikita-reva/tennis-academy-yasar-website.git/static/js/2.8406db18.chunk.js",
+    "static/js/2.8406db18.chunk.js.map": "/nikita-reva/tennis-academy-yasar-website.git/static/js/2.8406db18.chunk.js.map",
+    "static/js/3.1afc3df2.chunk.js": "/nikita-reva/tennis-academy-yasar-website.git/static/js/3.1afc3df2.chunk.js",
+    "static/js/3.1afc3df2.chunk.js.map": "/nikita-reva/tennis-academy-yasar-website.git/static/js/3.1afc3df2.chunk.js.map",
+    "index.html": "/nikita-reva/tennis-academy-yasar-website.git/index.html",
+    "static/css/main.84f23fa4.chunk.css.map": "/nikita-reva/tennis-academy-yasar-website.git/static/css/main.84f23fa4.chunk.css.map",
+    "static/js/2.8406db18.chunk.js.LICENSE.txt": "/nikita-reva/tennis-academy-yasar-website.git/static/js/2.8406db18.chunk.js.LICENSE.txt",
+    "static/media/logo-web-transparent.png": "/nikita-reva/tennis-academy-yasar-website.git/static/media/logo-web-transparent.afb18d72.png",
+    "static/media/logo.afb18d72.png": "/nikita-reva/tennis-academy-yasar-website.git/static/media/logo.afb18d72.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f7c6138.js",
+    "static/js/2.8406db18.chunk.js",
+    "static/css/main.84f23fa4.chunk.css",
+    "static/js/main.454f68c7.chunk.js"
+  ]
+}
