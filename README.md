@@ -1,1 +1,1 @@
-### (Demo)[https://nikita-reva.github.io/tennis-academy-yasar-website/]
+### [Demo](https://nikita-reva.github.io/tennis-academy-yasar-website/)
