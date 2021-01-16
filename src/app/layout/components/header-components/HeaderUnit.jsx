@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Header from './Header'
 import NavContainer from './NavContainer'
@@ -11,9 +11,21 @@ import SocialMediaBarItem from './SocialMediaBarItem'
 import NavBurger from './NavBurger'
 
 const HeaderUnit = () => {
+	const [mode, setMode] = useState()
+	const [windowWidth, setWindowWidth] = useState()
+	const [active, setActive] = useState(false)
+
+	useEffect(() => {
+		window.addEventListener('resize', () => {
+			setWindowWidth(window.innerWidth)
+		})
+
+		windowWidth >= 991 ? setMode('large') : setMode('small')
+	}, [windowWidth, mode])
+
 	return (
 		<Header>
-			<NavContainer>
+			<NavContainer mode={mode}>
 				<NavLogo to="/" />
 				<Navbar>
 					<NavItem>
@@ -38,7 +50,12 @@ const HeaderUnit = () => {
 						to="https://www.instagram.com/"
 					/>
 				</SocialMediaBar>
-				<NavBurger></NavBurger>
+				<NavBurger
+					activate={(active) => {
+						setActive(active)
+						console.log(active)
+					}}
+				/>
 			</NavContainer>
 		</Header>
 	)

@@ -10,7 +10,7 @@ const AniketosNavbar = styled.ul`
 
 	@media screen and (max-width: 991px) {
 		display: none;
-	} ;
+	}
 `
 
 const Navbar = ({ children }) => {

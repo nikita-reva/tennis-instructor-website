@@ -6,6 +6,10 @@ const AniketosSocialMediaBar = styled.ul`
 	align-items: center;
 	justify-content: flex-end;
 	gap: 2vw;
+
+	@media screen and (max-width: 991px) {
+		display: none;
+	}
 `
 
 const SocialMediaBar = ({ children }) => {

@@ -27,9 +27,9 @@ const AniketosNavBurger = styled.button`
 	}
 `
 
-const NavBurger = ({ onClick }) => {
+const NavBurger = ({ activate }) => {
 	return (
-		<AniketosNavBurger onClick={onClick}>
+		<AniketosNavBurger onClick={() => activate('Hello')}>
 			<i className="fas fa-bars"></i>
 		</AniketosNavBurger>
 	)
