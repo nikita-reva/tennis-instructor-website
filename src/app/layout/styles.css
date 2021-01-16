@@ -22,8 +22,8 @@ body {
 
 main {
 	position: relative;
-	top: 12vh;
+	top: 80px;
 	width: 80%;
 	margin: 0 auto;
-	min-height: 90vh;
+	min-height: 100vh;
 }
