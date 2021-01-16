@@ -7,7 +7,10 @@ const AniketosNavbar = styled.ul`
 	justify-content: flex-start;
 	align-items: center;
 	list-style: none;
-	gap: 2vw;
+
+	@media screen and (max-width: 991px) {
+		display: none;
+	} ;
 `
 
 const Navbar = ({ children }) => {

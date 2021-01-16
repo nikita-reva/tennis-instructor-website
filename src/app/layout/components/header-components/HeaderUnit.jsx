@@ -8,13 +8,14 @@ import NavLink from './NavLink'
 import NavLogo from './NavLogo'
 import SocialMediaBar from './SocialMediaBar'
 import SocialMediaBarItem from './SocialMediaBarItem'
+import NavBurger from './NavBurger'
 
 const HeaderUnit = () => {
 	return (
 		<Header>
 			<NavContainer>
+				<NavLogo to="/" />
 				<Navbar>
-					<NavLogo to="/" />
 					<NavItem>
 						<NavLink to="/" title="Home"></NavLink>
 					</NavItem>
@@ -32,9 +33,12 @@ const HeaderUnit = () => {
 					</NavItem>
 				</Navbar>
 				<SocialMediaBar>
-					<SocialMediaBarItem icon="instagram" />
-					<SocialMediaBarItem icon="facebook-square" />
+					<SocialMediaBarItem
+						icon="instagram-square"
+						to="https://www.instagram.com/"
+					/>
 				</SocialMediaBar>
+				<NavBurger></NavBurger>
 			</NavContainer>
 		</Header>
 	)
