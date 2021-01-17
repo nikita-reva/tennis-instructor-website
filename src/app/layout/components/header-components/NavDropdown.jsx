@@ -20,6 +20,9 @@ const AniketosNavDropdown = styled.div`
 	}
 
 	&:hover {
+		transition: color 0.1s ease-in-out;
+		color: #3636f0;
+
 		ul {
 			display: flex;
 			position: absolute;
@@ -27,9 +30,17 @@ const AniketosNavDropdown = styled.div`
 			left: 0;
 			flex-direction: column;
 			width: 120px;
-			align-items: center;
-			justify-content: center;
 			transition: background 0.1s ease-in;
+
+			&:before {
+				content: '';
+				position: relative;
+				top: 0;
+				left: 0;
+				height: 4px;
+				width: 200px;
+				background: #3636f0;
+			}
 
 			&:hover {
 				background: rgba(0, 0, 0, 0.1);

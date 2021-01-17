@@ -4,10 +4,10 @@ import styled from 'styled-components'
 const AniketosNavDropdownItem = styled.li`
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	width: 200px;
 	height: 40px;
-	background: #456289;
+	background: #4d73a5;
 	transition: background 0.1s ease-in;
 
 	&:hover {

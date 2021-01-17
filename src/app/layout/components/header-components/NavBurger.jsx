@@ -17,6 +17,11 @@ const AniketosNavBurger = styled.button`
 		color: var(--secondary-color);
 		border: none;
 
+		.fa-times {
+			font-size: 24px;
+			transform: translate(2%, 10%);
+		}
+
 		&:hover {
 			background: #db6d4c;
 		}
@@ -27,10 +32,10 @@ const AniketosNavBurger = styled.button`
 	}
 `
 
-const NavBurger = ({ activate }) => {
+const NavBurger = ({ activate, active }) => {
 	return (
 		<AniketosNavBurger onClick={() => activate('Hello')}>
-			<i className="fas fa-bars"></i>
+			<i className={active ? 'fas fa-times' : 'fas fa-bars'}></i>
 		</AniketosNavBurger>
 	)
 }

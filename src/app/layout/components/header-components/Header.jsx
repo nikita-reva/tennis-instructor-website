@@ -15,7 +15,7 @@ import NavDropdownItem from './NavDropdownItem'
 const AniketosHeader = styled.header`
 	position: fixed;
 	width: 100%;
-	height: 80px;
+	height: 90px;
 	z-index: 1000;
 	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 	display: flex;
@@ -33,14 +33,14 @@ const Header = () => {
 			setWindowWidth(window.innerWidth)
 		})
 
-		windowWidth >= 991 ? setMode('large') : setMode('small')
-	}, [windowWidth, mode])
+		windowWidth <= 991 ? setMode('small') : setMode('large')
+	}, [windowWidth, mode, active])
 
 	return (
 		<AniketosHeader>
 			<NavContainer>
 				<NavLogo to="/" />
-				<Navbar>
+				<Navbar active={active} mode={mode}>
 					<NavItem>
 						<NavLink to="/" title="Home"></NavLink>
 					</NavItem>
@@ -79,19 +79,19 @@ const Header = () => {
 						</NavDropdownItem>
 					</NavDropdown>
 					<NavItem>
-						<NavLink to="/" title="Kontakt"></NavLink>
+						<NavLink to="/kontakt" title="Kontakt"></NavLink>
 					</NavItem>
 				</Navbar>
-				<SocialMediaBar>
+				<SocialMediaBar active={active}>
 					<SocialMediaBarItem
 						icon="instagram-square"
 						to="https://www.instagram.com/"
 					/>
 				</SocialMediaBar>
 				<NavBurger
-					activate={(value) => {
-						setActive(value)
-						console.log(active)
+					active={active}
+					activate={() => {
+						setActive(!active)
 					}}
 				/>
 			</NavContainer>

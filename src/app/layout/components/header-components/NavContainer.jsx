@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const AniketosNavContainer = styled.nav`
-	width: 80%;
 	display: flex;
+	width: 80%;
 	justify-content: space-between;
+	gap: 4vw;
 	height: 100%;
 	margin: 0 auto;
 

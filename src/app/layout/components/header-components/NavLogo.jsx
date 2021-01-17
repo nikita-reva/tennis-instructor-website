@@ -2,18 +2,29 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Logo from './images/logo.png'
+
+const AniketosLogoContainer = styled.div`
+	display: flex;
+	height: 100%;
+	width: 160px;
+	justify-content: center;
+	align-content: center;
+	overflow: hidden;
+`
+
 const AniketosNavLogo = styled.img`
 	height: 80%;
-	width: 140px;
 `
 
 const NavLogo = ({ to }) => {
 	return (
 		<Link to={to}>
-			<AniketosNavLogo
-				src={Logo}
-				alt="tennis academy yasar logo"
-			></AniketosNavLogo>
+			<AniketosLogoContainer>
+				<AniketosNavLogo
+					src={Logo}
+					alt="tennis academy yasar logo"
+				></AniketosNavLogo>
+			</AniketosLogoContainer>
 		</Link>
 	)
 }
