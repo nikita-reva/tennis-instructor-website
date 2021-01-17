@@ -9,6 +9,8 @@ import NavLogo from './NavLogo'
 import SocialMediaBar from './SocialMediaBar'
 import SocialMediaBarItem from './SocialMediaBarItem'
 import NavBurger from './NavBurger'
+import NavDropdown from './NavDropdown'
+import NavDropdownItem from './NavDropdownItem'
 
 const AniketosHeader = styled.header`
 	position: fixed;
@@ -36,7 +38,7 @@ const Header = () => {
 
 	return (
 		<AniketosHeader>
-			<NavContainer mode={mode}>
+			<NavContainer>
 				<NavLogo to="/" />
 				<Navbar>
 					<NavItem>
@@ -45,12 +47,37 @@ const Header = () => {
 					<NavItem>
 						<NavLink to="/team" title="Team"></NavLink>
 					</NavItem>
-					<NavItem>
-						<NavLink to="/" title="Training"></NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink to="/" title="News"></NavLink>
-					</NavItem>
+					<NavDropdown to="/training" heading="Training">
+						<NavDropdownItem>
+							<NavLink
+								to="/anmeldung"
+								title="Anmeldung"
+							></NavLink>
+						</NavDropdownItem>
+						<NavDropdownItem>
+							<NavLink to="/camps" title="Camps"></NavLink>
+						</NavDropdownItem>
+						<NavDropdownItem>
+							<NavLink
+								to="/athletiktraining"
+								title="Athletiktraining"
+							></NavLink>
+						</NavDropdownItem>
+					</NavDropdown>
+					<NavDropdown to="/news" heading="News">
+						<NavDropdownItem>
+							<NavLink
+								to="/news"
+								title="News vom Court"
+							></NavLink>
+						</NavDropdownItem>
+						<NavDropdownItem>
+							<NavLink
+								to="/galerie"
+								title="Fotogalerie"
+							></NavLink>
+						</NavDropdownItem>
+					</NavDropdown>
 					<NavItem>
 						<NavLink to="/" title="Kontakt"></NavLink>
 					</NavItem>
@@ -62,8 +89,8 @@ const Header = () => {
 					/>
 				</SocialMediaBar>
 				<NavBurger
-					activate={(active) => {
-						setActive(active)
+					activate={(value) => {
+						setActive(value)
 						console.log(active)
 					}}
 				/>

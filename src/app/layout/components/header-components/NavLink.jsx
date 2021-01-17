@@ -7,6 +7,7 @@ const AniketosLink = styled.div`
 		text-decoration: none;
 		font-weight: 600;
 		letter-spacing: 0.1rem;
+		padding: 20px 5px;
 		color: var(--secondary-color);
 	}
 `

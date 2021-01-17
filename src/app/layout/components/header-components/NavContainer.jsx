@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const AniketosNavContainer = styled.nav`
@@ -8,12 +8,12 @@ const AniketosNavContainer = styled.nav`
 	height: 100%;
 	margin: 0 auto;
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 991px) {
 		width: 94%;
 	}
 `
 
-const NavContainer = ({ children, mode }) => {
+const NavContainer = ({ children }) => {
 	return <AniketosNavContainer>{children}</AniketosNavContainer>
 }
 
