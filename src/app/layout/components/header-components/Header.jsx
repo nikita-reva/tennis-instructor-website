@@ -84,7 +84,7 @@ const Header = () => {
 				</Navbar>
 				<SocialMediaBar>
 					<SocialMediaBarItem
-						icon="instagram-square"
+						icon="instagram"
 						to="https://www.instagram.com/"
 					/>
 				</SocialMediaBar>
