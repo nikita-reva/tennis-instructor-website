@@ -12,6 +12,12 @@ const AniketosNavItem = styled.li`
 	&:hover {
 		background: rgba(0, 0, 0, 0.1);
 	}
+
+	@media screen and (max-width: 991px) {
+		width: 100%;
+		height: 40px;
+		padding: 5px;
+	}
 `
 
 const NavItem = ({ children }) => {

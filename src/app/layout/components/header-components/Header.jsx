@@ -40,7 +40,7 @@ const Header = () => {
 		<AniketosHeader>
 			<NavContainer>
 				<NavLogo to="/" />
-				<Navbar active={active} mode={mode}>
+				<Navbar smallActive={active}>
 					<NavItem>
 						<NavLink to="/" title="Home"></NavLink>
 					</NavItem>
@@ -82,7 +82,7 @@ const Header = () => {
 						<NavLink to="/kontakt" title="Kontakt"></NavLink>
 					</NavItem>
 				</Navbar>
-				<SocialMediaBar active={active}>
+				<SocialMediaBar>
 					<SocialMediaBarItem
 						icon="instagram-square"
 						to="https://www.instagram.com/"

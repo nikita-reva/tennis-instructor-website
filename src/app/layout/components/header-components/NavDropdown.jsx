@@ -13,38 +13,64 @@ const AniketosNavDropdown = styled.div`
 	justify-content: center;
 	width: 120px;
 
-	a {
+	& > span > a {
 		text-decoration: none;
-		padding: 20px 10px;
+		padding: 5px;
 		color: var(--secondary-color);
 	}
 
-	&:hover {
-		transition: color 0.1s ease-in-out;
-		color: #3636f0;
+	@media screen and (min-width: 992px) {
+		&:hover {
+			transition: color 0.1s ease-in-out;
+			color: #3636f0;
+			background: rgba(0, 0, 0, 0.1);
 
-		ul {
-			display: flex;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			flex-direction: column;
-			width: 120px;
-			transition: background 0.1s ease-in;
-
-			&:before {
-				content: '';
-				position: relative;
-				top: 0;
+			& > ul {
+				display: flex;
+				position: absolute;
+				top: 100%;
 				left: 0;
-				height: 4px;
-				width: 200px;
-				background: #3636f0;
-			}
+				flex-direction: column;
+				width: 120px;
+				transition: background 0.1s ease-in;
 
-			&:hover {
-				background: rgba(0, 0, 0, 0.1);
+				&:before {
+					content: '';
+					position: relative;
+					top: 0;
+					left: 0;
+					height: 4px;
+					width: 200px;
+					background: #3636f0;
+				}
 			}
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		width: 100%;
+		flex-direction: column;
+
+		& > span {
+			display: flex;
+			align-items: center;
+			height: 40px;
+		}
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.1);
+
+			& > span > a,
+			& > span > i {
+				transition: color 0.1s ease-in-out;
+				color: #3636f0;
+			}
+		}
+
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
 		}
 	}
 `
@@ -56,8 +82,10 @@ const AniketosNavDropdownList = styled.ul`
 const NavDropdown = ({ children, heading, to }) => {
 	return (
 		<AniketosNavDropdown>
-			<Link to={to}>{heading}</Link>{' '}
-			<i className="fas fa-chevron-down"></i>
+			<span>
+				<Link to={to}>{heading}</Link>
+				<i className="fas fa-chevron-down"></i>
+			</span>
 			<AniketosNavDropdownList>{children}</AniketosNavDropdownList>
 		</AniketosNavDropdown>
 	)

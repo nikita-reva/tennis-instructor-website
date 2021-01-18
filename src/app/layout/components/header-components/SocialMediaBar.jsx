@@ -8,7 +8,17 @@ const AniketosSocialMediaBar = styled.ul`
 	gap: 2vw;
 
 	@media screen and (max-width: 991px) {
-		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@media screen and (max-width: 500px) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(100%, -50%);
 	}
 `
 

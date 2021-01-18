@@ -13,6 +13,11 @@ const AniketosNavDropdownItem = styled.li`
 	&:hover {
 		background: #03a9f4;
 	}
+
+	@media screen and (max-width: 991px) {
+		justify-content: center;
+		width: 100%;
+	}
 `
 
 const NavDropdownItem = ({ children }) => {

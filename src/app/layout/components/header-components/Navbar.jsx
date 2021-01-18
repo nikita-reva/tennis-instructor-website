@@ -15,6 +15,7 @@ const AniketosNavbar = styled.ul`
 		flex-direction: column;
 		position: absolute;
 		top: 100%;
+		background: #e27d5f;
 		height: unset;
 		width: 100%;
 		left: -100%;
@@ -22,14 +23,13 @@ const AniketosNavbar = styled.ul`
 
 		&.active {
 			left: 0;
-			background: #0000ff;
 		}
 	}
 `
 
-const Navbar = ({ children, active }) => {
+const Navbar = ({ children, smallActive }) => {
 	return (
-		<AniketosNavbar className={active ? 'active' : ''}>
+		<AniketosNavbar className={smallActive ? 'active' : ''}>
 			{children}
 		</AniketosNavbar>
 	)
