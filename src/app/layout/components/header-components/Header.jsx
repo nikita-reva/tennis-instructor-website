@@ -85,7 +85,7 @@ const Header = () => {
 				<SocialMediaBar>
 					<SocialMediaBarItem
 						icon="instagram"
-						to="https://www.instagram.com/"
+						to="https://instagram.com/tennis.academy.yasar?igshid=1szgb889vhno0"
 					/>
 				</SocialMediaBar>
 				<NavBurger
