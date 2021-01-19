@@ -16,14 +16,14 @@ const AniketosNavDropdown = styled.div`
 	& > span > a {
 		text-decoration: none;
 		padding: 5px;
-		color: var(--secondary-color);
+		color: var(--scondary-color);
 	}
 
 	@media screen and (min-width: 992px) {
 		&:hover {
 			transition: color 0.1s ease-in-out;
-			color: #3636f0;
-			background: rgba(0, 0, 0, 0.1);
+			color: var(--accent-color);
+			background: rgba(255, 255, 255, 0.05);
 
 			& > ul {
 				display: flex;
@@ -41,14 +41,15 @@ const AniketosNavDropdown = styled.div`
 					left: 0;
 					height: 4px;
 					width: 200px;
-					background: #3636f0;
+					background: var(--secondary-color);
 				}
 			}
 		}
 	}
 
 	@media screen and (max-width: 991px) {
-		width: 100%;
+		width: 60%;
+		background: var(--primary-color);
 		flex-direction: column;
 
 		& > span {
@@ -58,18 +59,20 @@ const AniketosNavDropdown = styled.div`
 		}
 
 		&:hover {
-			background: rgba(0, 0, 0, 0.1);
+			background: rgba(255, 255, 255, 0.05);
 
 			& > span > a,
 			& > span > i {
 				transition: color 0.1s ease-in-out;
-				color: #3636f0;
+				color: var(--accent-color);
 			}
 		}
 
 		& > ul {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			width: 100%;
 		}
 	}

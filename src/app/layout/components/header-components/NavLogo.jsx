@@ -9,7 +9,12 @@ const AniketosLogoContainer = styled.div`
 	width: 160px;
 	justify-content: center;
 	align-content: center;
-	overflow: hidden;
+	background: var(--logo-bg-color);
+	transition: all 0.2s ease;
+
+	&:hover {
+		background: var(--accent-color);
+	}
 `
 
 const AniketosNavLogo = styled.img`

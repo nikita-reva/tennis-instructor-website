@@ -4,14 +4,14 @@ import styled from 'styled-components'
 const AniketosSocialMediaBarItem = styled.a`
 	text-decoration: none;
 	font-size: 2rem;
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	cursor: pointer;
 
 	transition: transform 0.1s ease-in;
 
 	&:hover {
 		transform: translateY(-10%);
-		color: #db6d4c;
+		color: var(--accent-color);
 	}
 `
 

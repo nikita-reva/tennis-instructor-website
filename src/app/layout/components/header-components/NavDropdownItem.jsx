@@ -7,16 +7,20 @@ const AniketosNavDropdownItem = styled.li`
 	justify-content: flex-start;
 	width: 200px;
 	height: 40px;
-	background: #4d73a5;
+	background: #191919;
 	transition: background 0.1s ease-in;
 
 	&:hover {
-		background: #03a9f4;
+		background: #292929;
 	}
 
 	@media screen and (max-width: 991px) {
-		justify-content: center;
 		width: 100%;
+		justify-content: center;
+
+		&:hover {
+			background: transparent;
+		}
 	}
 `
 

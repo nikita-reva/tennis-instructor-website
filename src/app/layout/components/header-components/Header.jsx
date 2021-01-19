@@ -17,7 +17,7 @@ const AniketosHeader = styled.header`
 	width: 100%;
 	height: 90px;
 	z-index: 1000;
-	background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+	background: var(--primary-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;

@@ -15,11 +15,22 @@ const AniketosNavbar = styled.ul`
 		flex-direction: column;
 		position: absolute;
 		top: 100%;
-		background: #e27d5f;
+		background: rgba(0, 0, 0, 0.4);
+		backdrop-filter: blur(6px);
 		height: unset;
 		width: 100%;
 		left: -100%;
 		transition: all 0.5s ease;
+
+		&:before {
+			content: '';
+			position: relative;
+			top: 0;
+			left: 0;
+			height: 4px;
+			width: 100%;
+			background: var(--secondary-color);
+		}
 
 		&.active {
 			left: 0;

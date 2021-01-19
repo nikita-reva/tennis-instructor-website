@@ -9,6 +9,10 @@ const AniketosLink = styled.div`
 		letter-spacing: 0.1rem;
 		padding: 5px;
 		color: var(--secondary-color);
+
+		&:hover {
+			color: var(--accent-color);
+		}
 	}
 `
 

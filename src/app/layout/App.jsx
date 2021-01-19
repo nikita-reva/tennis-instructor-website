@@ -16,7 +16,7 @@ function App() {
 				<Route path="/" component={HomeScreen} exact />
 				<Route path="/team" component={TeamScreen} exact />
 			</Main>
-			<Footer />
+			{/* <Footer /> */}
 		</Router>
 	)
 }
