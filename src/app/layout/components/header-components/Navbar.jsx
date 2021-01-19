@@ -27,7 +27,7 @@ const AniketosNavbar = styled.ul`
 			position: relative;
 			top: 0;
 			left: 0;
-			height: 4px;
+			height: 2px;
 			width: 100%;
 			background: var(--secondary-color);
 		}

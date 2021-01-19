@@ -6,7 +6,7 @@ import Logo from './images/logo.png'
 const AniketosLogoContainer = styled.div`
 	display: flex;
 	height: 100%;
-	width: 160px;
+	width: 120px;
 	justify-content: center;
 	align-content: center;
 	background: var(--logo-bg-color);
@@ -18,7 +18,7 @@ const AniketosLogoContainer = styled.div`
 `
 
 const AniketosNavLogo = styled.img`
-	height: 80%;
+	height: 75%;
 `
 
 const NavLogo = ({ to }) => {

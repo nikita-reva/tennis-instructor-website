@@ -13,13 +13,6 @@ const AniketosSocialMediaBar = styled.ul`
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-
-	@media screen and (max-width: 500px) {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(100%, -50%);
-	}
 `
 
 const SocialMediaBar = ({ children }) => {

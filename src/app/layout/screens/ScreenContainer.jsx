@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const AniketosScreenContainer = styled.div`
 	width: 100%;
 	position: relative;
-	top: 90px;
+	top: 80px;
 	min-height: 200vh;
 `
 

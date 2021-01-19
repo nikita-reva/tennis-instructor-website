@@ -15,7 +15,7 @@ import NavDropdownItem from './NavDropdownItem'
 const AniketosHeader = styled.header`
 	position: fixed;
 	width: 100%;
-	height: 90px;
+	height: 80px;
 	z-index: 1000;
 	background: var(--primary-color);
 	display: flex;

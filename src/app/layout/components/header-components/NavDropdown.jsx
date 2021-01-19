@@ -39,7 +39,7 @@ const AniketosNavDropdown = styled.div`
 					position: relative;
 					top: 0;
 					left: 0;
-					height: 4px;
+					height: 2px;
 					width: 200px;
 					background: var(--secondary-color);
 				}
