@@ -15,7 +15,7 @@ const AniketosNavbar = styled.ul`
 		flex-direction: column;
 		position: absolute;
 		top: 100%;
-		background: rgba(0, 0, 0, 0.4);
+		background: rgba(20, 0, 0, 0.4);
 		backdrop-filter: blur(6px);
 		height: unset;
 		width: 100%;
