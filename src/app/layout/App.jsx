@@ -7,6 +7,7 @@ import Footer from './components/footer-components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import TeamScreen from './screens/TeamScreen'
 import Main from './components/main-components/Main'
+import EnrolmentScreen from './screens/EnrolmentScreen'
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<Main>
 				<Route path="/" component={HomeScreen} exact />
 				<Route path="/team" component={TeamScreen} exact />
+				<Route path="/anmeldung" component={EnrolmentScreen} exact />
 			</Main>
 			{/* <Footer /> */}
 		</Router>
