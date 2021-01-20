@@ -25,6 +25,8 @@ const StyledFormWrapper = styled.div`
 `
 
 const StyledForm = styled.form`
+	display: grid;
+	grid-template-columns: 2;
 	width: 100%;
 	max-width: 700px;
 	padding: 40px;

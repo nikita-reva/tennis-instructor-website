@@ -67,7 +67,7 @@ const Header = () => {
 					<NavDropdown to="/news" heading="News">
 						<NavDropdownItem>
 							<NavLink
-								to="/news"
+								to="/newsfromcourt"
 								title="News vom Court"
 							></NavLink>
 						</NavDropdownItem>

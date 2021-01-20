@@ -148,7 +148,7 @@ const EnrolmentScreen = ({ history }) => {
 		emailjs
 			.sendForm(
 				'service_do95f1d',
-				'template_v4jvoe3',
+				'template_nxwok15',
 				e.target,
 				'user_JsusNz0E8HNccYZdyYeKy'
 			)
