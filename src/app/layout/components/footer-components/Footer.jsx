@@ -14,19 +14,19 @@ const Footer = () => {
 						</b>
 
 						<li>
-							<i class="fas fa-envelope"></i>&nbsp;&nbsp;
+							<i className="fas fa-envelope"></i>&nbsp;&nbsp;
 							<a href="mailto:info@tennis-yasar.de">
 								info@tennis-yasar.de
 							</a>
 						</li>
 						<li>
-							<i class="fas fa-phone-alt"></i>&nbsp;&nbsp;
+							<i className="fas fa-phone-alt"></i>&nbsp;&nbsp;
 							<a href="tel://+4917655217938">+4917655217938</a>
 						</li>
 
 						<li>
-							<i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
-							Zoznegger Str.3 | 78333 Stockach
+							<i className="fas fa-map-marker-alt"></i>
+							&nbsp;&nbsp; Zoznegger Str.3 | 78333 Stockach
 						</li>
 					</ul>
 					<ul className="box-2">

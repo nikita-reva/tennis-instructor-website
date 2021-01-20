@@ -10,7 +10,7 @@ const AniketosNavItem = styled.li`
 	transition: background 0.1s ease-in;
 
 	&:hover {
-		background: rgba(255, 255, 255, 0.05);
+		background: var(--hover-color);
 	}
 
 	@media screen and (max-width: 991px) {

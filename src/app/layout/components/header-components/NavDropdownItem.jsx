@@ -11,16 +11,12 @@ const AniketosNavDropdownItem = styled.li`
 	transition: background 0.1s ease-in;
 
 	&:hover {
-		background: #292929;
+		background: var(--hover-color);
 	}
 
 	@media screen and (max-width: 991px) {
 		width: 100%;
 		justify-content: center;
-
-		&:hover {
-			background: transparent;
-		}
 	}
 `
 
