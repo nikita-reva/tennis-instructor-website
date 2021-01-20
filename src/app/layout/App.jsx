@@ -8,6 +8,7 @@ import HomeScreen from './screens/HomeScreen'
 import TeamScreen from './screens/TeamScreen'
 import Main from './components/main-components/Main'
 import EnrolmentScreen from './screens/EnrolmentScreen'
+import ContactScreen from './screens/ContactScreen'
 
 function App() {
 	return (
@@ -17,8 +18,9 @@ function App() {
 				<Route path="/" component={HomeScreen} exact />
 				<Route path="/team" component={TeamScreen} exact />
 				<Route path="/anmeldung" component={EnrolmentScreen} exact />
+				<Route path="/kontakt" component={ContactScreen} exact />
 			</Main>
-			{/* <Footer /> */}
+			<Footer />
 		</Router>
 	)
 }

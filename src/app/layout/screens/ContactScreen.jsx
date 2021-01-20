@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import styled, { css } from 'styled-components'
-import Select from 'react-select'
-import makeAnimated from 'react-select/animated'
 
 import ScreenContainer from './ScreenContainer'
 import ContentContainer from './ContentContainer'
@@ -118,11 +116,7 @@ const initialState = {
 	lastName: '',
 	email: '',
 	message: '',
-	gender: '',
-	offer: '',
 }
-
-const animatedComponents = makeAnimated()
 
 const EnrolmentScreen = ({ history }) => {
 	const [state, setState] = useState(initialState)
@@ -175,18 +169,6 @@ const EnrolmentScreen = ({ history }) => {
 		setState((prev) => ({ ...prev, [inputName]: inputValue }))
 	}
 
-	const offerOptions = [
-		{ value: 'angebot1', label: 'angebot1' },
-		{ value: 'angebot2', label: 'angebot2' },
-		{ value: 'angebot3', label: 'angebot3' },
-	]
-
-	function onChangeInput(value) {
-		setState({ ...state, offer: value })
-		console.log(state.offer)
-		console.log(value)
-	}
-
 	return (
 		<>
 			<ScreenContainer>
@@ -194,7 +176,7 @@ const EnrolmentScreen = ({ history }) => {
 					<ContentSection>
 						<StyledFormWrapper>
 							<StyledForm onSubmit={sendEmail}>
-								<h2>Anmeldung</h2>
+								<h2>Nachricht</h2>
 								<label>
 									Vorname
 									<StyledInput
@@ -222,61 +204,6 @@ const EnrolmentScreen = ({ history }) => {
 										onChange={handleInput}
 									/>
 								</label>
-								<StyledFieldset>
-									<legend>Geschlecht</legend>
-									<label>
-										<input
-											type="radio"
-											value="weiblich"
-											name="gender"
-											checked={
-												state.gender === 'weiblich'
-											}
-											onChange={handleInput}
-										/>
-										Weiblich
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="männlich"
-											name="gender"
-											checked={
-												state.gender === 'männlich'
-											}
-											onChange={handleInput}
-										/>
-										Männlich
-									</label>
-								</StyledFieldset>
-								{/* 
-								<label>
-									Angebot
-									<StyledSelect
-										value={state.offer}
-										onChange={handleInput}
-										name="offer"
-									>
-										<StyledOption value="angebot1">
-											Angebot 1
-										</StyledOption>
-										<StyledOption value="angebot2">
-											Angebot 2
-										</StyledOption>
-									</StyledSelect>
-								</label> */}
-
-								<Select
-									closeMenuOnSelect={false}
-									components={animatedComponents}
-									defaultValue={[offerOptions[0]]}
-									isMulti
-									options={offerOptions}
-									name="offer"
-									value={state.offer}
-									onChange={onChangeInput}
-								/>
-
 								<label htmlFor="Message"></label>
 								<StyledTextarea
 									name="message"
