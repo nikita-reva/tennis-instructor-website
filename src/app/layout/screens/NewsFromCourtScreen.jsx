@@ -8,7 +8,7 @@ const NewsFromCourtScreen = () => {
 		<ScreenContainer>
 			<ContentContainer>
 				<ContentSection>
-					<h1>Camps Screen</h1>
+					<h1>News From Court Screen</h1>
 				</ContentSection>
 			</ContentContainer>
 		</ScreenContainer>

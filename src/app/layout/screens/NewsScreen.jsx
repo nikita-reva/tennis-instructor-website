@@ -8,7 +8,7 @@ const NewsScreen = () => {
 		<ScreenContainer>
 			<ContentContainer>
 				<ContentSection>
-					<h1>Camps Screen</h1>
+					<h1>News Screen</h1>
 				</ContentSection>
 			</ContentContainer>
 		</ScreenContainer>

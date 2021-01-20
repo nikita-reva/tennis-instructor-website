@@ -18,28 +18,28 @@ import GalleryScreen from './screens/GalleryScreen'
 
 function App() {
 	return (
-		<Router>
+		<Router basename="/tennis-academy-yasar-website">
 			<Header />
 			<Main>
-				<Route path="/" component={HomeScreen} exact />
-				<Route path="/team" component={TeamScreen} exact />
-				<Route path="/training" component={TrainingScreen} exact />
-				<Route path="/anmeldung" component={EnrolmentScreen} exact />
-				<Route path="/camps" component={CampsScreen} exact />
+				<Route exact path="/" component={HomeScreen} />
+				<Route exact path="/team" component={TeamScreen} />
+				<Route exact path="/training" component={TrainingScreen} />
+				<Route exact path="/anmeldung" component={EnrolmentScreen} />
+				<Route exact path="/camps" component={CampsScreen} />
 				<Route
+					exact
 					path="/athletiktraining"
 					component={AthleticTrainingScreen}
-					exact
 				/>
 				<Route path="/news" component={NewsScreen} exact />
 				<Route
+					exact
 					path="/newsfromcourt"
 					component={NewsFromCourtScreen}
-					exact
 				/>
-				<Route path="/galerie" component={GalleryScreen} exact />
+				<Route exact path="/galerie" component={GalleryScreen} />
 
-				<Route path="/kontakt" component={ContactScreen} exact />
+				<Route exact path="/kontakt" component={ContactScreen} />
 			</Main>
 			<Footer />
 		</Router>
