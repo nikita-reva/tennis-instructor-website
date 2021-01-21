@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import styled, { css } from 'styled-components'
-import Select from 'react-select'
-import makeAnimated from 'react-select/animated'
 
 import ScreenContainer from './ScreenContainer'
 import ContentContainer from './ContentContainer'
@@ -13,42 +11,80 @@ const sharedStyles = css`
 	height: 40px;
 	border-radius: 5px;
 	border: 1px solid #ddd;
-	margin: 10px 0 20px 0;
 	padding: 20px;
 	box-sizing: border-box;
 `
 
 const StyledFormWrapper = styled.div`
 	display: grid;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 800px;
 	grid-template-areas:
 		'heading'
 		'main';
+`
 
+const StyledHeader = styled.div`
+	grid-area: heading;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 0;
+	position: relative;
+	top: 10px;
+	z-index: -1;
+	height: 85px;
+	background-image: linear-gradient(
+		to top,
+		#ff723b 0%,
+		var(--secondary-color) 84%
+	);
+	color: var(--accent-color);
+	border-radius: 10px 10px 0 0;
 	& > h2 {
 		text-align: center;
-		background: var(--secondary-color);
-		border-radius: 10px 10px 0 0;
 		width: 100%;
-		padding: 10px 0;
-		position: relative;
-		top: 10px;
-		z-index: -1;
-		height: 65px;
-		grid-area: heading;
+		line-height: 1.4em;
+	}
+	& > p {
+		text-align: center;
+		width: 80%;
+		line-height: 1em;
+		font-size: clamp(0.75rem, 2vw, 1rem);
 	}
 `
 
 const StyledForm = styled.form`
 	grid-area: main;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	justify-items: center;
 	width: 100%;
 	padding: 40px;
-	background-color: #fff;
+	background-color: var(--accent-color);
 	border-radius: 10px;
 	box-sizing: border-box;
+
+	@media screen and (max-width: 600px) {
+		padding: 20px;
+	}
+`
+
+const StyledInputContainer = styled.div`
+	display: grid;
+	width: 100%;
+	place-items: center;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	grid-template-rows: auto;
+
+	@media screen and (max-width: 600px) {
+		grid-template-columns: 1fr;
+	}
 `
 
 const StyledInput = styled.input`
@@ -68,9 +104,9 @@ const StyledTextarea = styled.textarea`
 const StyledButton = styled.button`
 	display: block;
 	text-align: center;
-	margin: 0 auto;
-	background-color: #f7797d;
-	color: #fff;
+	margin: 30px 0 auto;
+	background-color: var(--secondary-color);
+	color: var(--accent-color);
 	font-size: 0.9rem;
 	border: 0;
 	border-radius: 5px;
@@ -78,15 +114,38 @@ const StyledButton = styled.button`
 	padding: 0 20px;
 	cursor: pointer;
 	box-sizing: border-box;
+	transition: all 0.5s ease;
+	& > i {
+		opacity: 0;
+		transition: all 0.2s ease-in;
+	}
+
+	&:hover {
+		& > i {
+			display: inline-block;
+			padding-left: 15px;
+			opacity: 1;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	@media screen and (max-width: 600px) {
+		margin-top: 10px;
+		width: 100%;
+	}
 `
 
 const StyledFieldset = styled.fieldset`
 	border: 1px solid #ddd;
 	display: flex;
+	flex-direction: ${({ fd }) => (fd ? fd : 'row')};
 	flex-wrap: wrap;
+	width: 100%;
 	border-radius: 5px;
 	padding: 10px;
-	margin: 20px 0;
 
 	legend {
 		padding: 0 10px;
@@ -94,35 +153,42 @@ const StyledFieldset = styled.fieldset`
 
 	label {
 		padding-right: 20px;
+
+		@media screen and (max-width: 600px) {
+			padding: ${({ fd }) =>
+				fd ? '5px 20px 5px 0' : '0px 20px 0px 0px'};
+			border-bottom: ${({ fd }) =>
+				fd ? '1px solid rgba(0, 0, 0, 0.1)' : 'none'};
+		}
 	}
 
 	input {
 		margin-right: 10px;
 	}
 `
-const StyledSelect = styled.select`
-	border: 1px solid #ddd;
-	display: flex;
-	flex-wrap: wrap;
-	border-radius: 5px;
-	padding: 10px;
-	margin: 20px 0;
-`
-
-const StyledOption = styled.option`
-	margin-right: 10px;
-`
 
 const StyledError = styled.div`
-	color: red;
-	font-weight: 800;
-	margin: 0 0 40px 0;
+	border: 1px solid var(--secondary-color);
+	font-size: 0.8em;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+	color: var(--secondary-color);
+	background: #f0b7ab;
+	font-weight: 600;
+	margin-top: 10px;
 `
 
 const StyledSuccess = styled.div`
-	color: green;
-	font-weight: 800;
-	margin: 0 0 40px 0;
+	border: 1px solid #168131;
+	font-size: 0.8em;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+	color: #168131;
+	background: #89d19b;
+	font-weight: 600;
+	margin-top: 10px;
 `
 
 const initialState = {
@@ -131,7 +197,6 @@ const initialState = {
 	email: '',
 	birthDate: '',
 	address: '',
-	gender: '',
 	city: '',
 	phone: '',
 	mobile: '',
@@ -139,53 +204,75 @@ const initialState = {
 	group: '',
 	duration: '',
 	message: '',
-	aggreement: '',
 }
 
-const animatedComponents = makeAnimated()
+const InputNames = {
+	firstName: 'Vorname',
+	lastName: 'Nachname',
+	email: 'E-Mail-Adresse',
+	birthDate: 'Geburtsdatum',
+	address: 'Adresse',
+	city: 'PLZ/Wohnort',
+	phone: 'Festnetznummer',
+	mobile: 'Mobiltelfonnummer',
+	training: 'Training',
+	group: 'Gruppe',
+	duration: 'Dauer',
+	message: 'Nachricht',
+}
 
-const EnrolmentScreen = ({ history }) => {
+const EnrolmentScreen = () => {
 	const [state, setState] = useState(initialState)
 	const [error, setError] = useState('')
 	const [success, setSuccess] = useState('')
+	const missingFields = []
 
 	function sendEmail(e) {
 		e.preventDefault()
-		console.log(state)
+		let missing = ''
 
 		for (let key in state) {
 			if (state[key] === '') {
-				setError(`You must provide the ${key}`)
-				return
+				missingFields.push(key)
+				missing = missing
+					? missing + ', ' + InputNames[key]
+					: InputNames[key]
 			}
 		}
+
+		if (missingFields.length !== 0) {
+			setError(
+				`Folgende Felder müssen noch ausgefüllt werden: ${missing}`
+			)
+			setSuccess('')
+			return
+		}
+
 		setError('')
 		const regex = /^\w+([-+.']\w+)*@\w+([-.']\w+)*\.\w+([-.']\w+)*$/
 		const test = regex.test(state.email)
 		console.log(test)
-		setSuccess('Email sent!')
+		setSuccess(
+			'Ihre Anfrage wurde versendet! Sie erhalten in Kürze eine Antwort.'
+		)
 
 		setState(initialState)
 
-		// window.setTimeout(() => {
-		// 	history.push('/')
-		// }, 1500)
-
-		// emailjs
-		// 	.sendForm(
-		// 		'service_do95f1d',
-		// 		'template_v4jvoe3',
-		// 		e.target,
-		// 		'user_JsusNz0E8HNccYZdyYeKy'
-		// 	)
-		// 	.then(
-		// 		(result) => {
-		// 			console.log(result.text)
-		// 		},
-		// 		(error) => {
-		// 			console.log(error.text)
-		// 		}
-		// 	)
+		emailjs
+			.sendForm(
+				'service_do95f1d',
+				'template_v4jvoe3',
+				e.target,
+				'user_JsusNz0E8HNccYZdyYeKy'
+			)
+			.then(
+				(result) => {
+					console.log(result.text)
+				},
+				(error) => {
+					console.log(error.text)
+				}
+			)
 	}
 
 	const handleInput = (e) => {
@@ -195,109 +282,145 @@ const EnrolmentScreen = ({ history }) => {
 		setState((prev) => ({ ...prev, [inputName]: inputValue }))
 	}
 
-	const offerOptions = [
-		{ value: 'angebot1', label: 'angebot1' },
-		{ value: 'angebot2', label: 'angebot2' },
-		{ value: 'angebot3', label: 'angebot3' },
-	]
-
-	// function onChangeInput(value) {
-	// 	setState({ ...state, offer: value })
-	// 	console.log(state.offer)
-	// 	console.log(value)
-	// }
-
 	return (
 		<>
 			<ScreenContainer>
 				<ContentContainer>
 					<ContentSection>
 						<StyledFormWrapper>
-							<h2>Anmeldung</h2>
+							<StyledHeader>
+								<h2>Anmeldung</h2>
+								<p>
+									Melden Sie sich uverbindlich für
+									Trainingsstunden an
+								</p>
+							</StyledHeader>
 							<StyledForm onSubmit={sendEmail}>
-								<StyledInput
-									type="text"
-									name="firstName"
-									value={state.firstName}
-									onChange={handleInput}
-									placeholder="Vorname..."
-								/>
-								<StyledInput
-									type="text"
-									name="lastName"
-									value={state.lastName}
-									onChange={handleInput}
-									placeholder="Nachname..."
-								/>
-								<StyledInput
-									type="email"
-									name="email"
-									value={state.email}
-									onChange={handleInput}
-									placeholder="E-Mail-Addresse..."
-								/>
-								<StyledInput
-									type="text"
-									name="birthDate"
-									value={state.birthDate}
-									onChange={handleInput}
-									placeholder="Geburtsdatum..."
-								/>
-								<StyledInput
-									type="text"
-									name="address"
-									value={state.address}
-									onChange={handleInput}
-									placeholder="Straße/Hausnummer..."
-								/>
-								<StyledInput
-									type="text"
-									name="city"
-									value={state.city}
-									onChange={handleInput}
-									placeholder="PLZ/Wohnort..."
-								/>
-								<StyledInput
-									type="text"
-									name="phone"
-									value={state.phone}
-									onChange={handleInput}
-									placeholder="Festnetz..."
-								/>
-								<StyledInput
-									type="text"
-									name="mobile"
-									value={state.mobile}
-									onChange={handleInput}
-									placeholder="Mobil..."
-								/>
-								<StyledFieldset>
+								<StyledInputContainer>
+									<StyledInput
+										type="text"
+										name="firstName"
+										value={state.firstName}
+										onChange={handleInput}
+										placeholder="Vorname..."
+									/>
+									<StyledInput
+										type="text"
+										name="lastName"
+										value={state.lastName}
+										onChange={handleInput}
+										placeholder="Nachname..."
+									/>
+									<StyledInput
+										type="email"
+										name="email"
+										value={state.email}
+										onChange={handleInput}
+										placeholder="E-Mail-Adresse..."
+									/>
+									<StyledInput
+										type="text"
+										name="birthDate"
+										value={state.birthDate}
+										onChange={handleInput}
+										placeholder="Geburtsdatum..."
+									/>
+									<StyledInput
+										type="text"
+										name="address"
+										value={state.address}
+										onChange={handleInput}
+										placeholder="Straße/Hausnummer..."
+									/>
+									<StyledInput
+										type="text"
+										name="city"
+										value={state.city}
+										onChange={handleInput}
+										placeholder="PLZ/Wohnort..."
+									/>
+									<StyledInput
+										type="text"
+										name="phone"
+										value={state.phone}
+										onChange={handleInput}
+										placeholder="Festnetz..."
+									/>
+									<StyledInput
+										type="text"
+										name="mobile"
+										value={state.mobile}
+										onChange={handleInput}
+										placeholder="Mobil..."
+									/>
+								</StyledInputContainer>
+								<StyledFieldset fd="column">
 									<legend>Training</legend>
 									<label>
 										<input
 											type="radio"
-											value="Einzeltraining"
+											value="Kinder / Jugendliche - Einzeltraining"
 											name="training"
 											checked={
 												state.training ===
-												'Einzeltraining'
+												'Kinder / Jugendliche - Einzeltraining'
 											}
 											onChange={handleInput}
 										/>
-										Einzeltraining
+										Kinder / Jugendliche - Einzeltraining
 									</label>
 									<label>
 										<input
 											type="radio"
-											value="Gruppentraining"
+											value="Kinder / Jugendliche - Mannschaftstraining"
 											name="training"
 											checked={
 												state.training ===
-												'Gruppentraining'
+												'Kinder / Jugendliche - Mannschaftstraining'
 											}
 											onChange={handleInput}
 										/>
-										Gruppentraining
+										Kinder / Jugendliche -
+										Mannschaftstraining
+									</label>
+									<label>
+										<input
+											type="radio"
+											value="Erwachsene - Einzeltraining"
+											name="training"
+											checked={
+												state.training ===
+												'Erwachsene - Einzeltraining'
+											}
+											onChange={handleInput}
+										/>
+										Erwachsene - Einzeltraining
+									</label>
+									<label>
+										<input
+											type="radio"
+											value="Erwachsene - Gruppentraining"
+											name="training"
+											checked={
+												state.training ===
+												'Erwachsene - Gruppentraining'
+											}
+											onChange={handleInput}
+										/>
+										Erwachsene - Gruppentraining
+									</label>
+									<label>
+										<input
+											type="radio"
+											value="Erwachsene - Mannschaftstraining Aktive"
+											name="training"
+											checked={
+												state.training ===
+												'Erwachsene - Mannschaftstraining Aktive'
+											}
+											onChange={handleInput}
+										/>
+										Erwachsene - Mannschaftstraining Aktive
 									</label>
 								</StyledFieldset>
 								<StyledFieldset>
@@ -308,7 +431,7 @@ const EnrolmentScreen = ({ history }) => {
 											value="2er-Gruppe"
 											name="group"
 											checked={
-												state.group === '2er Gruppe'
+												state.group === '2er-Gruppe'
 											}
 											onChange={handleInput}
 										/>
@@ -356,7 +479,7 @@ const EnrolmentScreen = ({ history }) => {
 									<label>
 										<input
 											type="radio"
-											value="60 Minuten"
+											value="90 Minuten"
 											name="duration"
 											checked={
 												state.duration === '90 Minuten'
@@ -378,22 +501,6 @@ const EnrolmentScreen = ({ history }) => {
 										120 Minuten
 									</label>
 								</StyledFieldset>
-								{/* 
-								<label>
-									Angebot
-									<StyledSelect
-										value={state.offer}
-										onChange={handleInput}
-										name="offer"
-									>
-										<StyledOption value="angebot1">
-											Angebot 1
-										</StyledOption>
-										<StyledOption value="angebot2">
-											Angebot 2
-										</StyledOption>
-									</StyledSelect>
-								</label> */}
 								<label htmlFor="Message"></label>
 								<StyledTextarea
 									name="message"
@@ -401,6 +508,7 @@ const EnrolmentScreen = ({ history }) => {
 									onChange={handleInput}
 									placeholder="Nachricht/Terminwünsche"
 								/>
+
 								{error && (
 									<StyledError>
 										<p>{error}</p>
@@ -413,6 +521,7 @@ const EnrolmentScreen = ({ history }) => {
 								)}
 								<StyledButton type="submit">
 									Anmeldung absenden
+									<i className="fas fa-chevron-right"></i>
 								</StyledButton>
 							</StyledForm>
 						</StyledFormWrapper>
