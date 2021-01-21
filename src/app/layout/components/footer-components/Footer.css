@@ -1,64 +1,64 @@
 .container-main {
-	/*border: 5px red solid;*/
-	display: flex;
-	background: black;
+    /*border: 5px red solid;*/
+    display: flex;
+    background: black;
 }
 
 /*Anschrift+Kontakt-Container*/
 .container-1 {
-	/* border: 5px #ccc solid;*/
-	padding: 5px 20px;
-	width: 60%;
-	font-style: 'Poppins', sans-serif;
-	color: var(--secondary-color);
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
-	z-index: 1000;
+    /* border: 5px #ccc solid;*/
+    padding: 5px 20px;
+    width: 60%;
+    font-style: 'Poppins', sans-serif;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1000;
 }
 
 /*Copyright-Container*/
 .container-2 {
-	width: 100%;
-	font-style: 'Poppins', sans-serif;
-	color: var(--secondary-color);
-	margin: auto;
+    width: 100%;
+    font-style: 'Poppins', sans-serif;
+    color: var(--secondary-color);
+    margin: auto;
 }
 
 /*Logos Container*/
 .container-3 {
-	/*border: 5px yellow solid;*/
-	padding: 5px 20px;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width: 40%;
-	gap: 10px;
-	z-index: 1000;
+    /*border: 5px yellow solid;*/
+    padding: 5px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+    z-index: 1000;
 }
 
 /*Kontakt*/
 .box-1 {
-	/*background: dimgray;*/
-	list-style-type: none;
-	font-size: 13px;
+    /*background: dimgray;*/
+    list-style-type: none;
+    font-size: 13px;
 }
 
 /*Anschrift*/
 .box-2 {
-	/* background: darkslateblue;*/
-	list-style-type: none;
-	font-size: 13px;
+    /* background: darkslateblue;*/
+    list-style-type: none;
+    font-size: 13px;
 }
 
 /*Copyright zeug ganz unten*/
 .box-3 {
-	border-top: 1px solid grey;
-	background: black;
-	font-size: 11px;
-	list-style-type: none;
-	text-align: center;
-	padding: 3px;
+    border-top: 1px solid grey;
+    background: black;
+    font-size: 11px;
+    list-style-type: none;
+    text-align: center;
+    padding: 3px;
 }
 
 /*Logos*/
@@ -66,18 +66,18 @@
     /*background: black;}*/
 
 a {
-	color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 @media screen and (max-width: 991px) {
-	.container-1 {
-		flex-direction: column;
-		width: 50%;
-	}
-	.container-3 {
-		width: 50%;
-		margin: auto;
-	}
+    .container-1 {
+        flex-direction: column;
+        width: 50%;
+    }
+    .container-3 {
+        width: 50%;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 414px) {
