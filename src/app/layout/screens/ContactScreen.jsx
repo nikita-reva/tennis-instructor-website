@@ -11,30 +11,76 @@ const sharedStyles = css`
 	height: 40px;
 	border-radius: 5px;
 	border: 1px solid #ddd;
-	margin: 10px 0 20px 0;
 	padding: 20px;
 	box-sizing: border-box;
 `
 
 const StyledFormWrapper = styled.div`
+	display: grid;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 800px;
+	grid-template-areas:
+		'heading'
+		'main';
+`
+
+const StyledHeader = styled.div`
+	grid-area: heading;
+	width: 100%;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
+	padding: 10px 0;
+	position: relative;
+	top: 10px;
+	z-index: -1;
+	height: 85px;
+	background-image: linear-gradient(
+		to top,
+		#ff723b 0%,
+		var(--secondary-color) 84%
+	);
+	color: var(--accent-color);
+	border-radius: 10px 10px 0 0;
+	& > h2 {
+		text-align: center;
+		width: 100%;
+		line-height: 1.4em;
+	}
+	& > p {
+		text-align: center;
+		width: 80%;
+		line-height: 1em;
+		font-size: clamp(0.75rem, 2vw, 1rem);
+	}
 `
 
 const StyledForm = styled.form`
+	grid-area: main;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
-	max-width: 700px;
 	padding: 40px;
-	background-color: #fff;
+	background-color: var(--accent-color);
 	border-radius: 10px;
 	box-sizing: border-box;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 
-	& > h2 {
-		text-align: center;
-		margin-bottom: 20px;
+	@media screen and (max-width: 600px) {
+		padding: 20px;
 	}
+`
+
+const StyledInputContainer = styled.div`
+	display: grid;
+	width: 100%;
+	place-items: center;
+	grid-template-columns: 1fr;
+	gap: 10px;
+	grid-template-rows: auto;
 `
 
 const StyledInput = styled.input`
@@ -49,14 +95,18 @@ const StyledTextarea = styled.textarea`
 	min-height: 100px;
 	resize: none;
 	${sharedStyles}
+
+	@media screen and (max-width: 600px) {
+		height: 150px;
+	}
 `
 
 const StyledButton = styled.button`
 	display: block;
 	text-align: center;
-	margin: 0 auto;
-	background-color: #f7797d;
-	color: #fff;
+	margin: 30px 0 auto;
+	background-color: var(--secondary-color);
+	color: var(--accent-color);
 	font-size: 0.9rem;
 	border: 0;
 	border-radius: 5px;
@@ -64,51 +114,52 @@ const StyledButton = styled.button`
 	padding: 0 20px;
 	cursor: pointer;
 	box-sizing: border-box;
-`
-
-const StyledFieldset = styled.fieldset`
-	border: 1px solid #ddd;
-	display: flex;
-	flex-wrap: wrap;
-	border-radius: 5px;
-	padding: 10px;
-	margin: 20px 0;
-
-	legend {
-		padding: 0 10px;
+	transition: all 0.5s ease;
+	& > i {
+		opacity: 0;
+		transition: all 0.2s ease-in;
 	}
 
-	label {
-		padding-right: 20px;
+	&:hover {
+		& > i {
+			display: inline-block;
+			padding-left: 15px;
+			opacity: 1;
+		}
 	}
 
-	input {
-		margin-right: 10px;
+	&:focus {
+		outline: none;
 	}
-`
-const StyledSelect = styled.select`
-	border: 1px solid #ddd;
-	display: flex;
-	flex-wrap: wrap;
-	border-radius: 5px;
-	padding: 10px;
-	margin: 20px 0;
-`
 
-const StyledOption = styled.option`
-	margin-right: 10px;
+	@media screen and (max-width: 600px) {
+		margin-top: 10px;
+		width: 100%;
+	}
 `
 
 const StyledError = styled.div`
-	color: red;
-	font-weight: 800;
-	margin: 0 0 40px 0;
+	border: 1px solid var(--secondary-color);
+	font-size: 0.8em;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+	color: var(--secondary-color);
+	background: #f0b7ab;
+	font-weight: 600;
+	margin-top: 10px;
 `
 
 const StyledSuccess = styled.div`
-	color: green;
-	font-weight: 800;
-	margin: 0 0 40px 0;
+	border: 1px solid #168131;
+	font-size: 0.8em;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+	color: #168131;
+	background: #89d19b;
+	font-weight: 600;
+	margin-top: 10px;
 `
 
 const initialState = {
@@ -118,32 +169,49 @@ const initialState = {
 	message: '',
 }
 
-const EnrolmentScreen = ({ history }) => {
+const InputNames = {
+	firstName: 'Vorname',
+	lastName: 'Nachname',
+	email: 'E-Mail-Adresse',
+	message: 'Nachricht',
+}
+
+const EnrolmentScreen = () => {
 	const [state, setState] = useState(initialState)
 	const [error, setError] = useState('')
 	const [success, setSuccess] = useState('')
+	const missingFields = []
 
 	function sendEmail(e) {
 		e.preventDefault()
-		console.log(state)
+		let missing = ''
 
 		for (let key in state) {
 			if (state[key] === '') {
-				setError(`You must provide the ${key}`)
-				return
+				missingFields.push(key)
+				missing = missing
+					? missing + ', ' + InputNames[key]
+					: InputNames[key]
 			}
 		}
+
+		if (missingFields.length !== 0) {
+			setError(
+				`Folgende Felder müssen noch ausgefüllt werden: ${missing}`
+			)
+			setSuccess('')
+			return
+		}
+
 		setError('')
 		const regex = /^\w+([-+.']\w+)*@\w+([-.']\w+)*\.\w+([-.']\w+)*$/
 		const test = regex.test(state.email)
 		console.log(test)
-		setSuccess('Email sent!')
+		setSuccess(
+			'Ihre Nachricht wurde versendet! Sie erhalten in Kürze eine Antwort.'
+		)
 
 		setState(initialState)
-
-		// window.setTimeout(() => {
-		// 	history.push('/')
-		// }, 1500)
 
 		emailjs
 			.sendForm(
@@ -175,40 +243,43 @@ const EnrolmentScreen = ({ history }) => {
 				<ContentContainer>
 					<ContentSection>
 						<StyledFormWrapper>
-							<StyledForm onSubmit={sendEmail}>
+							<StyledHeader>
 								<h2>Nachricht</h2>
-								<label>
-									Vorname
+								<p>
+									Haben Sie fragen oder Anregungen? Senden Sie
+									uns eine Nachricht!
+								</p>
+							</StyledHeader>
+							<StyledForm onSubmit={sendEmail}>
+								<StyledInputContainer>
 									<StyledInput
 										type="text"
 										name="firstName"
 										value={state.firstName}
 										onChange={handleInput}
+										placeholder="Vorname..."
 									/>
-								</label>
-								<label>
-									Nachname
 									<StyledInput
 										type="text"
 										name="lastName"
 										value={state.lastName}
 										onChange={handleInput}
+										placeholder="Nachname..."
 									/>
-								</label>
-								<label>
-									E-Mail
 									<StyledInput
 										type="email"
 										name="email"
 										value={state.email}
 										onChange={handleInput}
+										placeholder="E-Mail-Adresse..."
 									/>
-								</label>
+								</StyledInputContainer>
 								<label htmlFor="Message"></label>
 								<StyledTextarea
 									name="message"
 									value={state.message}
 									onChange={handleInput}
+									placeholder="Ihre Nachricht..."
 								/>
 								{error && (
 									<StyledError>
@@ -221,7 +292,8 @@ const EnrolmentScreen = ({ history }) => {
 									</StyledSuccess>
 								)}
 								<StyledButton type="submit">
-									Anmeldung absenden
+									Nachricht absenden
+									<i className="fas fa-chevron-right"></i>
 								</StyledButton>
 							</StyledForm>
 						</StyledFormWrapper>
