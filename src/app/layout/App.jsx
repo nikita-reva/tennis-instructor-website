@@ -15,10 +15,12 @@ import AthleticTrainingScreen from './screens/AthleticTrainingScreen'
 import NewsScreen from './screens/NewsScreen'
 import NewsFromCourtScreen from './screens/NewsFromCourtScreen'
 import GalleryScreen from './screens/GalleryScreen'
+import ScrollToTop from './ScrollToTop'
 
 function App() {
 	return (
 		<Router basename="/tennis-academy-yasar-website">
+			<ScrollToTop />
 			<Header />
 			<Main>
 				<Route exact path="/" component={HomeScreen} />
