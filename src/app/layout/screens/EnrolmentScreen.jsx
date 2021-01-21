@@ -19,26 +19,36 @@ const sharedStyles = css`
 `
 
 const StyledFormWrapper = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: grid;
+	grid-template-areas:
+		'heading'
+		'main';
+
+	& > h2 {
+		text-align: center;
+		background: var(--secondary-color);
+		border-radius: 10px 10px 0 0;
+		width: 100%;
+		padding: 10px 0;
+		position: relative;
+		top: 10px;
+		z-index: -1;
+		height: 65px;
+		grid-area: heading;
+	}
 `
 
 const StyledForm = styled.form`
+	grid-area: main;
 	display: grid;
-	grid-template-columns: 2;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-items: center;
 	width: 100%;
-	max-width: 700px;
 	padding: 40px;
 	background-color: #fff;
 	border-radius: 10px;
 	box-sizing: border-box;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-
-	& > h2 {
-		text-align: center;
-		margin-bottom: 20px;
-	}
 `
 
 const StyledInput = styled.input`
@@ -119,9 +129,17 @@ const initialState = {
 	firstName: '',
 	lastName: '',
 	email: '',
-	message: '',
+	birthDate: '',
+	address: '',
 	gender: '',
-	offer: '',
+	city: '',
+	phone: '',
+	mobile: '',
+	training: '',
+	group: '',
+	duration: '',
+	message: '',
+	aggreement: '',
 }
 
 const animatedComponents = makeAnimated()
@@ -153,21 +171,21 @@ const EnrolmentScreen = ({ history }) => {
 		// 	history.push('/')
 		// }, 1500)
 
-		emailjs
-			.sendForm(
-				'service_do95f1d',
-				'template_v4jvoe3',
-				e.target,
-				'user_JsusNz0E8HNccYZdyYeKy'
-			)
-			.then(
-				(result) => {
-					console.log(result.text)
-				},
-				(error) => {
-					console.log(error.text)
-				}
-			)
+		// emailjs
+		// 	.sendForm(
+		// 		'service_do95f1d',
+		// 		'template_v4jvoe3',
+		// 		e.target,
+		// 		'user_JsusNz0E8HNccYZdyYeKy'
+		// 	)
+		// 	.then(
+		// 		(result) => {
+		// 			console.log(result.text)
+		// 		},
+		// 		(error) => {
+		// 			console.log(error.text)
+		// 		}
+		// 	)
 	}
 
 	const handleInput = (e) => {
@@ -183,11 +201,11 @@ const EnrolmentScreen = ({ history }) => {
 		{ value: 'angebot3', label: 'angebot3' },
 	]
 
-	function onChangeInput(value) {
-		setState({ ...state, offer: value })
-		console.log(state.offer)
-		console.log(value)
-	}
+	// function onChangeInput(value) {
+	// 	setState({ ...state, offer: value })
+	// 	console.log(state.offer)
+	// 	console.log(value)
+	// }
 
 	return (
 		<>
@@ -195,60 +213,169 @@ const EnrolmentScreen = ({ history }) => {
 				<ContentContainer>
 					<ContentSection>
 						<StyledFormWrapper>
+							<h2>Anmeldung</h2>
 							<StyledForm onSubmit={sendEmail}>
-								<h2>Anmeldung</h2>
-								<label>
-									Vorname
-									<StyledInput
-										type="text"
-										name="firstName"
-										value={state.firstName}
-										onChange={handleInput}
-									/>
-								</label>
-								<label>
-									Nachname
-									<StyledInput
-										type="text"
-										name="lastName"
-										value={state.lastName}
-										onChange={handleInput}
-									/>
-								</label>
-								<label>
-									E-Mail
-									<StyledInput
-										type="email"
-										name="email"
-										value={state.email}
-										onChange={handleInput}
-									/>
-								</label>
+								<StyledInput
+									type="text"
+									name="firstName"
+									value={state.firstName}
+									onChange={handleInput}
+									placeholder="Vorname..."
+								/>
+								<StyledInput
+									type="text"
+									name="lastName"
+									value={state.lastName}
+									onChange={handleInput}
+									placeholder="Nachname..."
+								/>
+								<StyledInput
+									type="email"
+									name="email"
+									value={state.email}
+									onChange={handleInput}
+									placeholder="E-Mail-Addresse..."
+								/>
+								<StyledInput
+									type="text"
+									name="birthDate"
+									value={state.birthDate}
+									onChange={handleInput}
+									placeholder="Geburtsdatum..."
+								/>
+								<StyledInput
+									type="text"
+									name="address"
+									value={state.address}
+									onChange={handleInput}
+									placeholder="Straße/Hausnummer..."
+								/>
+								<StyledInput
+									type="text"
+									name="city"
+									value={state.city}
+									onChange={handleInput}
+									placeholder="PLZ/Wohnort..."
+								/>
+								<StyledInput
+									type="text"
+									name="phone"
+									value={state.phone}
+									onChange={handleInput}
+									placeholder="Festnetz..."
+								/>
+								<StyledInput
+									type="text"
+									name="mobile"
+									value={state.mobile}
+									onChange={handleInput}
+									placeholder="Mobil..."
+								/>
 								<StyledFieldset>
-									<legend>Geschlecht</legend>
+									<legend>Training</legend>
 									<label>
 										<input
 											type="radio"
-											value="weiblich"
-											name="gender"
+											value="Einzeltraining"
+											name="training"
 											checked={
-												state.gender === 'weiblich'
+												state.training ===
+												'Einzeltraining'
 											}
 											onChange={handleInput}
 										/>
-										Weiblich
+										Einzeltraining
 									</label>
 									<label>
 										<input
 											type="radio"
-											value="männlich"
-											name="gender"
+											value="Gruppentraining"
+											name="training"
 											checked={
-												state.gender === 'männlich'
+												state.training ===
+												'Gruppentraining'
 											}
 											onChange={handleInput}
 										/>
-										Männlich
+										Gruppentraining
+									</label>
+								</StyledFieldset>
+								<StyledFieldset>
+									<legend>Gruppe</legend>
+									<label>
+										<input
+											type="radio"
+											value="2er-Gruppe"
+											name="group"
+											checked={
+												state.group === '2er Gruppe'
+											}
+											onChange={handleInput}
+										/>
+										2er Gruppe
+									</label>
+									<label>
+										<input
+											type="radio"
+											value="3er-Gruppe"
+											name="group"
+											checked={
+												state.group === '3er-Gruppe'
+											}
+											onChange={handleInput}
+										/>
+										3er-Gruppe
+									</label>
+									<label>
+										<input
+											type="radio"
+											value="4er-Gruppe"
+											name="group"
+											checked={
+												state.group === '4er-Gruppe'
+											}
+											onChange={handleInput}
+										/>
+										4er-Gruppe
+									</label>
+								</StyledFieldset>
+								<StyledFieldset>
+									<legend>Dauer</legend>
+									<label>
+										<input
+											type="radio"
+											value="60 Minuten"
+											name="duration"
+											checked={
+												state.duration === '60 Minuten'
+											}
+											onChange={handleInput}
+										/>
+										60 Minuten
+									</label>
+									<label>
+										<input
+											type="radio"
+											value="60 Minuten"
+											name="duration"
+											checked={
+												state.duration === '90 Minuten'
+											}
+											onChange={handleInput}
+										/>
+										90 Minuten
+									</label>
+									<label>
+										<input
+											type="radio"
+											value="120 Minuten"
+											name="duration"
+											checked={
+												state.duration === '120 Minuten'
+											}
+											onChange={handleInput}
+										/>
+										120 Minuten
 									</label>
 								</StyledFieldset>
 								{/* 
@@ -267,23 +394,12 @@ const EnrolmentScreen = ({ history }) => {
 										</StyledOption>
 									</StyledSelect>
 								</label> */}
-
-								<Select
-									closeMenuOnSelect={false}
-									components={animatedComponents}
-									defaultValue={[offerOptions[0]]}
-									isMulti
-									options={offerOptions}
-									name="offer"
-									value={state.offer}
-									onChange={onChangeInput}
-								/>
-
 								<label htmlFor="Message"></label>
 								<StyledTextarea
 									name="message"
 									value={state.message}
 									onChange={handleInput}
+									placeholder="Nachricht/Terminwünsche"
 								/>
 								{error && (
 									<StyledError>
