@@ -6,7 +6,7 @@ import ScreenContainer from './ScreenContainer'
 const TeamScreen = () => {
 	return (
 		<ScreenContainer>
-			<ContentContainer>
+			<ContentContainer background="#1f1faa">
 				<ContentSection>
 					<h1>Team Screen</h1>
 				</ContentSection>
