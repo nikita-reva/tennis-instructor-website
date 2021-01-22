@@ -59,7 +59,6 @@ const StyledHeader = styled.div`
 const StyledForm = styled.form`
 	grid-area: main;
 	display: flex;
-	gap: 10px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -92,12 +91,13 @@ const StyledInput = styled.input`
 const StyledTextarea = styled.textarea`
 	background-color: #eee;
 	width: 100%;
+	margin-top: 10px;
 	min-height: 100px;
 	resize: none;
 	${sharedStyles}
 
 	@media screen and (max-width: 600px) {
-		height: 150px;
+		min-height: 150px;
 	}
 `
 

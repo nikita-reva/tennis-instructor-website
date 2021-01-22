@@ -59,7 +59,6 @@ const StyledHeader = styled.div`
 const StyledForm = styled.form`
 	grid-area: main;
 	display: flex;
-	gap: 10px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -96,6 +95,7 @@ const StyledInput = styled.input`
 const StyledTextarea = styled.textarea`
 	background-color: #eee;
 	width: 100%;
+	margin-top: 10px;
 	min-height: 100px;
 	resize: none;
 	${sharedStyles}
@@ -147,6 +147,10 @@ const StyledFieldset = styled.fieldset`
 	border-radius: 5px;
 	padding: 10px;
 
+	& {
+		margin-top: 10px;
+	}
+
 	legend {
 		padding: 0 10px;
 	}
@@ -155,10 +159,13 @@ const StyledFieldset = styled.fieldset`
 		padding-right: 20px;
 
 		@media screen and (max-width: 600px) {
-			padding: ${({ fd }) =>
-				fd ? '5px 20px 5px 0' : '0px 20px 0px 0px'};
-			border-bottom: ${({ fd }) =>
-				fd ? '1px solid rgba(0, 0, 0, 0.1)' : 'none'};
+			&:not(:last-child) {
+				padding: ${({ fd }) =>
+					fd ? '0 20px 10px 0' : '0px 20px 0px 0px'};
+
+				border-bottom: ${({ fd }) =>
+					fd ? '1px solid rgba(0, 0, 0, 0.1)' : 'none'};
+			}
 		}
 	}
 
