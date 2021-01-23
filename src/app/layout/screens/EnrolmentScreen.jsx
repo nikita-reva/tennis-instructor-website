@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 import ScreenContainer from './ScreenContainer'
 import ContentContainer from './ContentContainer'
@@ -13,6 +14,34 @@ const sharedStyles = css`
 	border: 1px solid #ddd;
 	padding: 20px;
 	box-sizing: border-box;
+`
+
+const StyledLink = styled.div`
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	position: relative;
+	top: 10px;
+	background-image: linear-gradient(
+		to top,
+		#ff723b 0%,
+		var(--secondary-color) 84%
+	);
+
+	& > a {
+		display: grid;
+		place-items: center;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		text-decoration: none;
+		color: white;
+		transition: color 0.2s ease-in;
+
+		&:hover {
+			color: #f2fc6b;
+		}
+	}
 `
 
 const StyledFormWrapper = styled.div`
@@ -531,6 +560,12 @@ const EnrolmentScreen = () => {
 									<i className="fas fa-chevron-right"></i>
 								</StyledButton>
 							</StyledForm>
+							<StyledLink>
+								<Link to="anmeldung/anmeldungsformular">
+									Anmeldungsformular als PDF herunterladen /
+									ausdrucken
+								</Link>
+							</StyledLink>
 						</StyledFormWrapper>
 					</ContentSection>
 				</ContentContainer>

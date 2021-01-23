@@ -176,7 +176,7 @@ const InputNames = {
 	message: 'Nachricht',
 }
 
-const EnrolmentScreen = () => {
+const ContactScreen = () => {
 	const [state, setState] = useState(initialState)
 	const [error, setError] = useState('')
 	const [success, setSuccess] = useState('')
@@ -246,7 +246,7 @@ const EnrolmentScreen = () => {
 							<StyledHeader>
 								<h2>Nachricht</h2>
 								<p>
-									Haben Sie fragen oder Anregungen? Senden Sie
+									Haben Sie Fragen oder Anregungen? Senden Sie
 									uns eine Nachricht!
 								</p>
 							</StyledHeader>
@@ -304,4 +304,4 @@ const EnrolmentScreen = () => {
 	)
 }
 
-export default EnrolmentScreen
+export default ContactScreen

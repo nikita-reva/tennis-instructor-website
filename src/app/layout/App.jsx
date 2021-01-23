@@ -16,6 +16,7 @@ import NewsScreen from './screens/NewsScreen'
 import NewsFromCourtScreen from './screens/NewsFromCourtScreen'
 import GalleryScreen from './screens/GalleryScreen'
 import ScrollToTop from './ScrollToTop'
+import PrintScreen from './screens/PrintScreen'
 
 function App() {
 	return (
@@ -27,6 +28,11 @@ function App() {
 				<Route exact path="/team" component={TeamScreen} />
 				<Route exact path="/training" component={TrainingScreen} />
 				<Route exact path="/anmeldung" component={EnrolmentScreen} />
+				<Route
+					exact
+					path="/anmeldung/anmeldungsformular"
+					component={PrintScreen}
+				/>
 				<Route exact path="/camps" component={CampsScreen} />
 				<Route
 					exact
