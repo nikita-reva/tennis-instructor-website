@@ -82,11 +82,13 @@ const AniketosNavDropdownList = styled.ul`
 	display: none;
 `
 
-const NavDropdown = ({ children, heading, to }) => {
+const NavDropdown = ({ children, heading, to, activate }) => {
 	return (
 		<AniketosNavDropdown>
 			<span>
-				<Link to={to}>{heading}</Link>
+				<Link to={to} onClick={() => activate()}>
+					{heading}
+				</Link>
 				<i className="fas fa-chevron-down"></i>
 			</span>
 			<AniketosNavDropdownList>{children}</AniketosNavDropdownList>

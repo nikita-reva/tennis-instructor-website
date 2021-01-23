@@ -20,9 +20,9 @@ const AniketosNavLogo = styled.img`
 	height: 100%;
 `
 
-const NavLogo = ({ to }) => {
+const NavLogo = ({ to, activate }) => {
 	return (
-		<Link to={to}>
+		<Link to={to} onClick={() => activate()}>
 			<AniketosLogoContainer>
 				<AniketosNavLogo
 					src={Logo}

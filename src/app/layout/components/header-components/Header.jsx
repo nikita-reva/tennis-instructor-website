@@ -34,52 +34,109 @@ const Header = () => {
 		})
 
 		windowWidth <= 991 ? setMode('small') : setMode('large')
+
+		if (mode === 'large') {
+			setActive(false)
+		}
 	}, [windowWidth, mode, active])
 
 	return (
 		<AniketosHeader>
 			<NavContainer>
-				<NavLogo to="/" />
+				<NavLogo
+					to="/"
+					activate={() => {
+						setActive(false)
+					}}
+				/>
 				<Navbar smallActive={active}>
 					<NavItem>
-						<NavLink to="/" title="Home"></NavLink>
+						<NavLink
+							to="/"
+							title="Home"
+							activate={() => {
+								setActive(false)
+							}}
+						></NavLink>
 					</NavItem>
 					<NavItem>
-						<NavLink to="/team" title="Team"></NavLink>
+						<NavLink
+							to="/team"
+							title="Team"
+							activate={() => {
+								setActive(false)
+							}}
+						></NavLink>
 					</NavItem>
-					<NavDropdown to="/training" heading="Training">
+					<NavDropdown
+						to="/training"
+						heading="Training"
+						activate={() => {
+							setActive(false)
+						}}
+					>
 						<NavDropdownItem>
 							<NavLink
 								to="/anmeldung"
 								title="Anmeldung"
+								activate={() => {
+									setActive(false)
+								}}
 							></NavLink>
 						</NavDropdownItem>
 						<NavDropdownItem>
-							<NavLink to="/camps" title="Camps"></NavLink>
+							<NavLink
+								to="/camps"
+								title="Camps"
+								activate={() => {
+									setActive(false)
+								}}
+							></NavLink>
 						</NavDropdownItem>
 						<NavDropdownItem>
 							<NavLink
 								to="/athletiktraining"
 								title="Athletiktraining"
+								activate={() => {
+									setActive(false)
+								}}
 							></NavLink>
 						</NavDropdownItem>
 					</NavDropdown>
-					<NavDropdown to="/news" heading="News">
+					<NavDropdown
+						to="/news"
+						heading="News"
+						activate={() => {
+							setActive(false)
+						}}
+					>
 						<NavDropdownItem>
 							<NavLink
 								to="/newsfromcourt"
 								title="News vom Court"
+								activate={() => {
+									setActive(false)
+								}}
 							></NavLink>
 						</NavDropdownItem>
 						<NavDropdownItem>
 							<NavLink
 								to="/galerie"
 								title="Fotogalerie"
+								activate={() => {
+									setActive(false)
+								}}
 							></NavLink>
 						</NavDropdownItem>
 					</NavDropdown>
 					<NavItem>
-						<NavLink to="/kontakt" title="Kontakt"></NavLink>
+						<NavLink
+							activate={() => {
+								setActive(false)
+							}}
+							to="/kontakt"
+							title="Kontakt"
+						></NavLink>
 					</NavItem>
 				</Navbar>
 				<SocialMediaBar>

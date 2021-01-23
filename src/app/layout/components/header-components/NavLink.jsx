@@ -16,10 +16,12 @@ const AniketosLink = styled.div`
 	}
 `
 
-const NavLink = ({ to, title }) => {
+const NavLink = ({ to, title, activate }) => {
 	return (
 		<AniketosLink>
-			<Link to={to}>{title}</Link>
+			<Link onClick={() => activate()} to={to}>
+				{title}
+			</Link>
 		</AniketosLink>
 	)
 }

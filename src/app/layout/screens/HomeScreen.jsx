@@ -23,10 +23,16 @@ const StyledOverlay = styled.div`
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-	backdrop-filter: grayscale(100%);
 	top: 0;
 	left: 0;
+`
+const StyledOverlay1 = styled(StyledOverlay)`
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	backdrop-filter: grayscale(100%);
+`
+const StyledOverlay2 = styled(StyledOverlay)`
+	clip-path: polygon(100% 0, 0 43%, 0 0);
+	background-color: black;
 `
 
 const StyledSlogan = styled.div`
@@ -54,7 +60,7 @@ const HomeScreen = () => {
 			<ContentContainer>
 				<StyledHeroContainer>
 					<StyledHeroImage src={Hero} />
-					<StyledOverlay />
+					<StyledOverlay1 />
 					<StyledSlogan>
 						<h2>Training Sucks?</h2>
 						<h1>Try Losing!</h1>
