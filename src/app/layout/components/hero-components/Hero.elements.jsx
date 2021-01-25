@@ -35,14 +35,16 @@ export const Slogan = styled.div`
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
+	align-items: ${({ sloganLeft }) =>
+		sloganLeft ? 'flex-start' : 'flex-end'};
 	top: 25%;
-	right: 0;
-	padding-right: 6vw;
+	right: ${({ sloganLeft }) => (sloganLeft ? 'unset' : '0')};
+	padding-right: ${({ sloganLeft }) => (sloganLeft ? 'unset' : '6vw')};
+	left: ${({ sloganLeft }) => (sloganLeft ? '0' : 'unset')};
+	padding-left: ${({ sloganLeft }) => (sloganLeft ? '6vw' : 'unset')};
 	color: #fff;
 
 	@media screen and (max-width: 1100px) {
-		right: 0;
 		top: 100%;
 		background: rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(5px);

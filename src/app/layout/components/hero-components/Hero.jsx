@@ -10,15 +10,23 @@ import {
 	SubText,
 } from './Hero.elements'
 
-const Hero = ({ img, sloganMedium, sloganBig, subtext, btnText }) => {
+const Hero = ({
+	img,
+	sloganLeft,
+	sloganMedium,
+	sloganBig,
+	subtext,
+	btnText,
+	linkTo,
+}) => {
 	return (
 		<HeroContainer>
 			<HeroImage src={img} />
-			<Slogan>
+			<Slogan sloganLeft={sloganLeft}>
 				<SloganMedium>{sloganMedium}</SloganMedium>
 				<SloganBig>{sloganBig}</SloganBig>
 				<SubText>{subtext}</SubText>
-				<HeroLink to="/anmeldung">{btnText}</HeroLink>
+				<HeroLink to={linkTo}>{btnText}</HeroLink>
 			</Slogan>
 		</HeroContainer>
 	)
