@@ -20,8 +20,7 @@ const StyledLink = styled.div`
 	width: 100%;
 	text-align: center;
 	padding: 10px;
-	position: relative;
-	top: 10px;
+	margin: 20px 0;
 	background-image: linear-gradient(
 		to top,
 		#ff723b 0%,
@@ -48,6 +47,7 @@ const StyledFormWrapper = styled.div`
 	display: grid;
 	width: 100%;
 	margin: 0 auto;
+	margin-top: 10px;
 	max-width: 800px;
 	grid-template-areas:
 		'heading'

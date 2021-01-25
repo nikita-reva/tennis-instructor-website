@@ -11,8 +11,7 @@ import { Link } from 'react-router-dom'
 const StyledButton = styled.button`
 	display: block;
 	text-align: center;
-	margin: 10px auto;
-	margin-top: 10px;
+	margin: 20px auto;
 	width: 100%;
 	max-width: 800px;
 	background-color: var(--secondary-color);
@@ -38,7 +37,7 @@ const StyledButton = styled.button`
 const StyledLink = styled.div`
 	display: block;
 	max-width: 800px;
-	margin: auto;
+	margin: 20px auto;
 	text-align: center;
 	padding: 10px;
 	background-image: linear-gradient(
@@ -72,7 +71,7 @@ const PrintScreen = () => {
 	return (
 		<ScreenContainer>
 			<ContentContainer>
-				<ContentSection pdt="10px">
+				<ContentSection>
 					<StyledLink>
 						<Link to="/anmeldung">Zurück zur Anmeldung</Link>
 					</StyledLink>

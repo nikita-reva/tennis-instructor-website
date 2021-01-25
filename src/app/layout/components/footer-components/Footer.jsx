@@ -5,7 +5,7 @@ import TennisClub from './images/stockach.png'
 import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
-	position: relative;
+	width: 100%;
 `
 
 const Footer = () => {

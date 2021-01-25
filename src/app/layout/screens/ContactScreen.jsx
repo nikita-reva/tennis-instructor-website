@@ -18,7 +18,7 @@ const sharedStyles = css`
 const StyledFormWrapper = styled.div`
 	display: grid;
 	width: 100%;
-	margin: 0 auto;
+	margin: 10px auto 20px auto;
 	max-width: 800px;
 	grid-template-areas:
 		'heading'
