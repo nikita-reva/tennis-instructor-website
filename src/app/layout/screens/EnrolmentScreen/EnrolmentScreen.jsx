@@ -3,9 +3,9 @@ import emailjs from 'emailjs-com'
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import ScreenContainer from './ScreenContainer'
-import ContentContainer from './ContentContainer'
-import ContentSection from './ContentSection'
+import ScreenContainer from '../ScreenContainer'
+import ContentContainer from '../ContentContainer'
+import ContentSection from '../ContentSection'
 
 const sharedStyles = css`
 	background-color: #eee;

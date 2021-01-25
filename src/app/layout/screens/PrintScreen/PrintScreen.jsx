@@ -3,9 +3,9 @@ import { useReactToPrint } from 'react-to-print'
 import styled from 'styled-components'
 
 import { EnrolmentPDF } from './EnrolmentPDF'
-import ScreenContainer from './ScreenContainer'
-import ContentContainer from './ContentContainer'
-import ContentSection from './ContentSection'
+import ScreenContainer from '../ScreenContainer'
+import ContentContainer from '../ContentContainer'
+import ContentSection from '../ContentSection'
 import { Link } from 'react-router-dom'
 
 const StyledButton = styled.button`

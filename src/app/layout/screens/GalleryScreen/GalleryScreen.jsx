@@ -1,7 +1,7 @@
 import React from 'react'
-import ContentContainer from './ContentContainer'
-import ContentSection from './ContentSection'
-import ScreenContainer from './ScreenContainer'
+import ContentContainer from '../ContentContainer'
+import ContentSection from '../ContentSection'
+import ScreenContainer from '../ScreenContainer'
 
 const GalleryScreen = () => {
 	return (
