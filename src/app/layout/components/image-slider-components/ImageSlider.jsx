@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 import {
 	SliderContainer,
@@ -13,7 +13,23 @@ import {
 
 const ImageSlider = ({ slides }) => {
 	const [current, setCurrent] = useState(0)
+	const [width, setWidth] = useState(0)
 	const length = slides.length
+	const containerElement = useRef(null)
+
+	window.addEventListener('resize', () => {
+		if (containerElement.current) {
+			setWidth(containerElement.current.offsetWidth)
+		}
+	})
+
+	useEffect(() => {
+		if (containerElement.current) {
+			setWidth(containerElement.current.offsetWidth)
+		}
+	}, [containerElement])
+
+	console.log(width)
 
 	const prevSlide = () => {
 		setCurrent(current === 0 ? length - 1 : current - 1)
@@ -31,7 +47,7 @@ const ImageSlider = ({ slides }) => {
 
 	return (
 		<SliderContainer>
-			<Slider>
+			<Slider ref={containerElement} hgt={`${(width * 2) / 3}px`}>
 				<LeftArrow onClick={prevSlide} />
 				<RightArrow onClick={nextSlide} />
 				{slides.map((slide, index) => {
