@@ -34,4 +34,21 @@ export const ImageSliderData = [
 			'https://images.unsplash.com/photo-1599487436400-6aaf85142f32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
 		alt: 'tennis',
 	},
+	{
+		image: require('./images/img1.JPG').default,
+		alt: 'tennis',
+	},
+	{
+		image: require('./images/img2.JPG').default,
+		alt: 'tennis',
+	},
+	{
+		image: require('./images/img3.JPG').default,
+		alt: 'tennis',
+		pos: 'top',
+	},
+	{
+		image: require('./images/img4.png').default,
+		alt: 'tennis',
+	},
 ]

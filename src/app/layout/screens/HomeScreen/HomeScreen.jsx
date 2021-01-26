@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
@@ -14,6 +15,9 @@ const HomeScreen = () => {
 				<Hero {...HeroHomeScreen} />
 			</ContentContainer>
 			<ContentContainer>
+				<ContentSection>
+					<ImageSlider slides={ImageSliderData} />
+				</ContentSection>
 				<ContentSection>
 					<ImageSlider slides={ImageSliderData} />
 				</ContentSection>
