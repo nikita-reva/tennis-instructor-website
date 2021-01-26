@@ -25,6 +25,8 @@ export const EventTime = styled.h5``
 
 export const EventInfo = styled.div``
 
+export const EventDate = styled.h4``
+
 export const EventTitle = styled.h2``
 
 export const EventDescription = styled.p``
