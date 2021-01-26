@@ -1,0 +1,27 @@
+.title {
+    font-family: 'Fjalla One', sans-serif;
+    text-decoration-line: underline;
+    color: white;
+    font-size: 3.5rem;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3%;
+    padding-top: 2%;
+}
+
+.datenschutzText {
+    color: white;
+    text-align: justify;
+    padding-bottom: 2cm;
+}
+
+.unterTitle {
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3%;
+    padding-top: 5%;
+}
