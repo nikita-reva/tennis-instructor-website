@@ -12,7 +12,7 @@ export const Slider = styled.div`
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
-	height: calc(80vw * (2 / 3));
+	height: ${({ hgt }) => (hgt ? hgt : 'calc(80vw * (2 / 3))')};
 	max-height: 640px;
 	border-radius: 15px;
 	overflow: hidden;
@@ -23,7 +23,7 @@ export const Slider = styled.div`
 	margin: 20px 0;
 
 	@media screen and (max-width: 991px) {
-		height: calc(92vw * (2 / 3));
+		height: ${({ hgt }) => (hgt ? hgt : 'calc(92vw * (2 / 3))')};
 	}
 `
 
