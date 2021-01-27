@@ -15,6 +15,10 @@ import {
 } from './Events.elements.jsx'
 
 const Events = ({ events }) => {
+	if (!Array.isArray(events) || events.length <= 0) {
+		return null
+	}
+
 	return (
 		<EventsContainer>
 			<EventsHeading>Events</EventsHeading>

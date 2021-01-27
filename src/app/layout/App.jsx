@@ -19,47 +19,49 @@ import GalleryScreen from './screens/GalleryScreen/GalleryScreen'
 import PrintScreen from './screens/PrintScreen/PrintScreen'
 import DatenschutzScreen from './screens/DatenschutzScreen/DatenschutzScreen'
 import ImperessumScreen from './screens/ImperessumScreen/ImperessumScreen'
+import PricingScreen from './screens/PricingScreen/PricingScreen'
 
 function App() {
-    return (
-        <Router basename="/tennis-academy-yasar-website">
-            <ScrollToTop />
-            <Header />
-            <Main>
-                <Route exact path="/" component={HomeScreen} />
-                <Route exact path="/team" component={TeamScreen} />
-                <Route exact path="/training" component={TrainingScreen} />
-                <Route exact path="/anmeldung" component={EnrolmentScreen} />
-                <Route
-                    exact
-                    path="/anmeldung/anmeldungsformular"
-                    component={PrintScreen}
-                />
-                <Route exact path="/camps" component={CampsScreen} />
-                <Route
-                    exact
-                    path="/athletiktraining"
-                    component={AthleticTrainingScreen}
-                />
-                <Route path="/news" component={NewsScreen} exact />
-                <Route
-                    exact
-                    path="/newsfromcourt"
-                    component={NewsFromCourtScreen}
-                />
-                <Route exact path="/galerie" component={GalleryScreen} />
+	return (
+		<Router basename="/tennis-academy-yasar-website">
+			<ScrollToTop />
+			<Header />
+			<Main>
+				<Route exact path="/" component={HomeScreen} />
+				<Route exact path="/team" component={TeamScreen} />
+				<Route exact path="/training" component={TrainingScreen} />
+				<Route exact path="/angebote" component={PricingScreen} />
+				<Route exact path="/anmeldung" component={EnrolmentScreen} />
+				<Route
+					exact
+					path="/anmeldung/anmeldungsformular"
+					component={PrintScreen}
+				/>
+				<Route exact path="/camps" component={CampsScreen} />
+				<Route
+					exact
+					path="/athletiktraining"
+					component={AthleticTrainingScreen}
+				/>
+				<Route path="/news" component={NewsScreen} exact />
+				<Route
+					exact
+					path="/newsfromcourt"
+					component={NewsFromCourtScreen}
+				/>
+				<Route exact path="/galerie" component={GalleryScreen} />
 
-                <Route exact path="/kontakt" component={ContactScreen} />
-                <Route
-                    exact
-                    path="/datenschutz"
-                    component={DatenschutzScreen}
-                />
-                <Route exact path="/imperessum" component={ImperessumScreen} />
-            </Main>
-            <Footer />
-        </Router>
-    )
+				<Route exact path="/kontakt" component={ContactScreen} />
+				<Route
+					exact
+					path="/datenschutz"
+					component={DatenschutzScreen}
+				/>
+				<Route exact path="/imperessum" component={ImperessumScreen} />
+			</Main>
+			<Footer />
+		</Router>
+	)
 }
 
 export default App

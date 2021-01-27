@@ -78,6 +78,15 @@ const Header = () => {
 					>
 						<NavDropdownItem>
 							<NavLink
+								to="/angebote"
+								title="Angebote"
+								activate={() => {
+									setActive(false)
+								}}
+							></NavLink>
+						</NavDropdownItem>
+						<NavDropdownItem>
+							<NavLink
 								to="/anmeldung"
 								title="Anmeldung"
 								activate={() => {

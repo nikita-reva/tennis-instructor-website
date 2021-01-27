@@ -69,6 +69,19 @@ export const SliderImage = styled.img`
 	object-fit: cover;
 `
 
+export const SliderImageText = styled.p`
+	position: absolute;
+	bottom: 14%;
+	user-select: none;
+	left: 50%;
+	font-size: 12px;
+	color: #fff;
+	background: var(--secondary-color);
+	padding: 4px 8px;
+	border-radius: 12px;
+	transform: translateX(-50%);
+`
+
 export const SliderNav = styled.div`
 	position: absolute;
 	display: flex;

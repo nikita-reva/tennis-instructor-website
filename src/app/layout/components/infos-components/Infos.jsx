@@ -15,6 +15,10 @@ import {
 } from './Infos.elements'
 
 const Infos = ({ infos }) => {
+	if (!Array.isArray(infos) || infos.length <= 0) {
+		return null
+	}
+
 	return (
 		<InfosContainer>
 			<InfosHeading>Infos</InfosHeading>

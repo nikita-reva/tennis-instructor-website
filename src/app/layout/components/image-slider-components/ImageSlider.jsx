@@ -9,6 +9,7 @@ import {
 	SliderImage,
 	SliderNav,
 	SliderNavCircle,
+	SliderImageText,
 } from './ImageSlider.elements.jsx'
 
 const ImageSlider = ({ slides, incrementRate }) => {
@@ -73,10 +74,17 @@ const ImageSlider = ({ slides, incrementRate }) => {
 							key={index}
 						>
 							{index === current && (
-								<SliderImage
-									src={slide.image}
-									alt={slide.alt}
-								></SliderImage>
+								<>
+									<SliderImage
+										src={slide.image}
+										alt={slide.alt}
+									/>
+									{slide.text && (
+										<SliderImageText>
+											{slide.text}
+										</SliderImageText>
+									)}
+								</>
 							)}
 						</Slide>
 					)

@@ -1,7 +1,12 @@
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-export const InfosContainer = styled.div`
+import ContentContainer from '../ContentContainer'
+import ContentSection from '../ContentSection'
+import ScreenContainer from '../ScreenContainer'
+
+export const ServicesContainer = styled.div`
 	width: 100%;
 	display: flex;
 	position: relative;
@@ -19,7 +24,7 @@ export const InfosContainer = styled.div`
 	}
 `
 
-export const InfosHeading = styled.h1`
+export const ServicesHeading = styled.h1`
 	font-family: 'Fjalla One', sans-serif;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
@@ -29,7 +34,7 @@ export const InfosHeading = styled.h1`
 	color: var(--secondary-color);
 `
 
-export const InfosWrapper = styled.div`
+export const ServicesWrapper = styled.div`
 	background: #ccc;
 	padding: 12px 24px;
 	position: relative;
@@ -45,7 +50,7 @@ export const InfosWrapper = styled.div`
 	}
 `
 
-export const Info = styled.div`
+export const Service = styled.div`
 	width: 100%;
 	margin: 24px 0;
 	display: flex;
@@ -82,7 +87,7 @@ export const InfoContent = styled.div`
 	padding: 6px 9px;
 
 	@media screen and (min-width: 992px) {
-		flex-basis: 50%;
+		flex-basis: 60%;
 		padding: 12px 18px;
 	}
 `
@@ -109,7 +114,7 @@ export const InfoImageContainer = styled.div`
 	margin: 6px 9px;
 
 	@media screen and (min-width: 992px) {
-		flex-basis: 50%;
+		flex-basis: 40%;
 		margin: 12px 18px;
 	}
 `
@@ -119,7 +124,7 @@ export const InfoImage = styled.img`
 	object-fit: cover;
 `
 
-export const InfoLink = styled(Link)`
+export const ServicesLink = styled(Link)`
 	display: block;
 	align-self: flex-start;
 	width: 100%;
@@ -148,3 +153,20 @@ export const InfoLink = styled(Link)`
 		transform: scale(0.98);
 	}
 `
+
+const PricingScreen = () => {
+	return (
+		<ScreenContainer>
+			<ContentContainer>
+				<ContentSection>
+					<ServicesContainer>
+						<ServicesHeading>Unsere Angebote</ServicesHeading>
+						<ServicesWrapper></ServicesWrapper>
+					</ServicesContainer>
+				</ContentSection>
+			</ContentContainer>
+		</ScreenContainer>
+	)
+}
+
+export default PricingScreen

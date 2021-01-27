@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player'
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 import ScreenContainer from '../ScreenContainer'
+
 import { ContainerColorizer } from '../ContainerColorizer'
 
 import { HeroHomeScreen, ImageSliderData, EventsData, InfosData } from './Data'
