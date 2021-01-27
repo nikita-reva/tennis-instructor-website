@@ -2,32 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
-	--primary-color: #080808;
-	--secondary-color: #fc4444;
-	--accent-color: #ffffff;
-	--hover-color: #292929;
-	--text-color: #fc4444;
+    --primary-color: #080808;
+    --secondary-color: #fc4444;
+    --accent-color: #ccc;
+    --hover-color: #292929;
+    --text-color: #fc4444;
 }
 
 body {
-	background: #4d3436;
-	background: -webkit-linear-gradient(
-		to right,
-		#4d3436 0%,
-		#492427 50%,
-		#4d3436 100%
-	);
-	background: linear-gradient(
-		to right,
-		#4d3436 0%,
-		#492427 50%,
-		#4d3436 100%
-	);
+    background: #4d3436;
+    background: -webkit-linear-gradient(
+        to right,
+        #4d3436 0%,
+        #492427 50%,
+        #4d3436 100%
+    );
+    background: linear-gradient(
+        to right,
+        #4d3436 0%,
+        #492427 50%,
+        #4d3436 100%
+    );
 }
