@@ -12,7 +12,7 @@ export const Slider = styled.div`
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
-	height: calc(80vw * (2 / 3));
+	height: ${({ hgt }) => (hgt ? hgt : 'calc(80vw * (2 / 3))')};
 	max-height: 640px;
 	border-radius: 15px;
 	overflow: hidden;
@@ -23,7 +23,7 @@ export const Slider = styled.div`
 	margin: 20px 0;
 
 	@media screen and (max-width: 991px) {
-		height: calc(92vw * (2 / 3));
+		height: ${({ hgt }) => (hgt ? hgt : 'calc(92vw * (2 / 3))')};
 	}
 `
 
@@ -31,7 +31,7 @@ const Arrow = css`
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: clamp(2rem, 5vw, 3rem);
+	font-size: ${({ size }) => (size ? size : 'clamp(2rem, 5vw, 3rem)')};
 	color: #fff;
 	z-index: 10;
 	transition: opacity 0.4s ease;
@@ -46,12 +46,12 @@ const Arrow = css`
 
 export const LeftArrow = styled(FaArrowAltCircleLeft)`
 	${Arrow}
-	left: clamp(1rem, 5vw, 4rem);
+	left: ${({ pdl }) => (pdl ? pdl : 'clamp(1rem, 5vw, 4rem)')}; ;
 `
 
 export const RightArrow = styled(FaArrowAltCircleRight)`
 	${Arrow}
-	right: clamp(1rem, 5vw, 4rem);
+	right: ${({ pdr }) => (pdr ? pdr : 'clamp(1rem, 5vw, 4rem)')}; ;
 `
 
 export const Slide = styled.div`
