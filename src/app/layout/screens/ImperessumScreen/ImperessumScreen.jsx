@@ -17,7 +17,7 @@ const ImperessumScreen = () => {
                                 <b> Imperessum</b>
                             </div>
                             <div className="Container-info-text">
-                                <div className="Info-text-title">
+                                <div className="Info-text-title2">
                                     <b>Betreiber und Kontakt</b>
                                     <hr />
                                 </div>
@@ -49,7 +49,7 @@ const ImperessumScreen = () => {
                                 <br />
                                 <br />
                                 <br />
-                                <div className="Info-text-title">
+                                <div className="Info-text-title2">
                                     <b>
                                         Verantwortlicher für
                                         journalistisch-redaktionelle Inhalte
@@ -65,7 +65,7 @@ const ImperessumScreen = () => {
                                 <br />
                                 <br />
                                 <br />
-                                <div className="Info-text-title">
+                                <div className="Info-text-title2">
                                     <b>Design & Technische Realisierung</b>
                                     <hr />
                                 </div>
