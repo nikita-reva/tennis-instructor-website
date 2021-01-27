@@ -103,7 +103,7 @@ export const InfoText = styled.p`
 export const InfoImageContainer = styled.div`
 	display: grid;
 	place-items: center;
-	align-self: center
+	align-self: center;
 	border-radius: 10px;
 	overflow: hidden;
 	margin: 6px 9px;

@@ -95,13 +95,14 @@ export const EventTitle = styled.h2`
 	font-family: 'Fjalla One', sans-serif;
 	line-height: 1.8;
 	font-weight: 700;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	letter-spacing: 0.06rem;
 `
 
 export const EventDescription = styled.p`
 	width: 100%;
 	font-weight: 500;
+	font-size: 0.8rem;
 `
 
 export const EventLink = styled(Link)`
@@ -109,6 +110,7 @@ export const EventLink = styled(Link)`
 	align-self: center;
 	min-width: 60%;
 	font-weight: 600;
+	font-size: 0.8rem;
 	letter-spacing: 0.04rem;
 	text-decoration: none;
 	text-align: center;
