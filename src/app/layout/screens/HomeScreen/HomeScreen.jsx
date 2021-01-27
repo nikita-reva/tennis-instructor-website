@@ -8,6 +8,20 @@ import ScreenContainer from '../ScreenContainer'
 import { HeroHomeScreen, ImageSliderData, EventsData, InfosData } from './Data'
 import { Hero, Events, Infos, ImageSlider } from '../../components'
 
+const Billboard = styled.div`
+	display: flex;
+	padding: 20px 0;
+	gap: 20px;
+`
+
+const BillboardEventsContainer = styled.div`
+	flex-basis: 30%;
+`
+
+const BillboardInfosContainer = styled.div`
+	flex-basis: 70%;
+`
+
 const HomeScreen = () => {
 	return (
 		<ScreenContainer>
@@ -16,10 +30,14 @@ const HomeScreen = () => {
 			</ContentContainer>
 			<ContentContainer>
 				<ContentSection>
-					<Events events={EventsData} />
-				</ContentSection>
-				<ContentSection>
-					<Infos infos={InfosData} />
+					<Billboard>
+						<BillboardEventsContainer>
+							<Events events={EventsData} />
+						</BillboardEventsContainer>
+						<BillboardInfosContainer>
+							<Infos infos={InfosData} />
+						</BillboardInfosContainer>
+					</Billboard>
 				</ContentSection>
 			</ContentContainer>
 			<ContentContainer>

@@ -57,7 +57,8 @@ export const EventsData = [
 		date: '28.03.2020 - 31.09.2021',
 		time: '00:00 - 23.59 Uhr',
 		title: 'Beginn der Trainingssaison',
-		description: 'Das Training beginnt wieder!',
+		description:
+			'Das Training beginnt wieder! Hurra! Hurra! Es gibt wieder Training! Das Training beginnt wieder! Hurra! Hurra! Es gibt wieder Training!',
 		linkTo: '/anmeldung',
 		linkText: 'Zur Anmeldung',
 	},
@@ -90,7 +91,26 @@ export const EventsData = [
 export const InfosData = [
 	{
 		title: 'Beginn der Trainingssaison',
-		text: 'Das Training beginnt wieder!',
+		text:
+			'Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder!',
+		image: require('./images/img1.JPG').default,
+		alt: 'tennis',
+		linkTo: '/anmeldung',
+		linkText: 'Zur Anmeldung',
+	},
+	{
+		title: 'Beginn der Trainingssaison',
+		text:
+			'Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder!',
+		image: require('./images/img1.JPG').default,
+		alt: 'tennis',
+		linkTo: '/anmeldung',
+		linkText: 'Zur Anmeldung',
+	},
+	{
+		title: 'Beginn der Trainingssaison',
+		text:
+			'Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder!',
 		image: require('./images/img1.JPG').default,
 		alt: 'tennis',
 		linkTo: '/anmeldung',

@@ -5,6 +5,7 @@ import {
 	InfosHeading,
 	InfosWrapper,
 	Info,
+	InfoMediaContainer,
 	InfoContent,
 	InfoTitle,
 	InfoText,
@@ -20,13 +21,15 @@ const Infos = ({ infos }) => {
 			<InfosWrapper>
 				{infos.map((info, index) => (
 					<Info key={index}>
-						<InfoContent>
-							<InfoTitle>{info.title}</InfoTitle>
-							<InfoText>{info.text}</InfoText>
-						</InfoContent>
-						<InfoImageContainer>
-							<InfoImage src={info.image} alt={info.alt} />
-						</InfoImageContainer>
+						<InfoMediaContainer>
+							<InfoContent>
+								<InfoTitle>{info.title}</InfoTitle>
+								<InfoText>{info.text}</InfoText>
+							</InfoContent>
+							<InfoImageContainer>
+								<InfoImage src={info.image} alt={info.alt} />
+							</InfoImageContainer>
+						</InfoMediaContainer>
 						<InfoLink to={info.linkTo}>{info.linkText}</InfoLink>
 					</Info>
 				))}

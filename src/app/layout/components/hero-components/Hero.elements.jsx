@@ -87,6 +87,6 @@ export const HeroLink = styled(Link)`
 	color: #fff;
 	background: var(--secondary-color);
 	border-radius: 10px;
-	padding: 15px 25px;
+	padding: 12px 24px;
 	margin-top: 24px;
 `
