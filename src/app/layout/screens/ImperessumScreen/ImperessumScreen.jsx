@@ -28,22 +28,18 @@ const ImperessumScreen = () => {
                                 78333 Stockach
                                 <br />
                                 <br />
-                                <ul className="box1">
-                                    <li>
-                                        <i className="fas fa-phone-alt"></i>
-                                        &nbsp;&nbsp;
-                                        <a href="tel://+4917655217938">
-                                            +4917655217938
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i className="fas fa-envelope"></i>
-                                        &nbsp;&nbsp;
-                                        <a href="mailto:info@tennis-yasar.de">
-                                            info@tennis-yasar.de
-                                        </a>
-                                    </li>
-                                </ul>
+                                <i className="fas fa-phone-alt"></i>
+                                &nbsp;&nbsp;
+                                <a href="tel://+4917655217938">
+                                    +4917655217938
+                                </a>
+                                <br />
+                                <i className="fas fa-envelope"></i>
+                                &nbsp;&nbsp;
+                                <a href="mailto:info@tennis-yasar.de">
+                                    info@tennis-yasar.de
+                                </a>
+                                <br />
                                 <br />
                                 Steuer-Nr: 18495/01114
                                 <br />
