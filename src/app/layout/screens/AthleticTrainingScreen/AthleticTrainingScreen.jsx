@@ -150,6 +150,14 @@ const AthleticTrainingScreen = () => {
                                     selber mitgebracht werden!
                                 </AthWindowTextP>
                                 <AthWindowTextP>
+                                    Unser Athletiktraining ist für{' '}
+                                    <Faerben>jedes Fitnesslevel</Faerben>{' '}
+                                    geeignet. Egal ob Anfänger, Fortgeschritten
+                                    oder Leistungssportler. Mit unserem Training
+                                    werden Sie definitv das Maximum aus sich
+                                    heraus holen!
+                                </AthWindowTextP>
+                                <AthWindowTextP>
                                     Die Anmeldung zum Athletiktraining erfolgt
                                     ausschließlich per E-Mail an:{' '}
                                     <a href="mailto:info@tennis-yasar.de">
