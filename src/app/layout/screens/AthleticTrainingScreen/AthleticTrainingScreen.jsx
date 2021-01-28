@@ -20,7 +20,7 @@ export const TitelAthletik = styled.div`
 `
 
 export const ContainerAthMain = styled.div`
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     width: 100%;
     margin-bottom: 20px;
     display: flex;
@@ -32,7 +32,7 @@ export const ContainerAthMain = styled.div`
     }
 `
 export const ContainerAthInfo = styled.div`
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 60%;
     @media screen and (max-width: 1080px) {
         width: 100%;
@@ -76,7 +76,7 @@ export const Faerben = styled.span`
     font-weight: bold;
 `
 export const ContainerAthBild = styled.span`
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
     width: 40%;
     display: grid;
     place-items: center;
