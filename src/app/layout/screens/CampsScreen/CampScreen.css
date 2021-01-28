@@ -1,4 +1,4 @@
-.Container-title2 {
+.Container-title2-camps {
     font-family: 'Fjalla One', sans-serif;
     text-decoration-line: underline;
     color: white;
@@ -10,7 +10,7 @@
     padding-top: 5%;
 }
 
-.Container-main {
+.Container-main-camps {
     /* border: 2px solid purple; */
     width: 100%;
     color: white;
@@ -18,7 +18,7 @@
     flex-direction: row;
     gap: 5%;
 }
-.Container-info4 {
+.Container-info4-camps {
     /* border: 5px solid yellow; */
     padding-bottom: 3cm;
     width: 58%;
@@ -29,7 +29,7 @@
     padding-top: 4%;
 }
 
-.Container-info5 {
+.Container-info5-camps {
     /* border: 5px solid yellow; */
     padding-bottom: 3cm;
     width: 42%;
@@ -40,7 +40,7 @@
     padding-top: 4%;
 }
 
-.Container-info-title {
+.Container-info-title-camps {
     border: 3px solid var(--secondary-color);
     width: 100%;
     color: white;
@@ -59,7 +59,7 @@
     z-index: -1;
 }
 
-.Container-info-text {
+.Container-info-text-camps {
     border: 3px solid var(--secondary-color);
     background-color: var(--accent-color);
     z-index: 10;
@@ -69,7 +69,7 @@
     padding: 2% 5%;
 }
 
-.Container-info-text0 {
+.Container-info-text0-camps {
     border: 3px solid var(--secondary-color);
     background-color: var(--accent-color);
     z-index: 10;
@@ -80,32 +80,35 @@
     text-align: center;
 }
 
-.liste0 {
+.liste0-camps {
     list-style-type: none;
 }
-.Info-text-title0 {
+.Info-text-title0-camps {
     text-align: center;
     padding-bottom: 2%;
 }
 
-.Container-button {
-    width: 40%;
+.Container-button-camps {
+    width: 55%;
     margin: auto;
 }
 
-@media screen and (max-width: 991px) {
-    .Container-main {
+@media screen and (max-width: 1085px) {
+    .Container-main-camps {
         flex-direction: column;
     }
-    .Container-info4 {
+    .Container-info4-camps {
         width: 100%;
         text-align: left;
         padding: 0;
     }
-    .Container-info5 {
+    .Container-info5-camps {
         width: 100%;
         text-align: left;
         padding-top: 0;
         padding-bottom: 2cm;
+    }
+    .Container-button-camps {
+        width: 100%;
     }
 }
