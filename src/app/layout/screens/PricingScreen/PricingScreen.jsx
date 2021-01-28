@@ -200,28 +200,28 @@ export const ServiceTable = styled.table`
 		background: var(--secondary-color);
 	}
 
-	& > tr {
-		& > th {
-			font-size: 0.8rem;
-			padding: 8px 12px;
-			text-align: left;
-		}
-		& > td {
-			padding: 8px 12px;
-			font-size: 0.8rem;
-			text-align: left;
-		}
-		& > td:nth-child(1) {
-			min-width: 100px;
-		}
-		& > td:nth-child(2),
-		& > td:nth-child(2) {
-			min-width: 100px;
-		}
+	th {
+		font-size: 0.8rem;
+		padding: 8px 12px;
+		text-align: left;
+	}
+
+	td {
+		padding: 8px 12px;
+		font-size: 0.8rem;
+		text-align: left;
+	}
+
+	td:nth-child(1) {
+		min-width: 100px;
+	}
+	td:nth-child(2),
+	td:nth-child(2) {
+		min-width: 100px;
 	}
 `
 
-export const ServiceSubText = styled.p`
+export const ServiceSubText = styled.div`
 	width: 100%;
 	color: var(--secondary-color);
 	font-size: 0.9rem;
@@ -334,23 +334,30 @@ const PricingScreen = () => {
 									</ServiceText>
 									<ServiceTableContainer>
 										<ServiceTable>
-											<tr>
-												<th>Trainer</th>
-												<th>
-													Einzel- und Gruppentraining
-												</th>
-												<th>Mannschaftstraining</th>
-											</tr>
-											<tr>
-												<td>Ajdin Yasar</td>
-												<td>45,- EUR/Stunde</td>
-												<td>55,- EUR/Stunde</td>
-											</tr>
-											<tr>
-												<td>Trainer der Akademie</td>
-												<td>33,- EUR/Stunde</td>
-												<td>33,- EUR/Stunde</td>
-											</tr>
+											<thead>
+												<tr>
+													<th>Trainer</th>
+													<th>
+														Einzel- und
+														Gruppentraining
+													</th>
+													<th>Mannschaftstraining</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Ajdin Yasar</td>
+													<td>45,- EUR/Stunde</td>
+													<td>55,- EUR/Stunde</td>
+												</tr>
+												<tr>
+													<td>
+														Trainer der Akademie
+													</td>
+													<td>33,- EUR/Stunde</td>
+													<td>33,- EUR/Stunde</td>
+												</tr>
+											</tbody>
 										</ServiceTable>
 									</ServiceTableContainer>
 									<ServiceSubText>
@@ -507,7 +514,7 @@ const PricingScreen = () => {
 										Für Fragen stehen die Academy und TC
 										Stockach gerne zur Verfügung
 									</ServiceSubtitle>
-									<ServicesLink to="/kontakt" large>
+									<ServicesLink to="/kontakt" large="true">
 										Kontaktieren Sie uns!
 									</ServicesLink>
 								</ServiceContent>
