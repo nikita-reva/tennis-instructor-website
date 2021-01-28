@@ -12,7 +12,6 @@ export const TitelAthletik = styled.div`
     text-decoration-line: underline;
     color: white;
     font-size: 3.5rem;
-    border: 2px solid white;
     width: 100%;
     height: 100%;
     padding-bottom: 2%;
