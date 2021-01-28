@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/tennis-academy-yasar-website/static/css/main.88f286c5.chunk.css",
-    "main.js": "/tennis-academy-yasar-website/static/js/main.172a30a9.chunk.js",
-    "main.js.map": "/tennis-academy-yasar-website/static/js/main.172a30a9.chunk.js.map",
+    "main.js": "/tennis-academy-yasar-website/static/js/main.ede5bd7e.chunk.js",
+    "main.js.map": "/tennis-academy-yasar-website/static/js/main.ede5bd7e.chunk.js.map",
     "runtime-main.js": "/tennis-academy-yasar-website/static/js/runtime-main.6c1cbd1e.js",
     "runtime-main.js.map": "/tennis-academy-yasar-website/static/js/runtime-main.6c1cbd1e.js.map",
-    "static/js/2.15fc871e.chunk.js": "/tennis-academy-yasar-website/static/js/2.15fc871e.chunk.js",
-    "static/js/2.15fc871e.chunk.js.map": "/tennis-academy-yasar-website/static/js/2.15fc871e.chunk.js.map",
+    "static/js/2.a9a5db82.chunk.js": "/tennis-academy-yasar-website/static/js/2.a9a5db82.chunk.js",
+    "static/js/2.a9a5db82.chunk.js.map": "/tennis-academy-yasar-website/static/js/2.a9a5db82.chunk.js.map",
     "static/js/3.03b520af.chunk.js": "/tennis-academy-yasar-website/static/js/3.03b520af.chunk.js",
     "static/js/3.03b520af.chunk.js.map": "/tennis-academy-yasar-website/static/js/3.03b520af.chunk.js.map",
     "index.html": "/tennis-academy-yasar-website/index.html",
     "static/css/main.88f286c5.chunk.css.map": "/tennis-academy-yasar-website/static/css/main.88f286c5.chunk.css.map",
-    "static/js/2.15fc871e.chunk.js.LICENSE.txt": "/tennis-academy-yasar-website/static/js/2.15fc871e.chunk.js.LICENSE.txt",
+    "static/js/2.a9a5db82.chunk.js.LICENSE.txt": "/tennis-academy-yasar-website/static/js/2.a9a5db82.chunk.js.LICENSE.txt",
     "static/media/Injoy.jpg": "/tennis-academy-yasar-website/static/media/Injoy.650b3456.jpg",
     "static/media/Steckbrief foto 2.1f133e2d.JPG": "/tennis-academy-yasar-website/static/media/Steckbrief foto 2.1f133e2d.JPG",
     "static/media/Steinmann.62632eaf.jpg": "/tennis-academy-yasar-website/static/media/Steinmann.62632eaf.jpg",
@@ -33,8 +33,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6c1cbd1e.js",
-    "static/js/2.15fc871e.chunk.js",
+    "static/js/2.a9a5db82.chunk.js",
     "static/css/main.88f286c5.chunk.css",
-    "static/js/main.172a30a9.chunk.js"
+    "static/js/main.ede5bd7e.chunk.js"
   ]
 }
