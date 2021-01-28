@@ -45,6 +45,10 @@ const BillboardInfosContainer = styled.div`
 	}
 `
 
+const ImageSliderContainer = styled.div`
+	padding: 200px 0;
+`
+
 const HomeScreen = () => {
 	return (
 		<ScreenContainer>
@@ -65,10 +69,12 @@ const HomeScreen = () => {
 			</ContentContainer>
 			<ContentContainer>
 				<ContentSection>
-					<ImageSlider
-						slides={ImageSliderData}
-						incrementRate={4000}
-					/>
+					<ImageSliderContainer>
+						<ImageSlider
+							slides={ImageSliderData}
+							incrementRate={4000}
+						/>
+					</ImageSliderContainer>
 				</ContentSection>
 			</ContentContainer>
 			<ContentContainer>

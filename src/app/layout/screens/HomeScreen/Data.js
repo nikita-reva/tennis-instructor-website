@@ -13,25 +13,21 @@ export const ImageSliderData = [
 		image:
 			'https://images.unsplash.com/photo-1545809074-59472b3f5ecc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
 		alt: 'Franklin L. Smith',
-		text: 'Franklin L. Smith',
 	},
 	{
 		image:
 			'https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
 		alt: 'Brad Goldbaum',
-		text: 'Brad Goldbaum',
 	},
 	{
 		image:
 			'https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
 		alt: 'Adam Prett',
-		text: 'Adam Prett',
 	},
 	{
 		image:
 			'https://images.unsplash.com/photo-1530915365347-e35b749a0381?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
 		alt: 'Leroy Jenkins',
-		text: 'Leroy Jenkins',
 	},
 	{
 		image:
@@ -39,24 +35,29 @@ export const ImageSliderData = [
 		alt: 'tennis',
 	},
 	{
-		image: require('./images/img1.JPG').default,
-		alt: 'Sean Wallace Jr.',
-		text: 'Sean Wallace Jr.',
+		image: require('../images/img1.JPG').default,
+		alt: 'Feliciano López',
+		text: 'Ajdin & Feliciano López',
 	},
 	{
-		image: require('./images/img2.JPG').default,
-		alt: 'Michael Delawarren',
-		text: 'Michael Delawarren',
+		image: require('../images/img2.JPG').default,
+		alt: 'Jo-Wilfried Tsonga',
+		text: 'Ajdin & Jo-Wilfried Tsonga',
 	},
 	{
-		image: require('./images/img3.JPG').default,
-		alt: 'Jeff Browning',
-		text: 'Jeff Browning',
+		image: require('../images/img3.JPG').default,
+		alt: 'Nick Kyrgios',
+		text: 'Ajdin & Nick Kyrgios',
 	},
 	{
-		image: require('./images/img4.png').default,
-		alt: 'Winston T. Friggs',
-		text: 'Winston T. Friggs',
+		image: require('../images/img4.jpeg').default,
+		alt: 'Bernard Tomic',
+		text: 'Ajdin & Bernard Tomic',
+	},
+	{
+		image: require('../images/img5.png').default,
+		alt: 'Ajdin Yasar',
+		text: 'Ajdin Yasar',
 	},
 ]
 
