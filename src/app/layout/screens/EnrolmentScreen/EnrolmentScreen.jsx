@@ -227,9 +227,9 @@ const StyledSuccess = styled.div`
     margin-top: 10px;
 `
 const ContainerHinweis = styled.div`
-    background: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     width: 100%;
-    color: var(--accent-color);
+
     font-size: 0.8rem;
     text-align: center;
     margin-top: 20px;
@@ -580,11 +580,12 @@ const EnrolmentScreen = () => {
                                         Durch das Absenden der
                                         Trainingsanmeldung, wird die Anmeldung
                                         für die gesamte Sommersaison 2021
-                                        verbindlich. Bei Krankheit/Verhinderung
-                                        sind die Trainingskosten dennoch fällig.
-                                        Es steht der Spielerin/ dem Spieler
-                                        jedoch frei, für einen Ersatz zu sorgen,
-                                        der die Stunde/Kosten übernimmt.
+                                        verbindlich. Bei Krankheit /
+                                        Verhinderung sind die Trainingskosten
+                                        dennoch fällig. Es steht der Spielerin /
+                                        dem Spieler jedoch frei, für einen
+                                        Ersatz zu sorgen, der die Stunde /
+                                        Kosten übernimmt.
                                     </ContainerHinweisSchrift>
                                 </ContainerHinweis>
                             </StyledForm>
