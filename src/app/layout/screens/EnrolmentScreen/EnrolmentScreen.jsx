@@ -26,7 +26,6 @@ const StyledLink = styled.div`
 		#ff723b 0%,
 		var(--secondary-color) 84%
 	);
-
 	& > a {
 		display: grid;
 		place-items: center;
@@ -36,7 +35,6 @@ const StyledLink = styled.div`
 		text-decoration: none;
 		color: white;
 		transition: color 0.2s ease-in;
-
 		&:hover {
 			color: #f2fc6b;
 		}
@@ -96,7 +94,6 @@ const StyledForm = styled.form`
 	background-color: var(--accent-color);
 	border-radius: 10px;
 	box-sizing: border-box;
-
 	@media screen and (max-width: 600px) {
 		padding: 20px;
 	}
@@ -109,7 +106,6 @@ const StyledInputContainer = styled.div`
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;
 	grid-template-rows: auto;
-
 	@media screen and (max-width: 600px) {
 		grid-template-columns: 1fr;
 	}
@@ -148,7 +144,6 @@ const StyledButton = styled.button`
 		opacity: 0;
 		transition: all 0.2s ease-in;
 	}
-
 	&:hover {
 		& > i {
 			display: inline-block;
@@ -156,11 +151,9 @@ const StyledButton = styled.button`
 			opacity: 1;
 		}
 	}
-
 	&:focus {
 		outline: none;
 	}
-
 	@media screen and (max-width: 600px) {
 		margin-top: 10px;
 		width: 100%;
@@ -175,29 +168,23 @@ const StyledFieldset = styled.fieldset`
 	width: 100%;
 	border-radius: 5px;
 	padding: 10px;
-
 	& {
 		margin-top: 10px;
 	}
-
 	legend {
 		padding: 0 10px;
 	}
-
 	label {
 		padding-right: 20px;
-
 		@media screen and (max-width: 600px) {
 			&:not(:last-child) {
 				padding: ${({ fd }) =>
 					fd ? '0 20px 10px 0' : '0px 20px 0px 0px'};
-
 				border-bottom: ${({ fd }) =>
 					fd ? '1px solid rgba(0, 0, 0, 0.1)' : 'none'};
 			}
 		}
 	}
-
 	input {
 		margin-right: 10px;
 	}
@@ -227,14 +214,12 @@ const StyledSuccess = styled.div`
 	margin-top: 10px;
 `
 const ContainerHinweis = styled.div`
-	background: var(--secondary-color);
+	border: 2px solid var(--secondary-color);
 	width: 100%;
-	color: var(--accent-color);
 	font-size: 0.8rem;
 	text-align: center;
 	margin-top: 20px;
 	border-radius: 6px;
-
 	@media screen and (max-width: 600px) {
 		text-align: left;
 	}
@@ -580,11 +565,12 @@ const EnrolmentScreen = () => {
 										Durch das Absenden der
 										Trainingsanmeldung, wird die Anmeldung
 										für die gesamte Sommersaison 2021
-										verbindlich. Bei Krankheit/Verhinderung
-										sind die Trainingskosten dennoch fällig.
-										Es steht der Spielerin/ dem Spieler
-										jedoch frei, für einen Ersatz zu sorgen,
-										der die Stunde/Kosten übernimmt.
+										verbindlich. Bei Krankheit /
+										Verhinderung sind die Trainingskosten
+										dennoch fällig. Es steht der Spielerin /
+										dem Spieler jedoch frei, für einen
+										Ersatz zu sorgen, der die Stunde /
+										Kosten übernimmt.
 									</ContainerHinweisSchrift>
 								</ContainerHinweis>
 							</StyledForm>
@@ -601,5 +587,4 @@ const EnrolmentScreen = () => {
 		</>
 	)
 }
-
 export default EnrolmentScreen
