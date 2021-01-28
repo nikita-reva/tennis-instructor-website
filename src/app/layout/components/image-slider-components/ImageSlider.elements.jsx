@@ -80,6 +80,12 @@ export const SliderImageText = styled.p`
 	padding: 4px 8px;
 	border-radius: 12px;
 	transform: translateX(-50%);
+
+	@media screen and (max-width: 600px) {
+		font-size: 8px;
+		padding: 2px 6px;
+		bottom: 16%;
+	}
 `
 
 export const SliderNav = styled.div`

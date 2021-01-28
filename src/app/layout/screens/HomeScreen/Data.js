@@ -110,22 +110,6 @@ export const EventsData = [
 		linkTo: '/anmeldung',
 		linkText: 'Zur Anmeldung',
 	},
-	{
-		date: '28.03.2020 - 31.09.2021',
-		time: '00:00 - 23.59 Uhr',
-		title: 'Beginn der Trainingssaison',
-		description: 'Das Training beginnt wieder!',
-		linkTo: '/anmeldung',
-		linkText: 'Zur Anmeldung',
-	},
-	{
-		date: '28.03.2020 - 31.09.2021',
-		time: '00:00 - 23.59 Uhr',
-		title: 'Beginn der Trainingssaison',
-		description: 'Das Training beginnt wieder!',
-		linkTo: '/anmeldung',
-		linkText: 'Zur Anmeldung',
-	},
 ]
 
 export const InfosData = [

@@ -46,7 +46,8 @@ const BillboardInfosContainer = styled.div`
 `
 
 const ImageSliderContainer = styled.div`
-	padding: 200px 0;
+	position: relative;
+	padding: 100px 0;
 `
 
 const HomeScreen = () => {

@@ -11,7 +11,6 @@ export const ServicesContainer = styled.div`
 	display: flex;
 	position: relative;
 	flex-direction: column;
-	background: #fff;
 
 	&::after {
 		content: '';
@@ -26,6 +25,7 @@ export const ServicesContainer = styled.div`
 
 export const ServicesHeading = styled.h1`
 	font-family: 'Fjalla One', sans-serif;
+	background: #fff;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
 	font-size: 2.5rem;
@@ -35,8 +35,6 @@ export const ServicesHeading = styled.h1`
 `
 
 export const ServicesWrapper = styled.div`
-	background: #ccc;
-	padding: 12px 24px;
 	position: relative;
 
 	&::after {
@@ -52,11 +50,11 @@ export const ServicesWrapper = styled.div`
 
 export const Service = styled.div`
 	width: 100%;
+	background: #ccc;
 	margin: 24px 0;
 	display: flex;
 	flex-direction: column;
-	border-top: 2px solid var(--secondary-color);
-	padding-top: 18px;
+	border-top: 4px solid var(--secondary-color);
 	position: relative;
 
 	&::after {
@@ -65,23 +63,26 @@ export const Service = styled.div`
 		clip-path: polygon(100% 100%, 0 0, 100% 0);
 		top: 0;
 		right: 0;
-		width: 12px;
-		height: 12px;
+		width: 22px;
+		height: 18px;
 		background-color: var(--secondary-color);
 	}
 `
 
-export const InfoMediaContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-
-	@media screen and (min-width: 992px) {
-		flex-direction: row;
-		justify-content: space-between;
-	}
+export const ServiceTargetGroup = styled.h2`
+	font-family: 'Fjalla One', sans-serif;
+	background: #aaa;
+	width: 100%;
+	line-height: 1.2;
+	font-weight: 700;
+	font-size: 1.2rem;
+	letter-spacing: 0.04rem;
+	padding-top: 12px;
+	padding-left: 24px;
+	padding-bottom: 6px;
 `
 
-export const InfoContent = styled.div`
+export const ServiceContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 6px 9px;
@@ -90,14 +91,6 @@ export const InfoContent = styled.div`
 		flex-basis: 60%;
 		padding: 12px 18px;
 	}
-`
-
-export const InfoTitle = styled.h2`
-	font-family: 'Fjalla One', sans-serif;
-	line-height: 1.8;
-	font-weight: 700;
-	font-size: 1.6rem;
-	letter-spacing: 0.06rem;
 `
 
 export const InfoText = styled.p`
@@ -161,7 +154,13 @@ const PricingScreen = () => {
 				<ContentSection>
 					<ServicesContainer>
 						<ServicesHeading>Unsere Angebote</ServicesHeading>
-						<ServicesWrapper></ServicesWrapper>
+						<ServicesWrapper>
+							<Service>
+								<ServiceTargetGroup>
+									Anfänger
+								</ServiceTargetGroup>
+							</Service>
+						</ServicesWrapper>
 					</ServicesContainer>
 				</ContentSection>
 			</ContentContainer>
