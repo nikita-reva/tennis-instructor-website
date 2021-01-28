@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
+import { IoBarbellOutline } from 'react-icons/io5'
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 import ScreenContainer from '../ScreenContainer'
 
 export const ServicesContainer = styled.div`
 	width: 100%;
+	margin: 0 auto;
+	margin-top: 24px;
+	max-width: 1000px;
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -27,8 +30,9 @@ export const ServicesHeading = styled.h1`
 	font-family: 'Fjalla One', sans-serif;
 	background: #fff;
 	font-weight: 700;
+	text-align: center;
 	letter-spacing: 0.1rem;
-	font-size: 2.5rem;
+	font-size: 2.4rem;
 	line-height: 1.4;
 	padding: 12px 24px 6px 24px;
 	color: var(--secondary-color);
@@ -48,6 +52,24 @@ export const ServicesWrapper = styled.div`
 	}
 `
 
+export const ServiceType = styled.h2`
+	width: 100%;
+	font-family: 'Fjalla One', sans-serif;
+	background: #fff;
+	color: var(--secondary-color);
+	text-align: center;
+	letter-spacing: 0.06rem;
+	padding: 8px 24px;
+	font-weight: 700;
+	font-size: 1.6rem;
+	margin: 24px 0;
+	display: flex;
+	flex-direction: column;
+	border-top: 4px solid var(--secondary-color);
+	border-bottom: 4px solid var(--secondary-color);
+	position: relative;
+`
+
 export const Service = styled.div`
 	width: 100%;
 	background: #ccc;
@@ -55,6 +77,7 @@ export const Service = styled.div`
 	display: flex;
 	flex-direction: column;
 	border-top: 4px solid var(--secondary-color);
+	border-bottom: 4px solid var(--secondary-color);
 	position: relative;
 
 	&::after {
@@ -72,30 +95,145 @@ export const Service = styled.div`
 export const ServiceTargetGroup = styled.h2`
 	font-family: 'Fjalla One', sans-serif;
 	background: #aaa;
+	text-align: right;
 	width: 100%;
 	line-height: 1.2;
 	font-weight: 700;
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 	letter-spacing: 0.04rem;
 	padding-top: 12px;
-	padding-left: 24px;
+	padding-right: 24px;
 	padding-bottom: 6px;
+	padding-left: 24px;
 `
 
 export const ServiceContent = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 6px 9px;
+`
 
-	@media screen and (min-width: 992px) {
-		flex-basis: 60%;
-		padding: 12px 18px;
+export const ServiceTitle = styled.h2`
+	position: relative;
+	font-family: 'Fjalla One', sans-serif;
+	border-top: 2px solid var(--secondary-color);
+	width: 100%;
+	line-height: 1.2;
+	font-weight: 700;
+	font-size: 1.4rem;
+	letter-spacing: 0.04rem;
+	padding-top: 18px;
+	padding-right: 24px;
+	padding-bottom: 12px;
+	padding-left: 42px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 24px;
+		transform: translateY(-50%);
+		width: 8px;
+		height: 30px;
+		background: var(--secondary-color);
 	}
 `
 
-export const InfoText = styled.p`
+export const ServiceSubtitle = styled.h2`
+	font-family: 'Fjalla One', sans-serif;
+	width: 100%;
+	color: #333;
+	line-height: 1;
+	font-weight: 700;
+	font-size: 1rem;
+	letter-spacing: 0.04rem;
+	padding-top: 12px;
+	padding-right: 24px;
+	padding-bottom: 12px;
+	padding-left: 24px;
+`
+
+export const ServiceText = styled.p`
 	width: 100%;
 	font-weight: 500;
+	padding-top: 12px;
+	padding-right: 24px;
+	padding-bottom: 12px;
+	padding-left: 24px;
+`
+
+export const ServiceTableContainer = styled.div`
+	overflow-x: scroll;
+	margin: 0px 24px;
+	padding: 6px 0px;
+	display: grid;
+	place-items: center;
+
+	&::-webkit-scrollbar {
+		height: 16px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #000;
+		border-radius: 12px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: #222;
+	}
+
+	@media screen and (min-width: 501px) {
+		overflow-x: hidden;
+	}
+`
+
+export const ServiceTable = styled.table`
+	padding: 12px 0;
+	color: #fff;
+	border-collapse: collapse;
+	table,
+	td,
+	th {
+		border: 1px solid #fff;
+		background: var(--secondary-color);
+	}
+
+	& > tr {
+		& > th {
+			font-size: 0.8rem;
+			padding: 8px 12px;
+			text-align: left;
+		}
+		& > td {
+			padding: 8px 12px;
+			font-size: 0.8rem;
+			text-align: left;
+		}
+		& > td:nth-child(1) {
+			min-width: 100px;
+		}
+		& > td:nth-child(2),
+		& > td:nth-child(2) {
+			min-width: 100px;
+		}
+	}
+`
+
+export const ServiceSubText = styled.p`
+	width: 100%;
+	color: var(--secondary-color);
+	font-size: 0.9rem;
+	font-weight: 500;
+	padding-top: 12px;
+	padding-right: 24px;
+	padding-bottom: 12px;
+	padding-left: 24px;
+
+	& > ul {
+		padding-left: 24px;
+	}
 `
 
 export const InfoImageContainer = styled.div`
@@ -120,7 +258,7 @@ export const InfoImage = styled.img`
 export const ServicesLink = styled(Link)`
 	display: block;
 	align-self: flex-start;
-	width: 100%;
+	width: ${({ large }) => (large ? '250px' : '200px')};
 	font-weight: 600;
 	letter-spacing: 0.04rem;
 	text-decoration: none;
@@ -129,22 +267,12 @@ export const ServicesLink = styled(Link)`
 	background: var(--secondary-color);
 	border-radius: 6px;
 	padding: 6px 12px;
-	margin-top: 12px;
+	margin: 24px;
 	transition: all 0.1s ease-in;
+`
 
-	@media screen and (min-width: 501px) {
-		width: 60%;
-		max-width: 250px;
-		margin-left: 9px;
-	}
-
-	@media screen and (min-width: 992px) {
-		margin-left: 18px;
-	}
-
-	&:hover {
-		transform: scale(0.98);
-	}
+export const BarbellIcon = styled(IoBarbellOutline)`
+	margin-left: 12px;
 `
 
 const PricingScreen = () => {
@@ -155,10 +283,234 @@ const PricingScreen = () => {
 					<ServicesContainer>
 						<ServicesHeading>Unsere Angebote</ServicesHeading>
 						<ServicesWrapper>
+							<ServiceType>Tennistraining</ServiceType>
 							<Service>
 								<ServiceTargetGroup>
-									Anfänger
+									Zielgruppe: Anfänger
 								</ServiceTargetGroup>
+								<ServiceContent>
+									<ServiceTitle>
+										Schnuppertraining
+									</ServiceTitle>
+									<ServiceSubtitle>
+										30 Minuten Schnuppern für nur 10€!
+									</ServiceSubtitle>
+									<ServiceText>
+										Entdecken Sie, wie viel Spaß Tennis
+										spielen machen kann! Sie möchten mal
+										reinschnuppern? Bitte kontaktieren Sie
+										unseren Chef Trainer Ajdin Yasar.
+										Besuchen Sie uns auf unserer
+										wunderschönen Tennisanlage.
+									</ServiceText>
+									<ServiceSubText>
+										Tennischläger und Tennisbälle werden
+										kostenlos für das Schnuppertraining
+										gestellt
+									</ServiceSubText>
+								</ServiceContent>
+							</Service>
+							<Service>
+								<ServiceTargetGroup>
+									Zielgruppe: Anfänger, Fortgeschrittene,
+									Leistungssportler
+								</ServiceTargetGroup>
+								<ServiceContent>
+									<ServiceTitle>Trainerstunden</ServiceTitle>
+									<ServiceSubtitle>
+										Einzeltraining
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Gruppentraining (2-4 Personen)
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Mannschaftstraining (5-8 Personen)
+									</ServiceSubtitle>
+									<ServiceText>
+										Sie sind auf der Suche nach einem
+										Trainer für die neue Saison? Buchen Sie
+										Ihre Trainingsstunden zu folgenden
+										Bedingungen:
+									</ServiceText>
+									<ServiceTableContainer>
+										<ServiceTable>
+											<tr>
+												<th>Trainer</th>
+												<th>
+													Einzel- und Gruppentraining
+												</th>
+												<th>Mannschaftstraining</th>
+											</tr>
+											<tr>
+												<td>Ajdin Yasar</td>
+												<td>45,- EUR/Stunde</td>
+												<td>55,- EUR/Stunde</td>
+											</tr>
+											<tr>
+												<td>Trainer der Akademie</td>
+												<td>33,- EUR/Stunde</td>
+												<td>33,- EUR/Stunde</td>
+											</tr>
+										</ServiceTable>
+									</ServiceTableContainer>
+									<ServiceSubText>
+										<ul>
+											<li>
+												Bei Gruppen- oder
+												Mannschaftstraining sind die
+												Kosten entsprechend der
+												Personenanzahl zu dividieren.
+											</li>
+											<li>
+												Das Training findet nicht in den
+												Baden-Württembergischen
+												Schulferien sowie an Feiertagen
+												statt!
+											</li>
+											<li>
+												Die genannten Kosten umfassen
+												nur das Trainerhonorar. In der
+												Wintersaison fallen zusätzliche
+												Kosten für Halle inkl. Licht an.
+											</li>
+										</ul>
+									</ServiceSubText>
+									<ServicesLink to="/anmeldung">
+										Zur Anmeldung
+									</ServicesLink>
+								</ServiceContent>
+							</Service>
+
+							<ServiceType>Tennis Camps</ServiceType>
+							<Service>
+								<ServiceContent>
+									<ServiceTargetGroup>
+										Zielgruppe: Kinder
+									</ServiceTargetGroup>
+									<ServiceTitle>
+										Tennis Camps für Kinder
+									</ServiceTitle>
+									<ServiceText>
+										Damit Sie intensiver, vollumfänglich und
+										regelmäßig trainieren können, bietet die
+										Academy in den Baden-Württembergischen
+										Schulferien diverse Tenniscamps an:
+									</ServiceText>
+									<ServiceSubtitle>
+										Oster-Camp
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Pfingst-Camp
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Sommer-Camp I (erste Ferienwoche)
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Sommer-Camp II (letzte Ferienwoche)
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Herbst-Camp
+									</ServiceSubtitle>
+									<ServiceSubText>
+										Die Tenniscamps sind auf Kinder zwischen
+										4 und 10 Jahren ausgerichtet.
+									</ServiceSubText>
+									<ServicesLink to="/camps">
+										Mehr Erfahren
+									</ServicesLink>
+								</ServiceContent>
+							</Service>
+
+							<ServiceType>
+								Schlägerbespannung und mehr
+							</ServiceType>
+							<Service>
+								<ServiceContent>
+									<ServiceTitle>
+										Ausrüstung & Bespannungsservice
+									</ServiceTitle>
+									<ServiceText>
+										Die Tennis Academy Yasar bietet
+										sorgfältige Tennisschläger- und
+										Saitenbetreuung und einen profesionellen
+										Bespannungsservice. Wir sind
+										Bespannungspartner von mehreren Profis.
+										Verschiedene Tennissaiten und
+										Griffbänder stehen bei uns zur Auswahl.
+									</ServiceText>
+									<ServiceSubtitle>
+										Bespannungspreis ab 10,- Eur
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Lizenzierter Besaiter und
+										Ansprechpartner: Ajdin Yasar
+									</ServiceSubtitle>
+									<ServiceSubtitle>
+										Tennisausrüstung wird zum Verkauf
+										angeboten
+									</ServiceSubtitle>
+								</ServiceContent>
+							</Service>
+
+							<ServiceType>Fitness</ServiceType>
+							<Service>
+								<ServiceContent>
+									<ServiceTargetGroup>
+										Zielgruppe: Anfänger, Fortgeschrittene,
+										Leistungssportler
+									</ServiceTargetGroup>
+									<ServiceTitle>
+										Athletiktraining
+										<BarbellIcon />
+									</ServiceTitle>
+									<ServiceText>
+										Bei der Tennis Academy Yasar besteht die
+										Möglichkeit, die eigene Physis zu
+										verbessern und damit zugleich auch neben
+										dem Tennisplatz für ausreichend Bewegung
+										zu sorgen. Mit dem Academy Fitness
+										Trainer bietet wir exklusiv für die
+										Spielerinnen und Spieler der Tennis
+										Academy Yasar sowohl Einzel- als auch
+										Gruppentraining auf der Anlage des TC
+										Stockach an. Profesionelle Ausrüstung
+										ist vorhanden.
+									</ServiceText>
+									<ServicesLink to="/athletiktraining">
+										Mehr Erfahren
+									</ServicesLink>
+								</ServiceContent>
+							</Service>
+
+							<ServiceType>
+								Angebote für Kindergärten, Schulen und Vereine
+							</ServiceType>
+							<Service>
+								<ServiceContent>
+									<ServiceTitle>
+										Kindergärten und Schulen
+									</ServiceTitle>
+									<ServiceText>
+										Eine Kooperation mit Kindergärten und
+										Schulen wird in Absprache mit der Tennis
+										Academy Yasar und ihren erfahrenen
+										Trainern vorbereitet und praktisch
+										Umgesetzt. Unser Ziel ist es, den
+										Kindern und Jugendlichen mit viel Spaß
+										und dem erforderlichen Know-how
+										möglichst schnell die Fähigkeit zum
+										eigenständigen Spiel zu vermitteln. Wir
+										suchen gerne neue Kontakte zu
+										Kindergärten und Schulen!
+									</ServiceText>
+									<ServiceSubtitle>
+										Für Fragen stehen die Academy und TC
+										Stockach gerne zur Verfügung
+									</ServiceSubtitle>
+									<ServicesLink to="/kontakt" large>
+										Kontaktieren Sie uns!
+									</ServicesLink>
+								</ServiceContent>
 							</Service>
 						</ServicesWrapper>
 					</ServicesContainer>
