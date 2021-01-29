@@ -102,6 +102,7 @@ export const InfoText = styled.p`
 
 export const InfoImageContainer = styled.div`
 	display: grid;
+	width: 100%;
 	place-items: center;
 	align-self: center;
 	border-radius: 10px;

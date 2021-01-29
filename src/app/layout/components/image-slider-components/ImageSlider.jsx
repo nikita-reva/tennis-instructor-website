@@ -12,7 +12,7 @@ import {
 	SliderImageText,
 } from './ImageSlider.elements.jsx'
 
-const ImageSlider = ({ slides, incrementRate }) => {
+const ImageSlider = ({ slides, incrementRate, aspectRatio }) => {
 	const [current, setCurrent] = useState(0)
 	const [width, setWidth] = useState(0)
 	const length = slides.length
@@ -56,7 +56,7 @@ const ImageSlider = ({ slides, incrementRate }) => {
 
 	return (
 		<SliderContainer>
-			<Slider ref={containerElement} hgt={`${(width * 2) / 3}px`}>
+			<Slider ref={containerElement} hgt={`${width / aspectRatio}px`}>
 				<LeftArrow
 					size={`${width > 500 ? 0.06 * width : 0.08 * width}px`}
 					pdl={`${0.03 * width}px`}

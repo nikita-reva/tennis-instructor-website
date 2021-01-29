@@ -1,5 +1,5 @@
 export const HeroHomeScreen = {
-	img: require('./images/hero.png').default,
+	img: require('../images/hero.png').default,
 	sloganMedium: 'Training Sucks?',
 	sloganBig: 'Try Losing!',
 	subtext: 'Melden Sie sich jetzt für die kommende Saison an',
@@ -117,7 +117,7 @@ export const InfosData = [
 		title: 'Beginn der Trainingssaison',
 		text:
 			'Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder!',
-		image: require('./images/img1.JPG').default,
+		image: require('../images/img1.JPG').default,
 		alt: 'tennis',
 		linkTo: '/anmeldung',
 		linkText: 'Zur Anmeldung',
@@ -126,8 +126,20 @@ export const InfosData = [
 		title: 'Beginn der Trainingssaison',
 		text:
 			'Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder!',
-		image: require('./images/img1.JPG').default,
-		alt: 'tennis',
+		imageSlides: [
+			{
+				image: require('../images/img2.JPG').default,
+				alt: 'Jo-Wilfried Tsonga',
+			},
+			{
+				image: require('../images/img3.JPG').default,
+				alt: 'Nick Kyrgios',
+			},
+			{
+				image: require('../images/img4.jpeg').default,
+				alt: 'Bernard Tomic',
+			},
+		],
 		linkTo: '/anmeldung',
 		linkText: 'Zur Anmeldung',
 	},
@@ -135,7 +147,7 @@ export const InfosData = [
 		title: 'Beginn der Trainingssaison',
 		text:
 			'Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder! Das Training beginnt wieder!',
-		image: require('./images/img1.JPG').default,
+		image: require('../images/img1.JPG').default,
 		alt: 'tennis',
 		linkTo: '/anmeldung',
 		linkText: 'Zur Anmeldung',

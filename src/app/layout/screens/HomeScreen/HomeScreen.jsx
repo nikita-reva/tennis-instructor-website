@@ -74,6 +74,7 @@ const HomeScreen = () => {
 						<ImageSlider
 							slides={ImageSliderData}
 							incrementRate={4000}
+							aspectRatio={3 / 2}
 						/>
 					</ImageSliderContainer>
 				</ContentSection>

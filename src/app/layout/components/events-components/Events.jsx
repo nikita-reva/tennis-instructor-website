@@ -35,9 +35,11 @@ const Events = ({ events }) => {
 								{event.description}
 							</EventDescription>
 						</EventInfo>
-						<EventLink to={event.linkTo}>
-							{event.linkText}
-						</EventLink>
+						{event.linkTo && (
+							<EventLink to={event.linkTo}>
+								{event.linkText}
+							</EventLink>
+						)}
 					</Event>
 				))}
 			</EventsWrapper>
