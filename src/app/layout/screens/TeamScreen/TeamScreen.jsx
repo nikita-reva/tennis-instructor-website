@@ -7,6 +7,12 @@ import Video from '../videos/video1.mp4'
 import Bild1 from '../images/Steckbrief foto 2.JPG'
 import Bild2 from '../images/Steinmann.jpg'
 import ReactPlayer from 'react-player'
+import styled from 'styled-components'
+
+export const Faerben = styled.span`
+    color: var(--text-color);
+    font-weight: bold;
+`
 
 const TeamScreen = () => {
     return (
@@ -77,11 +83,13 @@ const TeamScreen = () => {
                             <p>
                                 Als Trainer im Leistungsbereich war Ajdin in den
                                 USA, Kanada, Deutschland und vielen anderen
-                                Ländern unterwegs. Tennis Profis wie, Bernard
-                                Tomic und Feliciano Lopez hat Ajdin im Training
-                                unterstützt und auch bei den Turnieren
-                                mitgewirkt. In Kanada wurden mehrere Top
-                                5-Jugendspieler ebenfalls von ihm betreut.
+                                Ländern unterwegs. Tennis Profis wie,{' '}
+                                <Faerben>Bernard Tomic</Faerben> und{' '}
+                                <Faerben>Feliciano Lopez</Faerben> hat Ajdin im
+                                Training unterstützt und auch bei den Turnieren
+                                mitgewirkt. In Kanada wurden mehrere{' '}
+                                <Faerben>Top 5-Jugendspieler</Faerben> ebenfalls
+                                von ihm betreut.
                             </p>
                             <p>
                                 2013 ging Ajdin erneut in die Staaten und fing
@@ -96,8 +104,9 @@ const TeamScreen = () => {
                                 Univeristy in Miami Florida gespielt und bereits
                                 im Jahr 2015, sich mit seiner Mannschaft den
                                 größten Titel der USA geholt. Damit waren sie
-                                die in den USA die Champions der Saison mit
-                                29-0!
+                                die in den USA die{' '}
+                                <Faerben>Champions der Saison</Faerben> mit
+                                einem Endstand von 29-0!
                             </p>
                             <p>
                                 Ajdin freut sich auf eine neue Reise und auf

@@ -53,34 +53,34 @@ const StyledFormWrapper = styled.div`
 `
 
 const StyledHeader = styled.div`
-	grid-area: heading;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 10px 0;
-	position: relative;
-	top: 10px;
-	z-index: -1;
-	height: 85px;
-	background-image: linear-gradient(
-		to top,
-		#ff723b 0%,
-		var(--secondary-color) 84%
-	);
-	color: var(--accent-color);
-	border-radius: 10px 10px 0 0;
-	& > h2 {
-		text-align: center;
-		width: 100%;
-		line-height: 1.4em;
-	}
-	& > p {
-		text-align: center;
-		width: 80%;
-		line-height: 1em;
-		font-size: clamp(0.75rem, 2vw, 1rem);
-	}
+    grid-area: heading;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    top: 10px;
+    z-index: -1;
+    height: 85px;
+    background-image: linear-gradient(
+        to top,
+        #ff723b 0%,
+        var(--secondary-color) 84%
+    );
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    & > h2 {
+        text-align: center;
+        width: 100%;
+        line-height: 1.4em;
+    }
+    & > p {
+        text-align: center;
+        width: 80%;
+        line-height: 1em;
+        font-size: clamp(0.75rem, 2vw, 1rem);
+    }
 `
 
 const StyledForm = styled.form`
@@ -259,332 +259,332 @@ const InputNames = {
 }
 
 const EnrolmentScreen = () => {
-	const [state, setState] = useState(initialState)
-	const [error, setError] = useState('')
-	const [success, setSuccess] = useState('')
-	const missingFields = []
+    const [state, setState] = useState(initialState)
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+    const missingFields = []
 
-	function sendEmail(e) {
-		e.preventDefault()
-		let missing = ''
+    function sendEmail(e) {
+        e.preventDefault()
+        let missing = ''
 
-		for (let key in state) {
-			if (state[key] === '') {
-				missingFields.push(key)
-				missing = missing
-					? missing + ', ' + InputNames[key]
-					: InputNames[key]
-			}
-		}
+        for (let key in state) {
+            if (state[key] === '') {
+                missingFields.push(key)
+                missing = missing
+                    ? missing + ', ' + InputNames[key]
+                    : InputNames[key]
+            }
+        }
 
-		if (missingFields.length !== 0) {
-			setError(
-				`Folgende Felder müssen noch ausgefüllt werden: ${missing}`
-			)
-			setSuccess('')
-			return
-		}
+        if (missingFields.length !== 0) {
+            setError(
+                `Folgende Felder müssen noch ausgefüllt werden: ${missing}`
+            )
+            setSuccess('')
+            return
+        }
 
-		setError('')
-		const regex = /^\w+([-+.']\w+)*@\w+([-.']\w+)*\.\w+([-.']\w+)*$/
-		const test = regex.test(state.email)
-		console.log(test)
-		setSuccess(
-			'Ihre Anfrage wurde versendet! Sie erhalten in Kürze eine Antwort.'
-		)
+        setError('')
+        const regex = /^\w+([-+.']\w+)*@\w+([-.']\w+)*\.\w+([-.']\w+)*$/
+        const test = regex.test(state.email)
+        console.log(test)
+        setSuccess(
+            'Ihre Anfrage wurde versendet! Sie erhalten in Kürze eine Antwort.'
+        )
 
-		setState(initialState)
+        setState(initialState)
 
-		emailjs
-			.sendForm(
-				'service_do95f1d',
-				'template_v4jvoe3',
-				e.target,
-				'user_JsusNz0E8HNccYZdyYeKy'
-			)
-			.then(
-				(result) => {
-					console.log(result.text)
-				},
-				(error) => {
-					console.log(error.text)
-				}
-			)
-	}
+        emailjs
+            .sendForm(
+                'service_do95f1d',
+                'template_v4jvoe3',
+                e.target,
+                'user_JsusNz0E8HNccYZdyYeKy'
+            )
+            .then(
+                (result) => {
+                    console.log(result.text)
+                },
+                (error) => {
+                    console.log(error.text)
+                }
+            )
+    }
 
-	const handleInput = (e) => {
-		const inputName = e.currentTarget.name
-		const inputValue = e.currentTarget.value
+    const handleInput = (e) => {
+        const inputName = e.currentTarget.name
+        const inputValue = e.currentTarget.value
 
-		setState((prev) => ({ ...prev, [inputName]: inputValue }))
-	}
+        setState((prev) => ({ ...prev, [inputName]: inputValue }))
+    }
 
-	return (
-		<>
-			<ScreenContainer>
-				<ContentContainer>
-					<ContentSection>
-						<StyledFormWrapper>
-							<StyledHeader>
-								<h2>Anmeldung</h2>
-								<p>
-									Melden Sie sich jetzt verbindlich für die
-									Sommersaison 2021 an
-								</p>
-							</StyledHeader>
-							<StyledForm onSubmit={sendEmail}>
-								<StyledInputContainer>
-									<StyledInput
-										type="text"
-										name="firstName"
-										value={state.firstName}
-										onChange={handleInput}
-										placeholder="Vorname..."
-									/>
-									<StyledInput
-										type="text"
-										name="lastName"
-										value={state.lastName}
-										onChange={handleInput}
-										placeholder="Nachname..."
-									/>
-									<StyledInput
-										type="email"
-										name="email"
-										value={state.email}
-										onChange={handleInput}
-										placeholder="E-Mail-Adresse..."
-									/>
-									<StyledInput
-										type="text"
-										name="birthDate"
-										value={state.birthDate}
-										onChange={handleInput}
-										placeholder="Geburtsdatum..."
-									/>
-									<StyledInput
-										type="text"
-										name="address"
-										value={state.address}
-										onChange={handleInput}
-										placeholder="Straße/Hausnummer..."
-									/>
-									<StyledInput
-										type="text"
-										name="city"
-										value={state.city}
-										onChange={handleInput}
-										placeholder="PLZ/Wohnort..."
-									/>
-									<StyledInput
-										type="text"
-										name="phone"
-										value={state.phone}
-										onChange={handleInput}
-										placeholder="Festnetz..."
-									/>
-									<StyledInput
-										type="text"
-										name="mobile"
-										value={state.mobile}
-										onChange={handleInput}
-										placeholder="Mobil..."
-									/>
-								</StyledInputContainer>
-								<StyledFieldset fd="column">
-									<legend>Training</legend>
-									<label>
-										<input
-											type="radio"
-											value="Kinder / Jugendliche - Einzeltraining"
-											name="training"
-											checked={
-												state.training ===
-												'Kinder / Jugendliche - Einzeltraining'
-											}
-											onChange={handleInput}
-										/>
-										Kinder / Jugendliche - Einzeltraining
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="Kinder / Jugendliche - Mannschaftstraining"
-											name="training"
-											checked={
-												state.training ===
-												'Kinder / Jugendliche - Mannschaftstraining'
-											}
-											onChange={handleInput}
-										/>
-										Kinder / Jugendliche -
-										Mannschaftstraining
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="Erwachsene - Einzeltraining"
-											name="training"
-											checked={
-												state.training ===
-												'Erwachsene - Einzeltraining'
-											}
-											onChange={handleInput}
-										/>
-										Erwachsene - Einzeltraining
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="Erwachsene - Gruppentraining"
-											name="training"
-											checked={
-												state.training ===
-												'Erwachsene - Gruppentraining'
-											}
-											onChange={handleInput}
-										/>
-										Erwachsene - Gruppentraining
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="Erwachsene - Mannschaftstraining Aktive"
-											name="training"
-											checked={
-												state.training ===
-												'Erwachsene - Mannschaftstraining Aktive'
-											}
-											onChange={handleInput}
-										/>
-										Erwachsene - Mannschaftstraining Aktive
-									</label>
-								</StyledFieldset>
-								<StyledFieldset>
-									<legend>Gruppe</legend>
-									<label>
-										<input
-											type="radio"
-											value="2er-Gruppe"
-											name="group"
-											checked={
-												state.group === '2er-Gruppe'
-											}
-											onChange={handleInput}
-										/>
-										2er Gruppe
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="3er-Gruppe"
-											name="group"
-											checked={
-												state.group === '3er-Gruppe'
-											}
-											onChange={handleInput}
-										/>
-										3er-Gruppe
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="4er-Gruppe"
-											name="group"
-											checked={
-												state.group === '4er-Gruppe'
-											}
-											onChange={handleInput}
-										/>
-										4er-Gruppe
-									</label>
-								</StyledFieldset>
-								<StyledFieldset>
-									<legend>Dauer</legend>
-									<label>
-										<input
-											type="radio"
-											value="60 Minuten"
-											name="duration"
-											checked={
-												state.duration === '60 Minuten'
-											}
-											onChange={handleInput}
-										/>
-										60 Minuten
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="90 Minuten"
-											name="duration"
-											checked={
-												state.duration === '90 Minuten'
-											}
-											onChange={handleInput}
-										/>
-										90 Minuten
-									</label>
-									<label>
-										<input
-											type="radio"
-											value="120 Minuten"
-											name="duration"
-											checked={
-												state.duration === '120 Minuten'
-											}
-											onChange={handleInput}
-										/>
-										120 Minuten
-									</label>
-								</StyledFieldset>
-								<label htmlFor="Message"></label>
-								<StyledTextarea
-									name="message"
-									value={state.message}
-									onChange={handleInput}
-									placeholder="Nachricht/Terminwünsche"
-								/>
+    return (
+        <>
+            <ScreenContainer>
+                <ContentContainer>
+                    <ContentSection>
+                        <StyledFormWrapper>
+                            <StyledHeader>
+                                <h2>Anmeldung</h2>
+                                <p>
+                                    Melden Sie sich jetzt verbindlich für die
+                                    Sommersaison 2021 an
+                                </p>
+                            </StyledHeader>
+                            <StyledForm onSubmit={sendEmail}>
+                                <StyledInputContainer>
+                                    <StyledInput
+                                        type="text"
+                                        name="firstName"
+                                        value={state.firstName}
+                                        onChange={handleInput}
+                                        placeholder="Vorname..."
+                                    />
+                                    <StyledInput
+                                        type="text"
+                                        name="lastName"
+                                        value={state.lastName}
+                                        onChange={handleInput}
+                                        placeholder="Nachname..."
+                                    />
+                                    <StyledInput
+                                        type="email"
+                                        name="email"
+                                        value={state.email}
+                                        onChange={handleInput}
+                                        placeholder="E-Mail-Adresse..."
+                                    />
+                                    <StyledInput
+                                        type="text"
+                                        name="birthDate"
+                                        value={state.birthDate}
+                                        onChange={handleInput}
+                                        placeholder="Geburtsdatum..."
+                                    />
+                                    <StyledInput
+                                        type="text"
+                                        name="address"
+                                        value={state.address}
+                                        onChange={handleInput}
+                                        placeholder="Straße/Hausnummer..."
+                                    />
+                                    <StyledInput
+                                        type="text"
+                                        name="city"
+                                        value={state.city}
+                                        onChange={handleInput}
+                                        placeholder="PLZ/Wohnort..."
+                                    />
+                                    <StyledInput
+                                        type="text"
+                                        name="phone"
+                                        value={state.phone}
+                                        onChange={handleInput}
+                                        placeholder="Festnetz..."
+                                    />
+                                    <StyledInput
+                                        type="text"
+                                        name="mobile"
+                                        value={state.mobile}
+                                        onChange={handleInput}
+                                        placeholder="Mobil..."
+                                    />
+                                </StyledInputContainer>
+                                <StyledFieldset fd="column">
+                                    <legend>Training</legend>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="Kinder / Jugendliche - Einzeltraining"
+                                            name="training"
+                                            checked={
+                                                state.training ===
+                                                'Kinder / Jugendliche - Einzeltraining'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        Kinder / Jugendliche - Einzeltraining
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="Kinder / Jugendliche - Mannschaftstraining"
+                                            name="training"
+                                            checked={
+                                                state.training ===
+                                                'Kinder / Jugendliche - Mannschaftstraining'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        Kinder / Jugendliche -
+                                        Mannschaftstraining
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="Erwachsene - Einzeltraining"
+                                            name="training"
+                                            checked={
+                                                state.training ===
+                                                'Erwachsene - Einzeltraining'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        Erwachsene - Einzeltraining
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="Erwachsene - Gruppentraining"
+                                            name="training"
+                                            checked={
+                                                state.training ===
+                                                'Erwachsene - Gruppentraining'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        Erwachsene - Gruppentraining
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="Erwachsene - Mannschaftstraining Aktive"
+                                            name="training"
+                                            checked={
+                                                state.training ===
+                                                'Erwachsene - Mannschaftstraining Aktive'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        Erwachsene - Mannschaftstraining Aktive
+                                    </label>
+                                </StyledFieldset>
+                                <StyledFieldset>
+                                    <legend>Gruppe</legend>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="2er-Gruppe"
+                                            name="group"
+                                            checked={
+                                                state.group === '2er-Gruppe'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        2er Gruppe
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="3er-Gruppe"
+                                            name="group"
+                                            checked={
+                                                state.group === '3er-Gruppe'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        3er-Gruppe
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="4er-Gruppe"
+                                            name="group"
+                                            checked={
+                                                state.group === '4er-Gruppe'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        4er-Gruppe
+                                    </label>
+                                </StyledFieldset>
+                                <StyledFieldset>
+                                    <legend>Dauer</legend>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="60 Minuten"
+                                            name="duration"
+                                            checked={
+                                                state.duration === '60 Minuten'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        60 Minuten
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="90 Minuten"
+                                            name="duration"
+                                            checked={
+                                                state.duration === '90 Minuten'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        90 Minuten
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            value="120 Minuten"
+                                            name="duration"
+                                            checked={
+                                                state.duration === '120 Minuten'
+                                            }
+                                            onChange={handleInput}
+                                        />
+                                        120 Minuten
+                                    </label>
+                                </StyledFieldset>
+                                <label htmlFor="Message"></label>
+                                <StyledTextarea
+                                    name="message"
+                                    value={state.message}
+                                    onChange={handleInput}
+                                    placeholder="Nachricht/Terminwünsche"
+                                />
 
-								{error && (
-									<StyledError>
-										<p>{error}</p>
-									</StyledError>
-								)}
-								{success && (
-									<StyledSuccess>
-										<p>{success}</p>
-									</StyledSuccess>
-								)}
-								<StyledButton type="submit">
-									Anmeldung absenden
-									<i className="fas fa-chevron-right"></i>
-								</StyledButton>
-								<ContainerHinweis>
-									<ContainerHinweisSchrift>
-										Durch das Absenden der
-										Trainingsanmeldung, wird die Anmeldung
-										für die gesamte Sommersaison 2021
-										verbindlich. Bei Krankheit /
-										Verhinderung sind die Trainingskosten
-										dennoch fällig. Es steht der Spielerin /
-										dem Spieler jedoch frei, für einen
-										Ersatz zu sorgen, der die Stunde /
-										Kosten übernimmt.
-									</ContainerHinweisSchrift>
-								</ContainerHinweis>
-							</StyledForm>
-							<StyledLink>
-								<Link to="anmeldung/anmeldungsformular">
-									Anmeldungsformular als PDF herunterladen /
-									ausdrucken
-								</Link>
-							</StyledLink>
-						</StyledFormWrapper>
-					</ContentSection>
-				</ContentContainer>
-			</ScreenContainer>
-		</>
-	)
+                                {error && (
+                                    <StyledError>
+                                        <p>{error}</p>
+                                    </StyledError>
+                                )}
+                                {success && (
+                                    <StyledSuccess>
+                                        <p>{success}</p>
+                                    </StyledSuccess>
+                                )}
+                                <StyledButton type="submit">
+                                    <b> Anmeldung absenden</b>
+                                    <i className="fas fa-chevron-right"></i>
+                                </StyledButton>
+                                <ContainerHinweis>
+                                    <ContainerHinweisSchrift>
+                                        Durch das Absenden der
+                                        Trainingsanmeldung, wird die Anmeldung
+                                        für die gesamte Sommersaison 2021
+                                        verbindlich. Bei Krankheit /
+                                        Verhinderung sind die Trainingskosten
+                                        dennoch fällig. Es steht der Spielerin /
+                                        dem Spieler jedoch frei, für einen
+                                        Ersatz zu sorgen, der die Stunde /
+                                        Kosten übernimmt.
+                                    </ContainerHinweisSchrift>
+                                </ContainerHinweis>
+                            </StyledForm>
+                            <StyledLink>
+                                <Link to="anmeldung/anmeldungsformular">
+                                    Anmeldungsformular als PDF herunterladen /
+                                    ausdrucken
+                                </Link>
+                            </StyledLink>
+                        </StyledFormWrapper>
+                    </ContentSection>
+                </ContentContainer>
+            </ScreenContainer>
+        </>
+    )
 }
 export default EnrolmentScreen
