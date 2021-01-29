@@ -12,7 +12,7 @@ import {
 	SliderImageText,
 } from './ImageSlider.elements.jsx'
 
-const ImageSlider = ({ slides, incrementRate, aspectRatio }) => {
+const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 	const [current, setCurrent] = useState(0)
 	const [width, setWidth] = useState(0)
 	const length = slides.length
@@ -60,11 +60,13 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio }) => {
 				<LeftArrow
 					size={`${width > 500 ? 0.06 * width : 0.08 * width}px`}
 					pdl={`${0.03 * width}px`}
+					black={blackNav}
 					onClick={prevSlide}
 				/>
 				<RightArrow
 					size={`${width > 500 ? 0.06 * width : 0.08 * width}px`}
 					pdr={`${0.03 * width}px`}
+					black={blackNav}
 					onClick={nextSlide}
 				/>
 				{slides.map((slide, index) => {
@@ -94,6 +96,7 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio }) => {
 						return (
 							<SliderNavCircle
 								className={index === current && 'active'}
+								black={blackNav}
 								key={slide.image}
 								onClick={() => {
 									setSlide(index)

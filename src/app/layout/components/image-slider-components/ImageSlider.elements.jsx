@@ -31,7 +31,7 @@ const Arrow = css`
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: ${({ size }) => (size ? size : 'clamp(2rem, 5vw, 3rem)')};
-	color: #fff;
+	color: ${({ black }) => (black ? '#111' : '#eee')};
 	z-index: 10;
 	transition: opacity 0.4s ease;
 	opacity: 0.2;
@@ -102,7 +102,7 @@ export const SliderNavCircle = styled.div`
 	width: 10px;
 	border-radius: 50%;
 	margin: 0 4px;
-	background: #fff;
+	background: ${({ black }) => (black ? '#111' : '#eee')};
 	cursor: pointer;
 	opacity: 0.6;
 	transform: translateX(-50%);
