@@ -70,7 +70,7 @@ const StyledHeader = styled.div`
         #ff723b 0%,
         var(--secondary-color) 84%
     );
-    color: var(--accent-color);
+    color: #fff;
     border-radius: 10px 10px 0 0;
     & > h2 {
         text-align: center;
@@ -572,7 +572,7 @@ const EnrolmentScreen = () => {
                                     </StyledSuccess>
                                 )}
                                 <StyledButton type="submit">
-                                    Anmeldung absenden
+                                    <b> Anmeldung absenden</b>
                                     <i className="fas fa-chevron-right"></i>
                                 </StyledButton>
                                 <ContainerHinweis>

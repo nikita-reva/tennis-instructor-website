@@ -22,17 +22,13 @@ export const ContainerAthMain = styled.div`
     /* border: 2px solid purple; */
     width: 100%;
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    place-items: center;
     gap: 2%;
-
-    @media screen and (max-width: 1080px) {
-        flex-direction: column;
-    }
 `
 export const ContainerAthInfo = styled.div`
     /* border: 2px solid red; */
-    width: 60%;
+    width: 80%;
     @media screen and (max-width: 1080px) {
         width: 100%;
         padding-bottom: 20px;
@@ -69,6 +65,9 @@ export const AthWindowText = styled.div`
 export const AthWindowTextP = styled.p`
     margin: 12px 0;
     text-align: justify;
+    @media screen and (max-width: 991px) {
+        text-align: left;
+    }
 `
 export const Faerben = styled.span`
     color: var(--text-color);
@@ -76,16 +75,17 @@ export const Faerben = styled.span`
 `
 export const ContainerAthBild = styled.span`
     /* border: 2px solid cyan; */
-    width: 40%;
+    width: 65%;
+    margin: auto;
     display: grid;
     place-items: center;
-    @media screen and (max-width: 1080px) {
-        width: 100%;
-        padding: 0 50px;
-    }
+    padding: 10px 0;
+
     @media screen and (max-width: 991px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 760px) {
         width: 100%;
-        padding: 0;
     }
 `
 
@@ -164,11 +164,15 @@ const AthleticTrainingScreen = () => {
                                         info@tennis-yasar.de
                                     </a>
                                 </AthWindowTextP>
+                                <ContainerAthBild>
+                                    <img
+                                        src={Bild1}
+                                        alt="Athletik"
+                                        width="100%"
+                                    />
+                                </ContainerAthBild>
                             </AthWindowText>
                         </ContainerAthInfo>
-                        <ContainerAthBild>
-                            <img src={Bild1} alt="Athletik" width="100%" />
-                        </ContainerAthBild>
                     </ContainerAthMain>
                 </ContentSection>
             </ContentContainer>
