@@ -7,23 +7,48 @@ export const NewsContainer = styled.div`
 	flex-direction: column;
 `
 
-export const NewsHeading = styled.h1``
-
 export const NewsWrapper = styled.div``
 
 export const NewsArticle = styled.article`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+
+	&:nth-child(odd) {
+		background: var(--secondary-color);
+	}
+
+	&:nth-child(even) {
+		background: var(--primary-color);
+	}
+
+	@media screen and (min-width: 992px) {
+		flex-direction: row;
+	}
 `
 
-export const NewsArticleContent = styled.div``
+export const NewsArticleContent = styled.div`
+	display: flex;
+	flex-direction: column;
 
-export const NewsArticleTitle = styled.h2``
-export const NewsArticleSubTitle = styled.h3``
-export const NewsArticleDate = styled.h4``
+	@media screen and (min-width: 992px) {
+		flex: 1;
+	}
+`
 
-export const NewsArticleText = styled.p``
+export const NewsArticleTitle = styled.h2`
+	color: #fff;
+`
+export const NewsArticleSubTitle = styled.h3`
+	color: #fff;
+`
+export const NewsArticleDate = styled.h4`
+	color: #fff;
+`
+
+export const NewsArticleText = styled.p`
+	color: #fff;
+`
 
 export const NewsArticleImageContainer = styled.div``
 
@@ -34,5 +59,7 @@ export const NewsArticleImage = styled.img`
 export const NewsArticleLink = styled(Link)``
 
 export const NewsArticleImageSliderContainer = styled.div`
-	max-width: 360px;
+	@media screen and (min-width: 992px) {
+		flex: 1;
+	}
 `

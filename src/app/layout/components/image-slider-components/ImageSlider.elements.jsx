@@ -13,7 +13,6 @@ export const Slider = styled.div`
 	max-width: 960px;
 	margin: 0 auto;
 	height: ${({ hgt }) => (hgt ? hgt : 'calc(80vw * (2 / 3))')};
-	max-height: 640px;
 	border-radius: 15px;
 	overflow: hidden;
 	display: flex;

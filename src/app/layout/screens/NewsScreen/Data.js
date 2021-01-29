@@ -18,15 +18,15 @@ export const NewsData = [
 		linkText: 'Zur Anmeldung',
 		imageSlides: [
 			{
-				image: require('../images/img1.JPG').default,
+				image: require('../images/news1.jpg').default,
 				alt: 'tennis',
 			},
 			{
-				image: require('../images/img2.JPG').default,
+				image: require('../images/news2.jpg').default,
 				alt: 'tennis',
 			},
 			{
-				image: require('../images/img3.JPG').default,
+				image: require('../images/news3.jpg').default,
 				alt: 'tennis',
 			},
 		],
