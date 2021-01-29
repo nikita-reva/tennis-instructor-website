@@ -8,50 +8,48 @@ import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 
 const sharedStyles = css`
-    background-color: #eee;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-sizing: border-box;
+	background-color: #eee;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	padding: 20px;
+	box-sizing: border-box;
 `
 
 const StyledLink = styled.div`
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    margin: 20px 0;
-    background-image: linear-gradient(
-        to top,
-        #ff723b 0%,
-        var(--secondary-color) 84%
-    );
-
-    & > a {
-        display: grid;
-        place-items: center;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        text-decoration: none;
-        color: white;
-        transition: color 0.2s ease-in;
-
-        &:hover {
-            color: #f2fc6b;
-        }
-    }
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	margin: 20px 0;
+	background-image: linear-gradient(
+		to top,
+		#ff723b 0%,
+		var(--secondary-color) 84%
+	);
+	& > a {
+		display: grid;
+		place-items: center;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		text-decoration: none;
+		color: white;
+		transition: color 0.2s ease-in;
+		&:hover {
+			color: #f2fc6b;
+		}
+	}
 `
 
 const StyledFormWrapper = styled.div`
-    display: grid;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 10px;
-    max-width: 800px;
-    grid-template-areas:
-        'heading'
-        'main';
+	display: grid;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 10px;
+	max-width: 800px;
+	grid-template-areas:
+		'heading'
+		'main';
 `
 
 const StyledHeader = styled.div`
@@ -86,191 +84,178 @@ const StyledHeader = styled.div`
 `
 
 const StyledForm = styled.form`
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 40px;
-    background-color: var(--accent-color);
-    border-radius: 10px;
-    box-sizing: border-box;
-
-    @media screen and (max-width: 600px) {
-        padding: 20px;
-    }
+	grid-area: main;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 40px;
+	background-color: var(--accent-color);
+	border-radius: 10px;
+	box-sizing: border-box;
+	@media screen and (max-width: 600px) {
+		padding: 20px;
+	}
 `
 
 const StyledInputContainer = styled.div`
-    display: grid;
-    width: 100%;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    grid-template-rows: auto;
-
-    @media screen and (max-width: 600px) {
-        grid-template-columns: 1fr;
-    }
+	display: grid;
+	width: 100%;
+	place-items: center;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	grid-template-rows: auto;
+	@media screen and (max-width: 600px) {
+		grid-template-columns: 1fr;
+	}
 `
 
 const StyledInput = styled.input`
-    display: block;
-    width: 100%;
-    ${sharedStyles}
+	display: block;
+	width: 100%;
+	${sharedStyles}
 `
 
 const StyledTextarea = styled.textarea`
-    background-color: #eee;
-    width: 100%;
-    margin-top: 10px;
-    min-height: 100px;
-    resize: none;
-    ${sharedStyles}
+	background-color: #eee;
+	width: 100%;
+	margin-top: 10px;
+	min-height: 100px;
+	resize: none;
+	${sharedStyles}
 `
 
 const StyledButton = styled.button`
-    display: block;
-    text-align: center;
-    margin: 30px 0 auto;
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
-    font-size: 0.9rem;
-    border: 0;
-    border-radius: 5px;
-    height: 40px;
-    padding: 0 20px;
-    cursor: pointer;
-    box-sizing: border-box;
-    transition: all 0.5s ease;
-    & > i {
-        opacity: 0;
-        transition: all 0.2s ease-in;
-    }
-
-    &:hover {
-        & > i {
-            display: inline-block;
-            padding-left: 15px;
-            opacity: 1;
-        }
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    @media screen and (max-width: 600px) {
-        margin-top: 10px;
-        width: 100%;
-    }
+	display: block;
+	text-align: center;
+	margin: 30px 0 auto;
+	background-color: var(--secondary-color);
+	color: var(--accent-color);
+	font-size: 0.9rem;
+	border: 0;
+	border-radius: 5px;
+	height: 40px;
+	padding: 0 20px;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: all 0.5s ease;
+	& > i {
+		opacity: 0;
+		transition: all 0.2s ease-in;
+	}
+	&:hover {
+		& > i {
+			display: inline-block;
+			padding-left: 15px;
+			opacity: 1;
+		}
+	}
+	&:focus {
+		outline: none;
+	}
+	@media screen and (max-width: 600px) {
+		margin-top: 10px;
+		width: 100%;
+	}
 `
 
 const StyledFieldset = styled.fieldset`
-    border: 1px solid #ddd;
-    display: flex;
-    flex-direction: ${({ fd }) => (fd ? fd : 'row')};
-    flex-wrap: wrap;
-    width: 100%;
-    border-radius: 5px;
-    padding: 10px;
-
-    & {
-        margin-top: 10px;
-    }
-
-    legend {
-        padding: 0 10px;
-    }
-
-    label {
-        padding-right: 20px;
-
-        @media screen and (max-width: 600px) {
-            &:not(:last-child) {
-                padding: ${({ fd }) =>
-                    fd ? '0 20px 10px 0' : '0px 20px 0px 0px'};
-
-                border-bottom: ${({ fd }) =>
-                    fd ? '1px solid rgba(0, 0, 0, 0.1)' : 'none'};
-            }
-        }
-    }
-
-    input {
-        margin-right: 10px;
-    }
+	border: 1px solid #ddd;
+	display: flex;
+	flex-direction: ${({ fd }) => (fd ? fd : 'row')};
+	flex-wrap: wrap;
+	width: 100%;
+	border-radius: 5px;
+	padding: 10px;
+	& {
+		margin-top: 10px;
+	}
+	legend {
+		padding: 0 10px;
+	}
+	label {
+		padding-right: 20px;
+		@media screen and (max-width: 600px) {
+			&:not(:last-child) {
+				padding: ${({ fd }) =>
+					fd ? '0 20px 10px 0' : '0px 20px 0px 0px'};
+				border-bottom: ${({ fd }) =>
+					fd ? '1px solid rgba(0, 0, 0, 0.1)' : 'none'};
+			}
+		}
+	}
+	input {
+		margin-right: 10px;
+	}
 `
 
 const StyledError = styled.div`
-    border: 1px solid var(--secondary-color);
-    font-size: 0.8em;
-    border-radius: 5px;
-    padding: 5px 10px;
-    width: 100%;
-    color: var(--secondary-color);
-    background: #f0b7ab;
-    font-weight: 600;
-    margin-top: 10px;
+	border: 1px solid var(--secondary-color);
+	font-size: 0.8em;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+	color: var(--secondary-color);
+	background: #f0b7ab;
+	font-weight: 600;
+	margin-top: 10px;
 `
 
 const StyledSuccess = styled.div`
-    border: 1px solid #168131;
-    font-size: 0.8em;
-    border-radius: 5px;
-    padding: 5px 10px;
-    width: 100%;
-    color: #168131;
-    background: #89d19b;
-    font-weight: 600;
-    margin-top: 10px;
+	border: 1px solid #168131;
+	font-size: 0.8em;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+	color: #168131;
+	background: #89d19b;
+	font-weight: 600;
+	margin-top: 10px;
 `
 const ContainerHinweis = styled.div`
-    border: 2px solid var(--secondary-color);
-    width: 100%;
-
-    font-size: 0.8rem;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 6px;
-
-    @media screen and (max-width: 600px) {
-        text-align: left;
-    }
+	border: 2px solid var(--secondary-color);
+	width: 100%;
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top: 20px;
+	border-radius: 6px;
+	@media screen and (max-width: 600px) {
+		text-align: left;
+	}
 `
 const ContainerHinweisSchrift = styled.p`
-    margin: 12px;
+	margin: 12px;
 `
 
 const initialState = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    birthDate: '',
-    address: '',
-    city: '',
-    phone: '',
-    mobile: '',
-    training: '',
-    group: '',
-    duration: '',
-    message: '',
+	firstName: '',
+	lastName: '',
+	email: '',
+	birthDate: '',
+	address: '',
+	city: '',
+	phone: '',
+	mobile: '',
+	training: '',
+	group: '',
+	duration: '',
+	message: '',
 }
 
 const InputNames = {
-    firstName: 'Vorname',
-    lastName: 'Nachname',
-    email: 'E-Mail-Adresse',
-    birthDate: 'Geburtsdatum',
-    address: 'Adresse',
-    city: 'PLZ/Wohnort',
-    phone: 'Festnetznummer',
-    mobile: 'Mobiltelfonnummer',
-    training: 'Training',
-    group: 'Gruppe',
-    duration: 'Dauer',
-    message: 'Nachricht',
+	firstName: 'Vorname',
+	lastName: 'Nachname',
+	email: 'E-Mail-Adresse',
+	birthDate: 'Geburtsdatum',
+	address: 'Adresse',
+	city: 'PLZ/Wohnort',
+	phone: 'Festnetznummer',
+	mobile: 'Mobiltelfonnummer',
+	training: 'Training',
+	group: 'Gruppe',
+	duration: 'Dauer',
+	message: 'Nachricht',
 }
 
 const EnrolmentScreen = () => {
@@ -602,5 +587,4 @@ const EnrolmentScreen = () => {
         </>
     )
 }
-
 export default EnrolmentScreen

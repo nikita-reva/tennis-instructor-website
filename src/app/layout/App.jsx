@@ -14,7 +14,6 @@ import TrainingScreen from './screens/TrainingScreen/TrainingScreen'
 import CampsScreen from './screens/CampsScreen/CampsScreen'
 import AthleticTrainingScreen from './screens/AthleticTrainingScreen/AthleticTrainingScreen'
 import NewsScreen from './screens/NewsScreen/NewsScreen'
-import NewsFromCourtScreen from './screens/NewsFromCourtScreen/NewsFromCourtScreen'
 import GalleryScreen from './screens/GalleryScreen/GalleryScreen'
 import PrintScreen from './screens/PrintScreen/PrintScreen'
 import DatenschutzScreen from './screens/DatenschutzScreen/DatenschutzScreen'
@@ -44,11 +43,6 @@ function App() {
 					component={AthleticTrainingScreen}
 				/>
 				<Route path="/news" component={NewsScreen} exact />
-				<Route
-					exact
-					path="/newsfromcourt"
-					component={NewsFromCourtScreen}
-				/>
 				<Route exact path="/galerie" component={GalleryScreen} />
 
 				<Route exact path="/kontakt" component={ContactScreen} />

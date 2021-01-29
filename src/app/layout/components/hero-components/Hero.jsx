@@ -26,7 +26,7 @@ const Hero = ({
 				<SloganMedium>{sloganMedium}</SloganMedium>
 				<SloganBig>{sloganBig}</SloganBig>
 				<SubText>{subtext}</SubText>
-				<HeroLink to={linkTo}>{btnText}</HeroLink>
+				{linkTo && <HeroLink to={linkTo}>{btnText}</HeroLink>}
 			</Slogan>
 		</HeroContainer>
 	)

@@ -1,4 +1,5 @@
 import React from 'react'
+import ImageSlider from '../image-slider-components/ImageSlider'
 
 import {
 	InfosContainer,
@@ -30,11 +31,29 @@ const Infos = ({ infos }) => {
 								<InfoTitle>{info.title}</InfoTitle>
 								<InfoText>{info.text}</InfoText>
 							</InfoContent>
-							<InfoImageContainer>
-								<InfoImage src={info.image} alt={info.alt} />
-							</InfoImageContainer>
+							{info.image && (
+								<InfoImageContainer>
+									<InfoImage
+										src={info.image}
+										alt={info.alt}
+									/>
+								</InfoImageContainer>
+							)}
+							{info.imageSlides && (
+								<InfoImageContainer>
+									<ImageSlider
+										slides={info.imageSlides}
+										incrementRate={10000}
+										aspectRatio={3 / 2}
+									/>
+								</InfoImageContainer>
+							)}
 						</InfoMediaContainer>
-						<InfoLink to={info.linkTo}>{info.linkText}</InfoLink>
+						{info.linkTo && (
+							<InfoLink to={info.linkTo}>
+								{info.linkText}
+							</InfoLink>
+						)}
 					</Info>
 				))}
 			</InfosWrapper>

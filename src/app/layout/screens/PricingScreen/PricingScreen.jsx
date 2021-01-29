@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { IoBarbellOutline } from 'react-icons/io5'
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 import ScreenContainer from '../ScreenContainer'
@@ -142,7 +141,7 @@ export const ServiceSubtitle = styled.h2`
 	font-family: 'Fjalla One', sans-serif;
 	width: 100%;
 	color: #333;
-	line-height: 1;
+	line-height: 1.25;
 	font-weight: 700;
 	font-size: 1rem;
 	letter-spacing: 0.04rem;
@@ -271,10 +270,6 @@ export const ServicesLink = styled(Link)`
 	transition: all 0.1s ease-in;
 `
 
-export const BarbellIcon = styled(IoBarbellOutline)`
-	margin-left: 12px;
-`
-
 const PricingScreen = () => {
 	return (
 		<ScreenContainer>
@@ -392,20 +387,16 @@ const PricingScreen = () => {
 							<Service>
 								<ServiceContent>
 									<ServiceTargetGroup>
-										Zielgruppe: Kinder
+										Zielgruppe: Anfänger, Fortgeschrittene,
+										Leistungssportler
 									</ServiceTargetGroup>
-									<ServiceTitle>
-										Tennis Camps für Kinder
-									</ServiceTitle>
+									<ServiceTitle>Tennis Camps</ServiceTitle>
 									<ServiceText>
 										Damit Sie intensiver, vollumfänglich und
 										regelmäßig trainieren können, bietet die
 										Academy in den Baden-Württembergischen
 										Schulferien diverse Tenniscamps an:
 									</ServiceText>
-									<ServiceSubtitle>
-										Oster-Camp
-									</ServiceSubtitle>
 									<ServiceSubtitle>
 										Pfingst-Camp
 									</ServiceSubtitle>
@@ -418,10 +409,6 @@ const PricingScreen = () => {
 									<ServiceSubtitle>
 										Herbst-Camp
 									</ServiceSubtitle>
-									<ServiceSubText>
-										Die Tenniscamps sind auf Kinder zwischen
-										4 und 10 Jahren ausgerichtet.
-									</ServiceSubText>
 									<ServicesLink to="/camps">
 										Mehr Erfahren
 									</ServicesLink>
@@ -468,7 +455,6 @@ const PricingScreen = () => {
 									</ServiceTargetGroup>
 									<ServiceTitle>
 										Athletiktraining
-										<BarbellIcon />
 									</ServiceTitle>
 									<ServiceText>
 										Bei der Tennis Academy Yasar besteht die

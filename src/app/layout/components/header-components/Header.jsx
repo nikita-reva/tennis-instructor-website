@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 import NavContainer from './NavContainer'
@@ -25,24 +25,38 @@ const AniketosHeader = styled.header`
 `
 
 const Header = () => {
-	const [mode, setMode] = useState()
 	const [windowWidth, setWindowWidth] = useState()
 	const [active, setActive] = useState(false)
+	const navbarRef = useRef()
+
+	window.addEventListener('resize', () => {
+		setWindowWidth(window.innerWidth)
+	})
 
 	useEffect(() => {
-		window.addEventListener('resize', () => {
-			setWindowWidth(window.innerWidth)
-		})
+		setWindowWidth(window.innerWidth)
 
-		windowWidth <= 991 ? setMode('small') : setMode('large')
-
-		if (mode === 'large') {
+		// Hide mobile navmenu when the screen is large
+		if (windowWidth > 991) {
 			setActive(false)
 		}
-	}, [windowWidth, mode, active])
+
+		// Hide mobile navmenu when the user clicks outside the nav element
+		const outsideClickHandler = (e) => {
+			if (!navbarRef.current.contains(e.target)) {
+				setActive(false)
+			}
+		}
+
+		document.addEventListener('mousedown', outsideClickHandler)
+
+		return () => {
+			document.removeEventListener('mousedown', outsideClickHandler)
+		}
+	}, [windowWidth])
 
 	return (
-		<AniketosHeader>
+		<AniketosHeader ref={navbarRef}>
 			<NavContainer>
 				<NavLogo
 					to="/"
@@ -113,32 +127,24 @@ const Header = () => {
 							></NavLink>
 						</NavDropdownItem>
 					</NavDropdown>
-					<NavDropdown
-						to="/news"
-						heading="News"
-						activate={() => {
-							setActive(false)
-						}}
-					>
-						<NavDropdownItem>
-							<NavLink
-								to="/newsfromcourt"
-								title="News vom Court"
-								activate={() => {
-									setActive(false)
-								}}
-							></NavLink>
-						</NavDropdownItem>
-						<NavDropdownItem>
-							<NavLink
-								to="/galerie"
-								title="Fotogalerie"
-								activate={() => {
-									setActive(false)
-								}}
-							></NavLink>
-						</NavDropdownItem>
-					</NavDropdown>
+					<NavItem>
+						<NavLink
+							to="/news"
+							title="News"
+							activate={() => {
+								setActive(false)
+							}}
+						></NavLink>
+					</NavItem>
+					<NavItem>
+						<NavLink
+							to="/galerie"
+							title="Galerie"
+							activate={() => {
+								setActive(false)
+							}}
+						></NavLink>
+					</NavItem>
 					<NavItem>
 						<NavLink
 							activate={() => {
