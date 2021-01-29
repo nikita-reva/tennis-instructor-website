@@ -174,7 +174,7 @@ const CampsScreen = () => {
                                 </div>
                                 <ul className="liste0-camps">
                                     <li>
-                                        Pfingsten: Camp 1 | 24.05. – 09.04.2021
+                                        Pfingsten: Camp 1 | 24.05. – 28.05.2021
                                     </li>
                                     <li>Sommer: Camp 2 | 02.08 – 06.08.2021</li>
                                     <li>Sommer: Camp 3 | 06.09 – 10.09.2021</li>
