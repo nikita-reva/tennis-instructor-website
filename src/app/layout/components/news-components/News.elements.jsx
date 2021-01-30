@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom'
 export const NewsContainer = styled.div`
 	width: 100%;
 	display: flex;
-	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 `
 
-export const NewsWrapper = styled.div``
+export const NewsWrapper = styled.div`
+	width: 100%;
+`
 
 export const NewsArticle = styled.article`
 	width: 100%;
@@ -16,14 +19,25 @@ export const NewsArticle = styled.article`
 
 	&:nth-child(odd) {
 		background: var(--secondary-color);
+		flex-direction: row;
 	}
 
 	&:nth-child(even) {
 		background: var(--primary-color);
+		flex-direction: row-reverse;
 	}
+`
+
+export const NewsArticleWrapper = styled.div`
+	width: 92%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 
 	@media screen and (min-width: 992px) {
-		flex-direction: row;
+		width: 80%;
+
+		flex-direction: inherit;
 	}
 `
 
@@ -59,6 +73,8 @@ export const NewsArticleImage = styled.img`
 export const NewsArticleLink = styled(Link)``
 
 export const NewsArticleImageSliderContainer = styled.div`
+	overflow: hidden;
+
 	@media screen and (min-width: 992px) {
 		flex: 1;
 	}
