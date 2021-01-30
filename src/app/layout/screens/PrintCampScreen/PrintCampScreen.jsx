@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useReactToPrint } from 'react-to-print'
 import styled from 'styled-components'
 
-import { EnrolmentPDF } from './EnrolmentPDF'
+import { EnrolmentCampPDF } from './EnrolmentCampPDF'
 import ScreenContainer from '../ScreenContainer'
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
@@ -74,9 +74,9 @@ const PrintScreen = () => {
             <ContentContainer>
                 <ContentSection>
                     <StyledLink>
-                        <Link to="/anmeldung">Zurück zur Anmeldung</Link>
+                        <Link to="/anmeldungcamps">Zurück zur Anmeldung</Link>
                     </StyledLink>
-                    <EnrolmentPDF ref={componentRef} />
+                    <EnrolmentCampPDF ref={componentRef} />
                     <StyledButton onClick={handlePrint}>
                         Formular drucken / speichern
                     </StyledButton>

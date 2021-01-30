@@ -213,7 +213,7 @@ const CampsScreen = () => {
                                         <br />
                                     </b>
                                     Als Verwendungszweck bitte das jeweilige
-                                    Camp mit der entsprechen Nummer eingeben.
+                                    Camp mit der entsprechen Nummer angeben.
                                 </ul>
                                 <br />
                                 <div className="Info-text-title0-camps">
@@ -230,7 +230,7 @@ const CampsScreen = () => {
                                 </ul>
                             </div>
                             <div className="Container-button-camps">
-                                <CampLink to="/anmeldung">
+                                <CampLink to="/anmeldungcamps">
                                     Zur Anmeldung
                                 </CampLink>
                             </div>
