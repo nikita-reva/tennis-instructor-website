@@ -7,7 +7,7 @@ import ScreenContainer from '../ScreenContainer'
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 import { Link } from 'react-router-dom'
-import { EnrolmentCampPDF } from '../PrintCampScreen/EnrolmentCampPDF'
+import { EnrolmentCampPDF } from './EnrolmentCampPDF'
 
 const StyledButton = styled.button`
 	display: block;

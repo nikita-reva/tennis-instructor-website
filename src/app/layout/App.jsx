@@ -17,7 +17,6 @@ import AthleticTrainingScreen from './screens/AthleticTrainingScreen/AthleticTra
 import NewsScreen from './screens/NewsScreen/NewsScreen'
 import GalleryScreen from './screens/GalleryScreen/GalleryScreen'
 import PrintScreen from './screens/PrintScreen/PrintScreen'
-import PrintCampScreen from './screens/PrintCampScreen/PrintCampScreen'
 import DatenschutzScreen from './screens/DatenschutzScreen/DatenschutzScreen'
 import ImperessumScreen from './screens/ImperessumScreen/ImperessumScreen'
 import PricingScreen from './screens/PricingScreen/PricingScreen'
@@ -41,11 +40,6 @@ function App() {
 					exact
 					path="/anmeldungcamps"
 					component={CampsEnrolmentScreen}
-				/>
-				<Route
-					exact
-					path="/anmeldungcamps/anmeldungsformular"
-					component={PrintCampScreen}
 				/>
 				<Route exact path="/camps" component={CampsScreen} />
 				<Route
