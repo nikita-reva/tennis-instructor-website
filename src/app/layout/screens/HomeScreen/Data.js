@@ -107,7 +107,7 @@ export const EventsData = [
         time: '',
         title: 'Tenniscamp Anmeldung',
         description: 'Hier könnt ihr euch für die Tenniscamps anmelden!',
-        linkTo: '/anmeldung',
+        linkTo: '/anmeldungcamps',
         linkText: 'Zur Anmeldung',
     },
 ]

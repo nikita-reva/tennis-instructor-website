@@ -140,7 +140,7 @@ const StyledTextarea = styled.textarea`
     ${sharedStyles}
 `
 
-export class EnrolmentPDF extends PureComponent {
+export class EnrolmentCampPDF extends PureComponent {
     render() {
         return (
             <StyledFormWrapper>
@@ -171,102 +171,41 @@ export class EnrolmentPDF extends PureComponent {
                         <StyledInput type="text" name="mobile" />
                     </StyledInputContainer>
                     <StyledFieldset fd="column">
-                        <legend>Training</legend>
+                        <legend>Tenniscamp</legend>
                         <label>
                             <input
                                 type="radio"
-                                value="Kinder / Jugendliche - Einzeltraining"
-                                name="training"
+                                value="Pfingsten: Camp 1"
+                                name="camp"
                             />
-                            Kinder / Jugendliche - Einzeltraining
+                            Pfingsten: Camp 1
                         </label>
                         <label>
                             <input
                                 type="radio"
-                                value="Kinder / Jugendliche - Mannschaftstraining"
-                                name="training"
+                                value="Sommer: Camp 2"
+                                name="camp"
                             />
-                            Kinder / Jugendliche - Mannschaftstraining
+                            Sommer: Camp 2
                         </label>
                         <label>
                             <input
                                 type="radio"
-                                value="Erwachsene - Einzeltraining"
-                                name="training"
+                                value="Sommer: Camp 3"
+                                name="camp"
                             />
-                            Erwachsene - Einzeltraining
+                            Sommer: Camp 3
                         </label>
                         <label>
                             <input
                                 type="radio"
-                                value="Erwachsene - Gruppentraining"
-                                name="training"
+                                value="Herbst: Camp 4 "
+                                name="camp"
                             />
-                            Erwachsene - Gruppentraining
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                value="Erwachsene - Mannschaftstraining Aktive"
-                                name="training"
-                            />
-                            Erwachsene - Mannschaftstraining Aktive
+                            Herbst: Camp 4
                         </label>
                     </StyledFieldset>
-                    <StyledFieldset>
-                        <legend>Gruppe</legend>
-                        <label>
-                            <input
-                                type="radio"
-                                value="2er-Gruppe"
-                                name="group"
-                            />
-                            2er Gruppe
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                value="3er-Gruppe"
-                                name="group"
-                            />
-                            3er-Gruppe
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                value="4er-Gruppe"
-                                name="group"
-                            />
-                            4er-Gruppe
-                        </label>
-                    </StyledFieldset>
-                    <StyledFieldset>
-                        <legend>Dauer</legend>
-                        <label>
-                            <input
-                                type="radio"
-                                value="60 Minuten"
-                                name="duration"
-                            />
-                            60 Minuten
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                value="90 Minuten"
-                                name="duration"
-                            />
-                            90 Minuten
-                        </label>
-                        <label>
-                            <input
-                                type="radio"
-                                value="120 Minuten"
-                                name="duration"
-                            />
-                            120 Minuten
-                        </label>
-                    </StyledFieldset>
+
                     <label htmlFor="Message">Nachricht / Terminwünsche:</label>
                     <StyledTextarea name="message" />
                 </StyledForm>

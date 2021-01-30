@@ -22,7 +22,7 @@ const DatenschutzScreen = () => {
                         <Link to="/imperessum">
                             <b>Imperessum</b>
                         </Link>
-                        . Wir nehmen Ihren Datenschutz sehr ernst und behandelt
+                        . Wir nehmen Ihren Datenschutz sehr ernst und behandeln
                         Ihre personenbezogenen Daten vertraulich und
                         entsprechend der gesetzlichen Vorschriften. Da durch
                         neue Technologien und die ständige Weiterentwicklung
