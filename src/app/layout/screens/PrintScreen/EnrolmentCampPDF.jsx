@@ -140,6 +140,44 @@ const StyledTextarea = styled.textarea`
 	${sharedStyles}
 `
 
+const DateAndSubscription = styled.div`
+	width: 100%;
+	padding: 24px 30px;
+	background: #ccc;
+	font-weight: 600;
+	display: flex;
+`
+
+const Date = styled.span`
+	flex: 1;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 120px;
+		bottom: 0;
+		height: 1px;
+		width: 200px;
+		background: #222;
+	}
+`
+
+const Subscription = styled.span`
+	flex: 1;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 120px;
+		bottom: 0;
+		height: 1px;
+		width: 200px;
+		background: #222;
+	}
+`
+
 export class EnrolmentCampPDF extends PureComponent {
 	render() {
 		return (
@@ -209,6 +247,10 @@ export class EnrolmentCampPDF extends PureComponent {
 					<label htmlFor="Message">Nachricht / Terminwünsche:</label>
 					<StyledTextarea name="message" />
 				</StyledForm>
+				<DateAndSubscription>
+					<Date>Ort, Datum:</Date>
+					<Subscription>Unterschrift:</Subscription>
+				</DateAndSubscription>
 			</StyledFormWrapper>
 		)
 	}

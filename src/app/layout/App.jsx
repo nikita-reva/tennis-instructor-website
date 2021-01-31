@@ -33,6 +33,7 @@ function App() {
 				<Route exact path="/angebote" component={PricingScreen} />
 				<Route exact path="/anmeldung" component={EnrolmentScreen} />
 				<Route
+					exact
 					path="/anmeldung/anmeldungsformular/:service"
 					component={PrintScreen}
 				/>
