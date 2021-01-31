@@ -75,7 +75,17 @@ const PrintScreen = ({ match }) => {
 			<ContentContainer>
 				<ContentSection>
 					<StyledLink>
-						<Link to="/anmeldung">Zurück zur Anmeldung</Link>
+						<Link
+							to={`/${
+								match.params.service === 'training'
+									? 'anmeldung'
+									: match.params.service === 'camps'
+									? 'anmeldungcamps'
+									: ''
+							}`}
+						>
+							Zurück zur Anmeldung
+						</Link>
 					</StyledLink>
 					{match.params.service === 'training' ? (
 						<EnrolmentPDF ref={componentRef} />

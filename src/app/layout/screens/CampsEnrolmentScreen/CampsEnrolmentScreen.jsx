@@ -8,10 +8,10 @@ import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 
 const sharedStyles = css`
-	background-color: #eee;
+	background-color: #ccc;
 	height: 40px;
 	border-radius: 5px;
-	border: 1px solid #ddd;
+	border: 1px solid #aaa;
 	padding: 20px;
 	box-sizing: border-box;
 `
