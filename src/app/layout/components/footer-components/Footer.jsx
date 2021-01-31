@@ -34,6 +34,9 @@ const FooterMainContainer2 = styled.div`
         flex-direction: column;
         text-align: center;
     }
+    @media screen and (max-width: 754px) {
+        border-top: 1px solid black;
+    }
 `
 const ContainerKontakt = styled.div`
     color: var(--secondary-color);
