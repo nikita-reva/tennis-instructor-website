@@ -57,18 +57,26 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 	return (
 		<SliderContainer>
 			<Slider ref={containerElement} hgt={`${width / aspectRatio}px`}>
-				<LeftArrow
-					size={`${width > 500 ? 0.06 * width : 0.08 * width}px`}
-					pdl={`${0.03 * width}px`}
-					black={blackNav}
-					onClick={prevSlide}
-				/>
-				<RightArrow
-					size={`${width > 500 ? 0.06 * width : 0.08 * width}px`}
-					pdr={`${0.03 * width}px`}
-					black={blackNav}
-					onClick={nextSlide}
-				/>
+				{length > 1 && (
+					<>
+						<LeftArrow
+							size={`${
+								width > 500 ? 0.06 * width : 0.08 * width
+							}px`}
+							pdl={`${0.03 * width}px`}
+							black={blackNav}
+							onClick={prevSlide}
+						/>
+						<RightArrow
+							size={`${
+								width > 500 ? 0.06 * width : 0.08 * width
+							}px`}
+							pdr={`${0.03 * width}px`}
+							black={blackNav}
+							onClick={nextSlide}
+						/>
+					</>
+				)}
 				{slides.map((slide, index) => {
 					return (
 						<Slide
@@ -91,20 +99,22 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 						</Slide>
 					)
 				})}
-				<SliderNav>
-					{slides.map((slide, index) => {
-						return (
-							<SliderNavCircle
-								className={index === current && 'active'}
-								black={blackNav}
-								key={slide.image}
-								onClick={() => {
-									setSlide(index)
-								}}
-							/>
-						)
-					})}
-				</SliderNav>
+				{length > 1 && (
+					<SliderNav>
+						{slides.map((slide, index) => {
+							return (
+								<SliderNavCircle
+									className={index === current && 'active'}
+									black={blackNav}
+									key={slide.image}
+									onClick={() => {
+										setSlide(index)
+									}}
+								/>
+							)
+						})}
+					</SliderNav>
+				)}
 			</Slider>
 		</SliderContainer>
 	)

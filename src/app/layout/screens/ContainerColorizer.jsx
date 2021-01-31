@@ -10,5 +10,4 @@ export const ContainerColorizer = styled.div`
 	background: ${({ bgFill }) => (bgFill ? bgFill : 'none')};
 	background-repeat: no-repeat;
 	background-size: cover;
-	clip-path: circle(50% at 50% 50%);
 `

@@ -14,6 +14,7 @@ import {
 	NewsArticleLink,
 	NewsArticleImageSliderContainer,
 	NewsArticleWrapper,
+	NewsArticleContentWrapper,
 } from './News.elements'
 
 import { ImageSlider } from '../index'
@@ -26,28 +27,25 @@ const news = ({ news }) => {
 					<NewsArticle key={index}>
 						<NewsArticleWrapper>
 							<NewsArticleContent>
-								<NewsArticleTitle>
-									{article.title}
-								</NewsArticleTitle>
-								<NewsArticleSubTitle>
-									{article.subtitle}
-								</NewsArticleSubTitle>
-								<NewsArticleDate>
-									{article.date}
-								</NewsArticleDate>
-								<NewsArticleText>
-									{article.text}
-								</NewsArticleText>
-								<NewsArticleImageContainer>
-									<NewsArticleImage
-										src={article.image}
-										alt={article.alt}
-									/>
-								</NewsArticleImageContainer>
+								<NewsArticleContentWrapper>
+									<NewsArticleTitle>
+										{article.title}
+									</NewsArticleTitle>
+									<NewsArticleSubTitle>
+										{article.subtitle}
+									</NewsArticleSubTitle>
+									<NewsArticleDate>
+										{article.date}
+									</NewsArticleDate>
+									<NewsArticleText>
+										{article.text}
+									</NewsArticleText>
+								</NewsArticleContentWrapper>
 								<NewsArticleLink to={article.linkTo}>
 									{article.linkText}
 								</NewsArticleLink>
 							</NewsArticleContent>
+
 							<NewsArticleImageSliderContainer>
 								<ImageSlider
 									slides={article.imageSlides}
