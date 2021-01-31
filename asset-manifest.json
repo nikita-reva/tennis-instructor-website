@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tennis-academy-yasar-website/static/css/main.cd02c9ea.chunk.css",
-    "main.js": "/tennis-academy-yasar-website/static/js/main.213664f6.chunk.js",
-    "main.js.map": "/tennis-academy-yasar-website/static/js/main.213664f6.chunk.js.map",
+    "main.css": "/tennis-academy-yasar-website/static/css/main.373af2d8.chunk.css",
+    "main.js": "/tennis-academy-yasar-website/static/js/main.e6828251.chunk.js",
+    "main.js.map": "/tennis-academy-yasar-website/static/js/main.e6828251.chunk.js.map",
     "runtime-main.js": "/tennis-academy-yasar-website/static/js/runtime-main.481a9e0a.js",
     "runtime-main.js.map": "/tennis-academy-yasar-website/static/js/runtime-main.481a9e0a.js.map",
-    "static/js/2.c4b610c8.chunk.js": "/tennis-academy-yasar-website/static/js/2.c4b610c8.chunk.js",
-    "static/js/2.c4b610c8.chunk.js.map": "/tennis-academy-yasar-website/static/js/2.c4b610c8.chunk.js.map",
+    "static/js/2.6025d130.chunk.js": "/tennis-academy-yasar-website/static/js/2.6025d130.chunk.js",
+    "static/js/2.6025d130.chunk.js.map": "/tennis-academy-yasar-website/static/js/2.6025d130.chunk.js.map",
     "static/js/3.cfe44966.chunk.js": "/tennis-academy-yasar-website/static/js/3.cfe44966.chunk.js",
     "static/js/3.cfe44966.chunk.js.map": "/tennis-academy-yasar-website/static/js/3.cfe44966.chunk.js.map",
     "index.html": "/tennis-academy-yasar-website/index.html",
-    "static/css/main.cd02c9ea.chunk.css.map": "/tennis-academy-yasar-website/static/css/main.cd02c9ea.chunk.css.map",
-    "static/js/2.c4b610c8.chunk.js.LICENSE.txt": "/tennis-academy-yasar-website/static/js/2.c4b610c8.chunk.js.LICENSE.txt",
+    "static/css/main.373af2d8.chunk.css.map": "/tennis-academy-yasar-website/static/css/main.373af2d8.chunk.css.map",
+    "static/js/2.6025d130.chunk.js.LICENSE.txt": "/tennis-academy-yasar-website/static/js/2.6025d130.chunk.js.LICENSE.txt",
     "static/media/Injoy.jpg": "/tennis-academy-yasar-website/static/media/Injoy.650b3456.jpg",
     "static/media/Steckbrief foto 2.1f133e2d.JPG": "/tennis-academy-yasar-website/static/media/Steckbrief foto 2.1f133e2d.JPG",
     "static/media/Steinmann.62632eaf.jpg": "/tennis-academy-yasar-website/static/media/Steinmann.62632eaf.jpg",
@@ -51,8 +51,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.481a9e0a.js",
-    "static/js/2.c4b610c8.chunk.js",
-    "static/css/main.cd02c9ea.chunk.css",
-    "static/js/main.213664f6.chunk.js"
+    "static/js/2.6025d130.chunk.js",
+    "static/css/main.373af2d8.chunk.css",
+    "static/js/main.e6828251.chunk.js"
   ]
 }
