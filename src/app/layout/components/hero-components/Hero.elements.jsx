@@ -84,9 +84,52 @@ export const HeroLink = styled(Link)`
 	display: block;
 	text-decoration: none;
 	text-align: center;
+	position: relative;
 	color: #fff;
 	background: var(--secondary-color);
 	border-radius: 10px;
 	padding: 12px 24px;
 	margin-top: 24px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background: #f5da41;
+		bottom: -50%;
+		left: -50%;
+		border-radius: 50%;
+		box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8),
+			inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+		width: 25px;
+		height: 25px;
+		transition: all 0.5s linear;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		background: #f5da41;
+		bottom: -50%;
+		right: -50%;
+		border-radius: 50%;
+		box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8),
+			inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+		width: 25px;
+		height: 25px;
+		transition: all 0.5s linear;
+		transition-delay: 0.6s;
+	}
+
+	&:hover {
+		&:after {
+			left: 150%;
+			bottom: 100%;
+		}
+
+		&:before {
+			right: 150%;
+			bottom: 100%;
+		}
+	}
 `

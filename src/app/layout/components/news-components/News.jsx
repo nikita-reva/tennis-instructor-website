@@ -9,8 +9,6 @@ import {
 	NewsArticleSubTitle,
 	NewsArticleDate,
 	NewsArticleText,
-	NewsArticleImageContainer,
-	NewsArticleImage,
 	NewsArticleLink,
 	NewsArticleImageSliderContainer,
 	NewsArticleWrapper,
@@ -41,15 +39,19 @@ const news = ({ news }) => {
 										{article.text}
 									</NewsArticleText>
 								</NewsArticleContentWrapper>
-								<NewsArticleLink to={article.linkTo}>
-									{article.linkText}
-								</NewsArticleLink>
+								{article.linkTo && (
+									<NewsArticleLink to={article.linkTo}>
+										{article.linkText}
+									</NewsArticleLink>
+								)}
 							</NewsArticleContent>
 
 							<NewsArticleImageSliderContainer>
 								<ImageSlider
 									slides={article.imageSlides}
 									aspectRatio={1}
+									incrementRate={article.autoChange && 5000}
+									blackNav={article.sliderBlackNav}
 								/>
 							</NewsArticleImageSliderContainer>
 						</NewsArticleWrapper>

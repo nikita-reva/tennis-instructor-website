@@ -146,6 +146,15 @@ const DateAndSubscription = styled.div`
 	background: #ccc;
 	font-weight: 600;
 	display: flex;
+
+	@media screen and (max-width: 800px) {
+		flex-direction: column;
+		padding: 24px 12px;
+		font-size: 12px;
+		span {
+			margin: 12px;
+		}
+	}
 `
 
 const Date = styled.span`
@@ -160,6 +169,14 @@ const Date = styled.span`
 		height: 1px;
 		width: 200px;
 		background: #222;
+
+		@media screen and (max-width: 400px) {
+			width: 120px;
+		}
+
+		@media screen and (max-width: 350px) {
+			width: 100px;
+		}
 	}
 `
 
@@ -175,6 +192,14 @@ const Subscription = styled.span`
 		height: 1px;
 		width: 200px;
 		background: #222;
+
+		@media screen and (max-width: 400px) {
+			width: 120px;
+		}
+
+		@media screen and (max-width: 350px) {
+			width: 100px;
+		}
 	}
 `
 
