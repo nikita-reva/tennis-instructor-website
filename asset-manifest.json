@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tennis-academy-yasar-website/static/css/main.07526d91.chunk.css",
-    "main.js": "/tennis-academy-yasar-website/static/js/main.4849c4f6.chunk.js",
-    "main.js.map": "/tennis-academy-yasar-website/static/js/main.4849c4f6.chunk.js.map",
+    "main.css": "/tennis-academy-yasar-website/static/css/main.8792ca0c.chunk.css",
+    "main.js": "/tennis-academy-yasar-website/static/js/main.59c27178.chunk.js",
+    "main.js.map": "/tennis-academy-yasar-website/static/js/main.59c27178.chunk.js.map",
     "runtime-main.js": "/tennis-academy-yasar-website/static/js/runtime-main.481a9e0a.js",
     "runtime-main.js.map": "/tennis-academy-yasar-website/static/js/runtime-main.481a9e0a.js.map",
-    "static/js/2.6025d130.chunk.js": "/tennis-academy-yasar-website/static/js/2.6025d130.chunk.js",
-    "static/js/2.6025d130.chunk.js.map": "/tennis-academy-yasar-website/static/js/2.6025d130.chunk.js.map",
+    "static/js/2.68175e09.chunk.js": "/tennis-academy-yasar-website/static/js/2.68175e09.chunk.js",
+    "static/js/2.68175e09.chunk.js.map": "/tennis-academy-yasar-website/static/js/2.68175e09.chunk.js.map",
     "static/js/3.cfe44966.chunk.js": "/tennis-academy-yasar-website/static/js/3.cfe44966.chunk.js",
     "static/js/3.cfe44966.chunk.js.map": "/tennis-academy-yasar-website/static/js/3.cfe44966.chunk.js.map",
     "index.html": "/tennis-academy-yasar-website/index.html",
-    "static/css/main.07526d91.chunk.css.map": "/tennis-academy-yasar-website/static/css/main.07526d91.chunk.css.map",
-    "static/js/2.6025d130.chunk.js.LICENSE.txt": "/tennis-academy-yasar-website/static/js/2.6025d130.chunk.js.LICENSE.txt",
+    "static/css/main.8792ca0c.chunk.css.map": "/tennis-academy-yasar-website/static/css/main.8792ca0c.chunk.css.map",
+    "static/js/2.68175e09.chunk.js.LICENSE.txt": "/tennis-academy-yasar-website/static/js/2.68175e09.chunk.js.LICENSE.txt",
     "static/media/Injoy.jpg": "/tennis-academy-yasar-website/static/media/Injoy.650b3456.jpg",
     "static/media/Steckbrief foto 2.1f133e2d.JPG": "/tennis-academy-yasar-website/static/media/Steckbrief foto 2.1f133e2d.JPG",
     "static/media/Steinmann.62632eaf.jpg": "/tennis-academy-yasar-website/static/media/Steinmann.62632eaf.jpg",
@@ -24,10 +24,10 @@
     "static/media/img3.JPG": "/tennis-academy-yasar-website/static/media/img3.7a8652b6.JPG",
     "static/media/img4.jpeg": "/tennis-academy-yasar-website/static/media/img4.5e836cb0.jpeg",
     "static/media/img5.png": "/tennis-academy-yasar-website/static/media/img5.7d4796ae.png",
+    "static/media/logo-square.jpg": "/tennis-academy-yasar-website/static/media/logo-square.edc58f5b.jpg",
     "static/media/logo-web.jpg": "/tennis-academy-yasar-website/static/media/logo-web.5548cff2.jpg",
     "static/media/logo.076ef897.png": "/tennis-academy-yasar-website/static/media/logo.076ef897.png",
     "static/media/news1.jpg": "/tennis-academy-yasar-website/static/media/news1.b6fdda79.jpg",
-    "static/media/news2.jpg": "/tennis-academy-yasar-website/static/media/news2.2f509234.jpg",
     "static/media/news3.jpg": "/tennis-academy-yasar-website/static/media/news3.c63a2257.jpg",
     "static/media/product1.jpg": "/tennis-academy-yasar-website/static/media/product1.d555068a.jpg",
     "static/media/product10.jpg": "/tennis-academy-yasar-website/static/media/product10.ccaa83c5.jpg",
@@ -42,6 +42,7 @@
     "static/media/saiten.jpg": "/tennis-academy-yasar-website/static/media/saiten.84531fe9.jpg",
     "static/media/sponsorRot2.86c07784.png": "/tennis-academy-yasar-website/static/media/sponsorRot2.86c07784.png",
     "static/media/stockach.e8a87d28.png": "/tennis-academy-yasar-website/static/media/stockach.e8a87d28.png",
+    "static/media/strings.jpg": "/tennis-academy-yasar-website/static/media/strings.2f526b4a.jpg",
     "static/media/tcstockach.jpg": "/tennis-academy-yasar-website/static/media/tcstockach.68d5aacb.jpg",
     "static/media/tcstockach_aussen.jpg": "/tennis-academy-yasar-website/static/media/tcstockach_aussen.900432aa.jpg",
     "static/media/video0.mp4": "/tennis-academy-yasar-website/static/media/video0.bcc0c478.mp4",
@@ -51,8 +52,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.481a9e0a.js",
-    "static/js/2.6025d130.chunk.js",
-    "static/css/main.07526d91.chunk.css",
-    "static/js/main.4849c4f6.chunk.js"
+    "static/js/2.68175e09.chunk.js",
+    "static/css/main.8792ca0c.chunk.css",
+    "static/js/main.59c27178.chunk.js"
   ]
 }
