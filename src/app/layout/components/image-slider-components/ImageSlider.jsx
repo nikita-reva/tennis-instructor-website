@@ -80,11 +80,11 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 			}
 
 			if (theTouchInfo.dx < -40) {
-				prevSlide()
+				setCurrent(current === 0 ? length - 1 : current - 1)
 			}
 
 			if (theTouchInfo.dx > 40) {
-				nextSlide()
+				setCurrent(current === length - 1 ? 0 : current + 1)
 			}
 		}
 
