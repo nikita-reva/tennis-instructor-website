@@ -66,6 +66,10 @@ export const Slide = styled.div`
 export const SliderImage = styled.img`
 	max-width: 100%;
 	object-fit: cover;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
 `
 
 export const SliderImageText = styled.p`
