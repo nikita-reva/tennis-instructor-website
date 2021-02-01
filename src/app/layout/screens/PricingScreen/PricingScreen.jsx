@@ -35,6 +35,7 @@ export const ServicesHeading = styled.h1`
     line-height: 1.4;
     padding: 12px 24px 6px 24px;
     color: var(--secondary-color);
+    border: 2px solid red;
 `
 
 export const ServicesWrapper = styled.div`
