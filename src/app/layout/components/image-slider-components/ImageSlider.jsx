@@ -17,6 +17,7 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 	const [width, setWidth] = useState(0)
 	const length = slides.length
 	const containerElement = useRef(null)
+	const swipeElement = useRef(null)
 
 	window.addEventListener('resize', () => {
 		if (containerElement.current) {
@@ -42,11 +43,62 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 		if (containerElement.current) {
 			setWidth(containerElement.current.offsetWidth)
 		}
+
 		if (incrementRate) {
 			interval = setInterval(() => {
 				setCurrent(current === length - 1 ? 0 : current + 1)
 			}, incrementRate)
 		}
+
+		let touchesInAction = {}
+
+		function touchStartHandler(event) {
+			let touches = event.changedTouches
+
+			for (let j = 0; j < touches.length; j++) {
+				/* store touch info on touchstart */
+				touchesInAction['$' + touches[j].identifier] = {
+					identifier: touches[j].identifier,
+					pageX: touches[j].pageX,
+					pageY: touches[j].pageY,
+				}
+			}
+		}
+
+		function touchEndHandler(event) {
+			let touches = event.changedTouches
+			let theTouchInfo
+			for (let j = 0; j < touches.length; j++) {
+				/* access stored touch info on touchend */
+				theTouchInfo = touchesInAction['$' + touches[j].identifier]
+				theTouchInfo.dx =
+					touches[j].pageX -
+					theTouchInfo.pageX /* x-distance moved since touchstart */
+				theTouchInfo.dy =
+					touches[j].pageY -
+					theTouchInfo.pageY /* y-distance moved since touchstart */
+			}
+
+			if (theTouchInfo.dx < -40) {
+				prevSlide()
+			}
+
+			if (theTouchInfo.dx > 40) {
+				nextSlide()
+			}
+		}
+
+		swipeElement.current.addEventListener(
+			'touchstart',
+			touchStartHandler,
+			false
+		)
+		swipeElement.current.addEventListener(
+			'touchend',
+			touchEndHandler,
+			false
+		)
+
 		return () => clearInterval(interval)
 	}, [containerElement, current, length, incrementRate])
 
@@ -88,6 +140,7 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 									<SliderImage
 										src={slide.image}
 										alt={slide.alt}
+										ref={swipeElement}
 									/>
 									{slide.text && (
 										<SliderImageText>
