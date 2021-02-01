@@ -38,6 +38,7 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 	}
 
 	useEffect(() => {
+		/* Increment the slides count periodically */
 		let interval
 
 		if (containerElement.current) {
@@ -50,6 +51,7 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 			}, incrementRate)
 		}
 
+		/* Enable touch control of the image slider on touch screens */
 		let touchesInAction = {}
 
 		function touchStartHandler(event) {
@@ -80,6 +82,8 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 			}
 
 			if (theTouchInfo.dx < -40) {
+				console.log(touches)
+				console.log(theTouchInfo, typeof theTouchInfo)
 				setCurrent(current === 0 ? length - 1 : current - 1)
 			}
 
