@@ -298,10 +298,10 @@ const ContactScreen = () => {
 
         emailjs
             .sendForm(
-                'service_do95f1d',
-                'template_nxwok15',
+                'service_2doo1mj',
+                'template_h5aexue',
                 e.target,
-                'user_JsusNz0E8HNccYZdyYeKy'
+                'user_ZKW0zg0Te4PemrfU596mT'
             )
             .then(
                 (result) => {
