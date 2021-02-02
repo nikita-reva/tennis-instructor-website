@@ -40,6 +40,7 @@ const GalleryItems = ({ galleryItems }) => {
 					}
 					aspectRatio={galleryItems[currentSlides].sliderAspectRatio}
 					blackNav={galleryItems[currentSlides].sliderBlackNav}
+					textActive
 					reset={sliderReset}
 				/>
 			</GalleryMainSliderContainer>

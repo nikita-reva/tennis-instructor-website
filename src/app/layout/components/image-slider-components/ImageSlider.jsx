@@ -17,6 +17,7 @@ const ImageSlider = ({
 	incrementRate,
 	aspectRatio,
 	blackNav,
+	textActive,
 	reset,
 }) => {
 	const [current, setCurrent] = useState(0)
@@ -155,7 +156,7 @@ const ImageSlider = ({
 										alt={slide.alt}
 										ref={swipeElement}
 									/>
-									{slide.text && (
+									{slide.text && textActive && (
 										<SliderImageText>
 											{slide.text}
 										</SliderImageText>

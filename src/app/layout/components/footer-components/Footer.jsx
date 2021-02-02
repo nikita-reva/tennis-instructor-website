@@ -135,7 +135,7 @@ const Footer = () => {
         <FooterMainContainer0>
             <FooterMainContainer1>
                 <ContainerKontakt>
-                    <FooterTitle>Kontakt</FooterTitle>
+                    <FooterTitle>Kontakt Büro</FooterTitle>
                     <FooterText>
                         <i className="fas fa-envelope"></i>
                         <a href="mailto:info@tennis-yasar.de">

@@ -44,6 +44,14 @@ export const Slogan = styled.div`
 	padding-left: ${({ sloganLeft }) => (sloganLeft ? '6vw' : 'unset')};
 	color: #fff;
 
+	@media screen and (min-width: 1101px) {
+		&:hover {
+			& h1:after {
+				top: 0%;
+			}
+		}
+	}
+
 	@media screen and (max-width: 1100px) {
 		top: 100%;
 		background: rgba(0, 0, 0, 0.5);
@@ -52,9 +60,11 @@ export const Slogan = styled.div`
 		width: 100%;
 	}
 `
+
 export const SloganMedium = styled.h2`
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 4rem;
+	user-select: none;
 
 	@media screen and (max-width: 500px) {
 		font-size: 2.2rem;
@@ -64,6 +74,7 @@ export const SloganMedium = styled.h2`
 export const SloganBig = styled.h2`
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 6rem;
+	user-select: none;
 
 	@media screen and (max-width: 500px) {
 		font-size: 3.8rem;
@@ -77,6 +88,37 @@ export const SubText = styled.p`
 
 	@media screen and (max-width: 500px) {
 		font-size: 0.8rem;
+	}
+`
+
+export const BusinessName = styled.h1`
+	font-family: 'Fjalla One', sans-serif;
+	position: relative;
+	font-size: 1.5rem;
+	margin: 12px 0;
+	letter-spacing: 1px;
+	user-select: none;
+	overflow: hidden;
+
+	@media screen and (min-width: 501px) {
+		font-size: 2.5rem;
+	}
+
+	@media screen and (min-width: 1101px) {
+		text-align: center;
+		width: 100%;
+
+		&:after {
+			content: '';
+			width: 100%;
+			height: 80px;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			mix-blend-mode: darken;
+			background: var(--secondary-color);
+			transition: top 1s linear;
+		}
 	}
 `
 

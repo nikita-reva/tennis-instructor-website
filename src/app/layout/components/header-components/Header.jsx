@@ -84,7 +84,7 @@ const Header = () => {
 						></NavLink>
 					</NavItem>
 					<NavDropdown
-						to="/training"
+						to="/angebote"
 						heading="Training"
 						activate={() => {
 							setActive(false)

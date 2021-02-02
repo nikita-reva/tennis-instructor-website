@@ -8,6 +8,7 @@ import {
 	SloganBig,
 	HeroLink,
 	SubText,
+	BusinessName,
 } from './Hero.elements'
 
 const Hero = ({
@@ -18,6 +19,7 @@ const Hero = ({
 	subtext,
 	btnText,
 	linkTo,
+	businessName,
 }) => {
 	return (
 		<HeroContainer>
@@ -25,6 +27,7 @@ const Hero = ({
 			<Slogan sloganLeft={sloganLeft}>
 				<SloganMedium>{sloganMedium}</SloganMedium>
 				<SloganBig>{sloganBig}</SloganBig>
+				{businessName && <BusinessName>{businessName}</BusinessName>}
 				<SubText>{subtext}</SubText>
 				{linkTo && <HeroLink to={linkTo}>{btnText}</HeroLink>}
 			</Slogan>
