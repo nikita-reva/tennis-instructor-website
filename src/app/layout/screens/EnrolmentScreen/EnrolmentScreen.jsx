@@ -576,7 +576,9 @@ const EnrolmentScreen = () => {
                                         dennoch fällig. Es steht der Spielerin /
                                         dem Spieler jedoch frei, für einen
                                         Ersatz zu sorgen, der die Stunde /
-                                        Kosten übernimmt.
+                                        Kosten übernimmt. Zudem stimmen Sie
+                                        durch die Anmeldung auch der
+                                        Datenschutzerklärung zu.
                                     </ContainerHinweisSchrift>
                                 </ContainerHinweis>
                             </StyledForm>

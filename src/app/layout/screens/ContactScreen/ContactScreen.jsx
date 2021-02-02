@@ -244,6 +244,17 @@ const StyledSuccess = styled.div`
     font-weight: 600;
     margin-top: 10px;
 `
+const ContainerHinweis = styled.div`
+    border: 2px solid var(--secondary-color);
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 6px;
+    @media screen and (max-width: 600px) {
+        text-align: left;
+    }
+`
 
 const initialState = {
     firstName: '',
@@ -393,6 +404,10 @@ const ContactScreen = () => {
                                     <b>Nachricht absenden</b>
                                     <i className="fas fa-chevron-right"></i>
                                 </StyledButton>
+                                <ContainerHinweis>
+                                    Durch die Absendung der Nachricht stimmen
+                                    Sie der Datenschutzerklärung zu
+                                </ContainerHinweis>
                             </StyledForm>
                         </StyledFormWrapper>
                         <MapContainer>
