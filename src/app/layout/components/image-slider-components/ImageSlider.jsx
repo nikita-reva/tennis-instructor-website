@@ -12,7 +12,13 @@ import {
 	SliderImageText,
 } from './ImageSlider.elements.jsx'
 
-const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
+const ImageSlider = ({
+	slides,
+	incrementRate,
+	aspectRatio,
+	blackNav,
+	reset,
+}) => {
 	const [current, setCurrent] = useState(0)
 	const [width, setWidth] = useState(0)
 	const length = slides.length
@@ -38,6 +44,9 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 	}
 
 	useEffect(() => {
+		if (reset) {
+			setCurrent(0)
+		}
 		/* Increment the slides count periodically */
 		let interval
 
@@ -104,7 +113,7 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 		)
 
 		return () => clearInterval(interval)
-	}, [containerElement, current, length, incrementRate])
+	}, [containerElement, current, length, reset, incrementRate])
 
 	if (!Array.isArray(slides) || slides.length <= 0) {
 		return null
@@ -163,7 +172,7 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 								<SliderNavCircle
 									className={index === current && 'active'}
 									black={blackNav}
-									key={slide.image}
+									key={index}
 									onClick={() => {
 										setSlide(index)
 									}}
@@ -176,5 +185,4 @@ const ImageSlider = ({ slides, incrementRate, aspectRatio, blackNav }) => {
 		</SliderContainer>
 	)
 }
-
 export default ImageSlider

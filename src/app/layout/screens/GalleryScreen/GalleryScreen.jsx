@@ -11,7 +11,7 @@ const GalleryScreen = () => {
 		<ScreenContainer>
 			<ContentContainer>
 				<ContentSection>
-					<h1>Gallery Screen</h1>
+					<GalleryItems galleryItems={GalleryData} />
 				</ContentSection>
 			</ContentContainer>
 		</ScreenContainer>
