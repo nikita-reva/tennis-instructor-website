@@ -7,13 +7,12 @@ import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 
 const MapContainer = styled.div`
-    width: 800px;
-    height: 500px;
-    margin-bottom: 20px;
-
-    @media screen and (max-width: 840px) {
-        width: 600px;
-    }
+    border: 4px solid var(--secondary-color);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
 `
 const TitelHeading = styled.h1`
     font-family: 'Fjalla One', sans-serif;
