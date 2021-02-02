@@ -42,11 +42,12 @@ const StyledLink = styled.div`
 	margin: 20px auto;
 	text-align: center;
 	padding: 10px;
-	background-image: linear-gradient(
-		to top,
-		#ff723b 0%,
-		var(--secondary-color) 84%
-	);
+	transition: color 0.2s ease-in;
+	background: #389583;
+
+	&:hover {
+		background: var(--secondary-color);
+	}
 
 	& > a {
 		display: grid;
@@ -56,11 +57,6 @@ const StyledLink = styled.div`
 		z-index: 2;
 		text-decoration: none;
 		color: #fff;
-		transition: color 0.2s ease-in;
-
-		&:hover {
-			color: #f2fc6b;
-		}
 	}
 `
 
