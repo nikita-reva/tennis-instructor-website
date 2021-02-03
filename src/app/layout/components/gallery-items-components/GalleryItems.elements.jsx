@@ -13,7 +13,7 @@ export const GalleryMainSliderContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	max-width: 800px;
+	max-width: 750px;
 	margin: 24px 0;
 `
 
@@ -34,18 +34,18 @@ export const GalleryItemContainer = styled.div`
 	margin: 6px;
 	border-radius: 15px;
 
+	@media screen and (max-width: 600px) {
+		width: 100%;
+		height: auto;
+		padding: 0 18px;
+		padding-bottom: 12px;
+	}
 	&:nth-child(odd) {
 		background: var(--secondary-color);
 	}
 
 	&:nth-child(even) {
 		background: var(--primary-color);
-	}
-
-	@media screen and (min-width: 992px) {
-		width: 396px;
-		height: 594px;
-		padding: 24px;
 	}
 `
 
@@ -80,19 +80,11 @@ export const GalleryItemTitle = styled.h3`
 	font-size: 1rem;
 	margin-bottom: 6px;
 	letter-spacing: 0.8px;
-
-	@media screen and (min-width: 992px) {
-		font-size: 1.2rem;
-	}
 `
 
 export const GalleryItemText = styled.p`
 	color: #ddd;
 	font-size: 0.8rem;
-
-	@media screen and (min-width: 992px) {
-		font-size: 1rem;
-	}
 `
 
 export const GalleryItemButton = styled.button`
