@@ -23,7 +23,7 @@ import PricingScreen from './screens/PricingScreen/PricingScreen'
 
 function App() {
 	return (
-		<Router basename="/tennis-academy-yasar-website">
+		<Router>
 			<ScrollToTop />
 			<Header />
 			<Main>
