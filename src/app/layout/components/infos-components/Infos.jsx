@@ -13,6 +13,7 @@ import {
 	InfoImageContainer,
 	InfoImage,
 	InfoLink,
+	InfoLink2,
 } from './Infos.elements'
 
 const Infos = ({ infos }) => {
@@ -58,6 +59,17 @@ const Infos = ({ infos }) => {
 							<InfoLink to={info.linkTo}>
 								{info.linkText}
 							</InfoLink>
+						)}
+						{info.link2To && (
+							<InfoLink2>
+								<a
+									href={info.link2To}
+									target="_blank"
+									rel="noreferrer"
+								>
+									{info.link2Text}
+								</a>
+							</InfoLink2>
 						)}
 					</Info>
 				))}

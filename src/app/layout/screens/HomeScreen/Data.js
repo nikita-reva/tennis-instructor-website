@@ -96,8 +96,9 @@ export const InfosData = [
 		image: require('../images/logo-web.jpg').default,
 		alt: 'tennis',
 		linkTo: '/anmeldung',
-
 		linkText: 'Zur Anmeldung',
+		link2To: require('../images/tay-anmeldungsformular.pdf').default,
+		link2Text: 'Anmeldungsformular',
 	},
 	{
 		title: 'Professionelle Tennisausrüstung ',

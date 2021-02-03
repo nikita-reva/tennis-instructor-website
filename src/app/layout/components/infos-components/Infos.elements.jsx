@@ -149,3 +149,37 @@ export const InfoLink = styled(Link)`
 		transform: scale(0.98);
 	}
 `
+
+export const InfoLink2 = styled.div`
+	display: block;
+	align-self: flex-start;
+	width: 100%;
+	font-weight: 600;
+	letter-spacing: 0.04rem;
+	text-decoration: none;
+	text-align: center;
+	background: #079ce0;
+	border-radius: 6px;
+	padding: 6px 12px;
+	margin-top: 12px;
+	transition: all 0.1s ease-in;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	@media screen and (min-width: 501px) {
+		width: 60%;
+		max-width: 250px;
+		margin-left: 9px;
+	}
+
+	@media screen and (min-width: 992px) {
+		margin-left: 18px;
+	}
+
+	&:hover {
+		transform: scale(0.98);
+	}
+`
