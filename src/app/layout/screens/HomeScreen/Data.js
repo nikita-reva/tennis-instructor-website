@@ -1,5 +1,5 @@
 export const HeroHomeScreen = {
-	img: require('../images/hero.png').default,
+	img: require('../images/hero.jpg').default,
 	sloganMedium: 'Training Sucks?',
 	sloganBig: 'Try Losing!',
 	subtext: 'Melden Sie sich jetzt für die Sommersaison 2021 an!',
@@ -31,7 +31,7 @@ export const ImageSliderData = [
 		text: 'Ajdin & Bernard Tomic',
 	},
 	{
-		image: require('../images/img5.png').default,
+		image: require('../images/img5.jpg').default,
 		alt: 'Ajdin Yasar',
 		text: 'Ajdin Yasar',
 	},

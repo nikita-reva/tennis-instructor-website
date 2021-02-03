@@ -75,7 +75,7 @@ export const GalleryData = [
 				text: 'Ajdin & Bernard Tomic',
 			},
 			{
-				image: require('../images/img5.png').default,
+				image: require('../images/img5.jpg').default,
 				alt: 'Ajdin Yasar',
 				text: 'Ajdin Yasar',
 			},
