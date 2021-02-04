@@ -154,8 +154,8 @@ export const InfosData = [
 				alt: 'tecnifibre',
 			},
 		],
-		linkTo: '',
-		linkText: '',
+		link1To: '',
+		link1Text: '',
 	},
 	{
 		title: 'Ausrüstung & Bespannungsservice',
@@ -163,7 +163,7 @@ export const InfosData = [
 			'Die Tennis Academy Yasar bietet sorgfältige Tennisschläger- und Saitenbetreuung und einen profesionellen Bespannungsservice. Wir sind Bespannungspartner von mehreren Profis. Verschiedene Tennissaiten und Griffbänder stehen bei uns zur Auswahl. Bespannungspreis ab 10,- Eur.',
 		image: require('../images/strings.jpeg').default,
 		alt: '',
-		linkTo: '/kontakt',
-		linkText: 'Service anfragen',
+		link1To: '/kontakt',
+		link1Text: 'Service anfragen',
 	},
 ]
