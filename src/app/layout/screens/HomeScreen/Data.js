@@ -50,7 +50,7 @@ export const EventsData = [
         date: '01.05.2021',
         time: '',
         title: 'Saisoneröffnung 2021',
-        description: 'Eröffnungsfeier der Tennis Academy Yasar',
+        description: 'Eröffnungsfeier der Tennis Academy Yasar.',
         linkTo: '',
         linkText: '',
     },

@@ -14,6 +14,8 @@ export const NewsData = [
             'Meldet euch jetzt für die kommende Tennistraining Saison im Sommer 2021 an. Der Anmeldeschluss ist der 28. März!',
         linkTo: '/anmeldung',
         linkText: 'Zur Anmeldung',
+        link2To: require('../images/tay-anmeldungsformular.pdf').default,
+        link2Text: 'Anmeldungsformular',
         imageSlides: [
             {
                 image: require('../images/logo-square.jpg').default,
@@ -81,7 +83,7 @@ export const NewsData = [
         subtitle: 'Lizenzierter Besaiter und Ansprechpartner: Ajdin Yasar',
         date: '',
         text:
-            'Die Tennis Academy Yasar bietet sorgfältige Tennisschläger- und Saitenbetreuung und einen profesionellen Bespannungsservice. Wir sind Bespannungspartner von mehreren Profis. Verschiedene Tennissaiten und Griffbänder stehen bei uns zur Auswahl. Bespannungspreis ab 10,- Eur',
+            'Die Tennis Academy Yasar bietet sorgfältige Tennisschläger- und Saitenbetreuung und einen profesionellen Bespannungsservice. Wir sind Bespannungspartner von mehreren Profis. Verschiedene Tennissaiten und Griffbänder stehen bei uns zur Auswahl. Bespannungspreis ab 10,- Eur.',
 
         linkTo: '/kontakt',
         linkText: 'Service anfragen',
