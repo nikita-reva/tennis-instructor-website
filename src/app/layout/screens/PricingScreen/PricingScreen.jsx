@@ -341,6 +341,23 @@ const PricingScreen = () => {
 										kostenlos für das Schnuppertraining
 										gestellt
 									</ServiceSubText>
+									<LinksContainer>
+										<ServicesLink to="/kontakt">
+											Anfragen
+										</ServicesLink>
+										<DownloadLink>
+											<a
+												href={
+													require('../images/tay-angebote.pdf')
+														.default
+												}
+												target="_blank"
+												rel="noreferrer"
+											>
+												PDF öffnen
+											</a>
+										</DownloadLink>
+									</LinksContainer>
 								</ServiceContent>
 							</Service>
 							<Service>
