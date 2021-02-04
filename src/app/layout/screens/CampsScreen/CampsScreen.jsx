@@ -213,7 +213,7 @@ const CampsScreen = () => {
 										<br />
 									</b>
 									Als Verwendungszweck bitte das jeweilige
-									Camp mit der entsprechen Nummer angeben.
+									Camp mit der entsprechenden Nummer angeben.
 								</ul>
 								<br />
 								<div className="Info-text-title0-camps">

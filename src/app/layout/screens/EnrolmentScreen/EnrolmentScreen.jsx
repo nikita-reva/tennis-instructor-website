@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
 import styled, { css } from 'styled-components'
-import { Link } from 'react-router-dom'
 
 import ScreenContainer from '../ScreenContainer'
 import ContentContainer from '../ContentContainer'

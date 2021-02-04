@@ -57,7 +57,7 @@ function App() {
 					path="/datenschutz"
 					component={DatenschutzScreen}
 				/>
-				<Route exact path="/imperessum" component={ImperessumScreen} />
+				<Route exact path="/impressum" component={ImperessumScreen} />
 			</Main>
 			<Footer />
 		</Router>
