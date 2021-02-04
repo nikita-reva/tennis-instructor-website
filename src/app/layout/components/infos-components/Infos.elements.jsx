@@ -151,7 +151,7 @@ export const InfoLink1 = styled.div`
 	}
 
 	&:hover {
-		background: #0886c0;
+		background: #b93434;
 	}
 `
 
@@ -182,7 +182,7 @@ export const InfoLink2 = styled(Link)`
 	}
 
 	&:hover {
-		background: #b93434;
+		background: #0886c0;
 	}
 `
 
