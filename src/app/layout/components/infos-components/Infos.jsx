@@ -57,19 +57,19 @@ const Infos = ({ infos }) => {
 							)}
 						</InfoMediaContainer>
 						{info.link1To && (
-							<InfoLink1 to={info.link1To}>
-								{info.link1Text}
-							</InfoLink1>
-						)}
-						{info.link2To && (
-							<InfoLink2>
+							<InfoLink1>
 								<a
-									href={info.link2To}
+									href={info.link1To}
 									target="_blank"
 									rel="noreferrer"
 								>
-									{info.link2Text}
+									{info.link1Text}
 								</a>
+							</InfoLink1>
+						)}
+						{info.link2To && (
+							<InfoLink2 to={info.link2To}>
+								{info.link2Text}
 							</InfoLink2>
 						)}
 						{info.link3To && (
