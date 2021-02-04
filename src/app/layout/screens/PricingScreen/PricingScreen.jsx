@@ -267,7 +267,7 @@ export const LinksContainer = styled.div`
 export const ServicesLink = styled(Link)`
 	display: block;
 	align-self: flex-start;
-	min-width: 250px;
+	min-width: 220px;
 	font-weight: 600;
 	letter-spacing: 0.04rem;
 	text-decoration: none;
@@ -276,8 +276,12 @@ export const ServicesLink = styled(Link)`
 	background: var(--secondary-color);
 	border-radius: 6px;
 	padding: 6px 12px;
-	transition: all 0.1s ease-in;
+	transition: background 0.2s ease-in;
 	margin: 6px 12px;
+
+	&:hover {
+		background: #b93434;
+	}
 `
 
 export const DownloadLink = styled.div`
@@ -288,7 +292,7 @@ export const DownloadLink = styled.div`
 		display: block;
 		font-weight: 600;
 		padding: 6px 12px;
-		min-width: 250px;
+		min-width: 220px;
 		letter-spacing: 0.04rem;
 		text-decoration: none;
 		text-align: center;
@@ -299,7 +303,7 @@ export const DownloadLink = styled.div`
 		margin: 6px 12px;
 
 		&:hover {
-			background: var(--secondary-color);
+			background: #b93434;
 		}
 	}
 `
@@ -413,7 +417,7 @@ const PricingScreen = () => {
 									</ServiceSubText>
 									<LinksContainer>
 										<ServicesLink to="/anmeldung">
-											Zur Anmeldung
+											Anmelden
 										</ServicesLink>
 										<DownloadLink>
 											<a
@@ -424,7 +428,7 @@ const PricingScreen = () => {
 												target="_blank"
 												rel="noreferrer"
 											>
-												PDF herunterladen
+												PDF öffnen
 											</a>
 										</DownloadLink>
 									</LinksContainer>
@@ -460,9 +464,14 @@ const PricingScreen = () => {
 									<ServiceSubtitle>
 										Herbst-Camp
 									</ServiceSubtitle>
-									<ServicesLink to="/camps">
-										Mehr Erfahren
-									</ServicesLink>
+									<LinksContainer>
+										<ServicesLink to="/camps">
+											Mehr Erfahren
+										</ServicesLink>
+										<ServicesLink to="/anmeldungcamps">
+											Anmelden
+										</ServicesLink>
+									</LinksContainer>
 								</ServiceContent>
 							</Service>
 
@@ -520,9 +529,11 @@ const PricingScreen = () => {
 										Stockach an. Profesionelle Ausrüstung
 										ist vorhanden.
 									</ServiceText>
-									<ServicesLink to="/athletiktraining">
-										Mehr Erfahren
-									</ServicesLink>
+									<LinksContainer>
+										<ServicesLink to="/athletiktraining">
+											Mehr Erfahren
+										</ServicesLink>
+									</LinksContainer>
 								</ServiceContent>
 							</Service>
 
@@ -551,9 +562,11 @@ const PricingScreen = () => {
 										Für Fragen stehen die Academy und TC
 										Stockach gerne zur Verfügung
 									</ServiceSubtitle>
-									<ServicesLink to="/kontakt">
-										Kontaktieren Sie uns!
-									</ServicesLink>
+									<LinksContainer>
+										<ServicesLink to="/kontakt">
+											Kontaktieren Sie uns!
+										</ServicesLink>
+									</LinksContainer>
 								</ServiceContent>
 							</Service>
 						</ServicesWrapper>

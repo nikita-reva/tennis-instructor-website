@@ -99,6 +99,7 @@ export const BusinessName = styled.h1`
 	letter-spacing: 1px;
 	user-select: none;
 	overflow: hidden;
+	color: var(--secondary-color);
 
 	@media screen and (min-width: 501px) {
 		font-size: 2.5rem;
@@ -107,6 +108,7 @@ export const BusinessName = styled.h1`
 	@media screen and (min-width: 1101px) {
 		text-align: center;
 		width: 100%;
+		color: #fff;
 
 		&:after {
 			content: '';
