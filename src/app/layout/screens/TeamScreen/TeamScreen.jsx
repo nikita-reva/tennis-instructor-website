@@ -10,170 +10,283 @@ import ReactPlayer from 'react-player'
 import styled from 'styled-components'
 
 export const Faerben = styled.span`
-	color: var(--text-color);
-	font-weight: bold;
+    color: var(--text-color);
+    font-weight: bold;
 `
 
 const TeamScreen = () => {
-	return (
-		<ScreenContainer>
-			<ContentContainer>
-				<ReactPlayer
-					url={Video}
-					muted={true}
-					controls={false}
-					playing={true}
-					playsinline={true}
-					width="100%"
-					height="100%"
-				/>
+    return (
+        <ScreenContainer>
+            <ContentContainer>
+                <ReactPlayer
+                    url={Video}
+                    muted={true}
+                    controls={false}
+                    playing={true}
+                    playsinline={true}
+                    width="100%"
+                    height="100%"
+                />
 
-				<ContentSection>
-					<div className="team-container-title">
-						Unser Trainerteam
-					</div>
+                <ContentSection>
+                    <div className="team-container-title">
+                        Unser Trainerteam
+                    </div>
 
-					<div className="Container-team-info">
-						<div className="Container-info-title">
-							Cheftrainer und Leiter <br />
-							<b>Ajdin Yasar</b>
-						</div>
-						<div className="Container-info-text">
-							<div className="Container-main">
-								<div className="Container-Bild">
-									<img
-										src={Bild1}
-										alt="Ajdin Yasar"
-										width="100%"
-									/>
-								</div>
-								<div className="container-personal-info">
-									<div className="Info-text-title">
-										<b>Persönliche Informationen</b>
-										<i className="fas fa-user"></i>
-										<hr />
-									</div>
-									<p>
-										Geboren am 17.07.1996 in Miami, Florida
-										(USA)
-									</p>
-									<ul>
-										<li>PTR Professional Lizenz</li>
-										<li>DTB B-Trainer Leistungssport</li>
-										<li>
-											Ehemaliger Tennis Profi und DTB top
-											Ranglisten Spieler, Württembergische
-											und Oberliga Spieler.
-										</li>
-									</ul>
-									<p>
-										Der Cheftrainer und Gründer Ajdin Yasar
-										der Tennis Academy Yasar, bringt nach
-										einer hoch beeindruckenden
-										Tenniskarriere die besten Erfahrungen
-										mit auf den Platz. Mit dabei gehört
-										selbstverständlich eine professionelle
-										Tennisausbildung dazu.
-									</p>
-								</div>
-							</div>
-							<div className="Info-text-title">
-								<b>Erfolge</b>
-								<i className="fas fa-medal"></i>
-								<hr />
-							</div>
-							<p>
-								Als Trainer im Leistungsbereich war Ajdin in den
-								USA, Kanada, Deutschland und vielen anderen
-								Ländern unterwegs. Tennis Profis wie,{' '}
-								<Faerben>Bernard Tomic</Faerben> und{' '}
-								<Faerben>Feliciano Lopez</Faerben> hat Ajdin im
-								Training unterstützt und auch bei den Turnieren
-								mitgewirkt. In Kanada wurden mehrere{' '}
-								<Faerben>Top 5-Jugendspieler</Faerben> ebenfalls
-								von ihm betreut.
-							</p>
-							<p>
-								2013 ging Ajdin erneut in die Staaten und fing
-								mit seinem Studium und seiner Leidenschaft zum
-								Tennis wieder von vorne an. Er studierte auf der
-								Barry-University in Florida und absolvierte hier
-								auch seinen Abschluss im Bereich Marketing und
-								Finanzwesen.
-							</p>
-							<p>
-								Drei Jahre lang hat Ajdin für die Barry
-								Univeristy in Miami Florida gespielt und bereits
-								im Jahr 2015, sich mit seiner Mannschaft den
-								größten Titel der USA geholt. Damit waren sie
-								die in den USA die{' '}
-								<Faerben>Champions der Saison</Faerben> mit
-								einem Endstand von 29-0!
-							</p>
-							<p>
-								Ajdin freut sich auf eine neue Reise und auf
-								eine gleichzeitige Herausforderung in Stockach!
-							</p>
-						</div>
-					</div>
-					<div className="Container-team-info">
-						<div className="Container-info-title">
-							<b>Moritz Till Steinmann</b>
-						</div>
-						<div className="Container-info-text">
-							<div className="Container-main">
-								<div className="Container-Bild">
-									<img
-										src={Bild2}
-										alt="Ajdin Yasar"
-										width="100%"
-									/>
-								</div>
-								<div className="container-personal-info">
-									<div className="Info-text-title">
-										<b>Persönliche Informationen</b>
-										<i className="fas fa-user"></i>
-										<hr />
-									</div>
-									<p>
-										Geboren am 29.10.1996 in Überlingen, BW
-										(DE)
-									</p>
-									<ul>
-										<li>
-											Student der Sportwissenschaft
-											(B.Sc., Uni Konstanz)
-										</li>
-										<li>
-											Spielt Tennis seit dem 4. Lebensjahr
-										</li>
-										<li>
-											Trainerstunden seit dem 15.
-											Lebensjahr
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div className="Info-text-title">
-								<b>Erfolge</b>
-								<i className="fas fa-medal"></i>
-								<hr />
-							</div>
-							<ul>
-								<li>Aktuell LK1 - Platz 439 DTB</li>
-								<li>
-									Oberliga für den TC Stockach und als #1 für
-									den TC Überlingen
-								</li>
-								<li>Jugendbezirksmeister Einzel und Doppel</li>
-								<li>Nachwuchsbezirksmeister Einzel</li>
-							</ul>
-						</div>
-					</div>
-				</ContentSection>
-			</ContentContainer>
-		</ScreenContainer>
-	)
+                    <div className="Container-team-info">
+                        <div className="Container-info-title">
+                            Leiter der Akademie & Cheftrainer <br />
+                            <b>Ajdin Yasar</b>
+                        </div>
+                        <div className="Container-info-text">
+                            <div className="Container-main">
+                                <div className="Container-Bild">
+                                    <img
+                                        src={Bild1}
+                                        alt="Ajdin Yasar"
+                                        width="100%"
+                                    />
+                                </div>
+                                <div className="container-personal-info">
+                                    <div className="Info-text-title">
+                                        <b>Profil</b>
+                                        <i className="fas fa-user"></i>
+                                        <hr />
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Geboren:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                17.07.1995 in USA (Miami,
+                                                Florida)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Tennisprofi:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                <Faerben>2010-2014</Faerben>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Studium:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                Marketing & Finanzwesen
+                                                (Barry-University, Florida)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Collage-Spieler:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                <Faerben>2014-2017</Faerben>{' '}
+                                                (2015:
+                                                Mannschafts-Champions-Sieger)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Trainererfolge:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                Betreuung der
+                                                Weltranglistenspieler: Bernard
+                                                Tomic, Feliciano López
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Stützpunkte:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>USA, Kanada, Deutschland</p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Trainerlizenz:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                PTR Professional Lizenz, DTB-B
+                                                Leistungssport
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>DTB-Spieler:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                <Faerben>2008-2014</Faerben>{' '}
+                                                (Württembergische- + Oberliga)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTextBottom">
+                                            <Faerben>
+                                                Ich freue mich auf die neue
+                                                Herausforderung im Tennis-Club
+                                                Stockach!
+                                            </Faerben>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="Container-team-info">
+                        <div className="Container-info-title">
+                            <b>Moritz Till Steinmann</b>
+                        </div>
+                        <div className="Container-info-text">
+                            <div className="Container-main">
+                                <div className="Container-Bild">
+                                    <img
+                                        src={Bild2}
+                                        alt="Moritz Till Steinmann"
+                                        width="100%"
+                                    />
+                                </div>
+                                <div className="container-personal-info">
+                                    <div className="Info-text-title">
+                                        <b>Profil</b>
+                                        <i className="fas fa-user"></i>
+                                        <hr />
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Geboren:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>29.10.1995 in Überlingen</p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Studium:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                Sportwissenschaften (B. Sc. Uni
+                                                Konstanz)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Tennissport:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>seit dem Jahr 2000</p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Lizenz:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>DTB C-Lizenz Leistungssport</p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Titel / Erfolge:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                Jugendbezirksmeister{' '}
+                                                <Faerben>2014</Faerben> (Einzel
+                                                & Doppel)
+                                            </p>
+                                            <p>
+                                                Nachwuchsbezirksmeister{' '}
+                                                <Faerben>2015</Faerben>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Akt. Position:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>LK 1 / DTB-Rangliste 439</p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTitle">
+                                            <ul>
+                                                <li>Mannschaft:</li>
+                                            </ul>
+                                        </div>
+                                        <div className="ListProfilText">
+                                            <p>
+                                                TC Überlingen / Oberliga / Pos.
+                                                1
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="ListContainer">
+                                        <div className="ListProfilTextBottom">
+                                            <Faerben>
+                                                Moritz: Hochgradig motiviert -
+                                                als Trainer und Spieler
+                                            </Faerben>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ContentSection>
+            </ContentContainer>
+        </ScreenContainer>
+    )
 }
 
 export default TeamScreen
