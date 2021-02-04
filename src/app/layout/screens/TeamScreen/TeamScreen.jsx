@@ -61,7 +61,7 @@ const TeamScreen = () => {
                                         </div>
                                         <div className="ListProfilText">
                                             <p>
-                                                17.07.1995 in USA (Miami,
+                                                17.07.1996 in USA (Miami,
                                                 Florida)
                                             </p>
                                         </div>
@@ -100,8 +100,7 @@ const TeamScreen = () => {
                                         <div className="ListProfilText">
                                             <p>
                                                 <Faerben>2014-2017</Faerben>{' '}
-                                                (2015:
-                                                Mannschafts-Champions-Sieger)
+                                                (2015: NCAA National Champions)
                                             </p>
                                         </div>
                                     </div>
@@ -115,7 +114,8 @@ const TeamScreen = () => {
                                             <p>
                                                 Betreuung der
                                                 Weltranglistenspieler: Bernard
-                                                Tomic, Feliciano López
+                                                Tomic, Feliciano López; Top 5
+                                                Spieler aus Kanada
                                             </p>
                                         </div>
                                     </div>
