@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
 import ScreenContainer from '../ScreenContainer'
+import { FaFileDownload } from 'react-icons/fa'
 
 export const ServicesContainer = styled.div`
 	width: 100%;
@@ -266,7 +267,6 @@ export const LinksContainer = styled.div`
 
 export const ServicesLink = styled(Link)`
 	display: block;
-	align-self: flex-start;
 	min-width: 220px;
 	font-weight: 600;
 	letter-spacing: 0.04rem;
@@ -285,9 +285,6 @@ export const ServicesLink = styled(Link)`
 `
 
 export const DownloadLink = styled.div`
-	display: block;
-	align-self: flex-start;
-
 	a {
 		display: block;
 		font-weight: 600;
@@ -308,6 +305,61 @@ export const DownloadLink = styled.div`
 	}
 `
 
+export const HeaderPDFContainer = styled.div`
+	display: flex;
+	width: 100%;
+	background: #fff;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 24px 0;
+	border-top: 4px solid var(--secondary-color);
+	border-bottom: 4px solid var(--secondary-color);
+`
+
+export const TrainingHeading = styled.h2`
+	width: 100%;
+	font-family: 'Fjalla One', sans-serif;
+	background: #fff;
+	color: var(--secondary-color);
+	text-align: center;
+	letter-spacing: 0.06rem;
+	padding-top: 12px;
+	font-weight: 700;
+	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+`
+
+export const PDFLink = styled.div`
+	a {
+		display: block;
+		font-weight: 600;
+		padding: 6px 24px;
+		letter-spacing: 0.04rem;
+		text-decoration: none;
+		text-align: center;
+		color: #fff;
+		border-radius: 6px;
+		transition: background 0.2s ease-in;
+		background: var(--secondary-color);
+		margin: 12px;
+
+		&:hover {
+			background: #b93434;
+			& > svg {
+				margin-left: 12px;
+			}
+		}
+
+		& > svg {
+			margin-left: 4px;
+			transition: all 0.2s ease;
+		}
+	}
+`
+
 const PricingScreen = () => {
 	return (
 		<ScreenContainer>
@@ -316,7 +368,23 @@ const PricingScreen = () => {
 					<ServicesContainer>
 						<ServicesHeading>Unsere Angebote</ServicesHeading>
 						<ServicesWrapper>
-							<ServiceType>Tennistraining</ServiceType>
+							<HeaderPDFContainer>
+								<TrainingHeading>
+									Tennistraining
+								</TrainingHeading>
+								<PDFLink>
+									<a
+										href={
+											require('../images/tay-angebote.pdf')
+												.default
+										}
+										target="_blank"
+										rel="noreferrer"
+									>
+										Angebote PDF <FaFileDownload />
+									</a>
+								</PDFLink>
+							</HeaderPDFContainer>
 							<Service>
 								<ServiceTargetGroup>
 									Zielgruppe: Anfänger
@@ -345,18 +413,6 @@ const PricingScreen = () => {
 										<ServicesLink to="/kontakt">
 											Anfragen
 										</ServicesLink>
-										<DownloadLink>
-											<a
-												href={
-													require('../images/tay-angebote.pdf')
-														.default
-												}
-												target="_blank"
-												rel="noreferrer"
-											>
-												PDF öffnen
-											</a>
-										</DownloadLink>
 									</LinksContainer>
 								</ServiceContent>
 							</Service>

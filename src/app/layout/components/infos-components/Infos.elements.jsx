@@ -120,12 +120,13 @@ export const InfoImage = styled.img`
 	object-fit: cover;
 `
 
-export const InfoLink = styled(Link)`
+export const InfoLink1 = styled(Link)`
 	display: block;
 	align-self: flex-start;
 	width: 100%;
 	font-weight: 600;
 	letter-spacing: 0.04rem;
+	cursor: pointer;
 	text-decoration: none;
 	text-align: center;
 	color: #fff;
@@ -133,7 +134,7 @@ export const InfoLink = styled(Link)`
 	border-radius: 6px;
 	padding: 6px 12px;
 	margin-top: 12px;
-	transition: all 0.1s ease-in;
+	transition: all 0.2s ease-in;
 
 	@media screen and (min-width: 501px) {
 		width: 60%;
@@ -146,7 +147,7 @@ export const InfoLink = styled(Link)`
 	}
 
 	&:hover {
-		transform: scale(0.98);
+		background: #b93434;
 	}
 `
 
@@ -157,12 +158,13 @@ export const InfoLink2 = styled.div`
 	font-weight: 600;
 	letter-spacing: 0.04rem;
 	text-decoration: none;
+	cursor: pointer;
 	text-align: center;
 	background: #079ce0;
 	border-radius: 6px;
 	padding: 6px 12px;
 	margin-top: 12px;
-	transition: all 0.1s ease-in;
+	transition: all 0.2s ease-in;
 
 	a {
 		text-decoration: none;
@@ -180,6 +182,41 @@ export const InfoLink2 = styled.div`
 	}
 
 	&:hover {
-		transform: scale(0.98);
+		background: #0886c0;
+	}
+`
+
+export const InfoLink3 = styled.div`
+	display: block;
+	align-self: flex-start;
+	width: 100%;
+	font-weight: 600;
+	letter-spacing: 0.04rem;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	background: #4db34d;
+	border-radius: 6px;
+	padding: 6px 12px;
+	margin-top: 12px;
+	transition: all 0.2s ease-in;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	@media screen and (min-width: 501px) {
+		width: 60%;
+		max-width: 250px;
+		margin-left: 9px;
+	}
+
+	@media screen and (min-width: 992px) {
+		margin-left: 18px;
+	}
+
+	&:hover {
+		background: #459745;
 	}
 `

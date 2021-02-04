@@ -12,8 +12,9 @@ import {
 	InfoText,
 	InfoImageContainer,
 	InfoImage,
-	InfoLink,
+	InfoLink1,
 	InfoLink2,
+	InfoLink3,
 } from './Infos.elements'
 
 const Infos = ({ infos }) => {
@@ -55,10 +56,10 @@ const Infos = ({ infos }) => {
 								</InfoImageContainer>
 							)}
 						</InfoMediaContainer>
-						{info.linkTo && (
-							<InfoLink to={info.linkTo}>
-								{info.linkText}
-							</InfoLink>
+						{info.link1To && (
+							<InfoLink1 to={info.link1To}>
+								{info.link1Text}
+							</InfoLink1>
 						)}
 						{info.link2To && (
 							<InfoLink2>
@@ -70,6 +71,17 @@ const Infos = ({ infos }) => {
 									{info.link2Text}
 								</a>
 							</InfoLink2>
+						)}
+						{info.link3To && (
+							<InfoLink3>
+								<a
+									href={info.link3To}
+									target="_blank"
+									rel="noreferrer"
+								>
+									{info.link3Text}
+								</a>
+							</InfoLink3>
 						)}
 					</Info>
 				))}
