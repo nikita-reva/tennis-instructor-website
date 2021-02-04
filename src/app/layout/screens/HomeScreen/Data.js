@@ -82,7 +82,7 @@ export const EventsData = [
         date: '',
         time: '',
         title: 'Tenniscamp Anmeldung',
-        description: 'Hier könnt ihr euch für die Tenniscamps anmelden!',
+        description: 'Hier könnt ihr euch für die Tenniscamps anmelden.',
         linkTo: '/anmeldungcamps',
         linkText: 'Zur Anmeldung',
     },
@@ -158,7 +158,7 @@ export const InfosData = [
     {
         title: 'Ausrüstung & Bespannungsservice',
         text:
-            'Die Tennis Academy Yasar bietet sorgfältige Tennisschläger- und Saitenbetreuung und einen profesionellen Bespannungsservice. Wir sind Bespannungspartner von mehreren Profis. Verschiedene Tennissaiten und Griffbänder stehen bei uns zur Auswahl. Bespannungspreis ab 10,- Eur',
+            'Die Tennis Academy Yasar bietet sorgfältige Tennisschläger- und Saitenbetreuung und einen profesionellen Bespannungsservice. Wir sind Bespannungspartner von mehreren Profis. Verschiedene Tennissaiten und Griffbänder stehen bei uns zur Auswahl. Bespannungspreis ab 10,- Eur.',
         image: require('../images/strings.jpeg').default,
         alt: '',
         linkTo: '/kontakt',
