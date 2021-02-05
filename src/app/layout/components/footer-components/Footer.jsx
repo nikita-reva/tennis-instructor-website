@@ -3,6 +3,7 @@ import Sponsor from './images/sponsorRot2.png'
 import TennisClub from './images/stockach.png'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { CgArrowUpR } from 'react-icons/cg'
 
 const FooterMainContainer0 = styled.div`
 	width: 100%;
@@ -33,6 +34,7 @@ const FooterMainContainer2 = styled.div`
 	@media screen and (max-width: 699px) {
 		flex-direction: column;
 		text-align: center;
+		align-items: center;
 	}
 	@media screen and (max-width: 754px) {
 		border-top: 1px solid black;
@@ -127,8 +129,29 @@ const ContainerDesignedby = styled.div`
 	padding: 0 25px;
 `
 const ContainerDatenschutzImperessum = styled.div`
+	display: flex;
 	color: var(--secondary-color);
 	padding: 0 25px;
+
+	& a:hover {
+		transition: all 0.2s ease;
+		color: #fff;
+	}
+`
+
+const ScrollToTopBtn = styled(CgArrowUpR)`
+	cursor: pointer;
+	font-size: 20px;
+	transition: all 0.2s ease;
+	margin-left: 6px;
+
+	@media screen and (max-width: 501px) {
+		font-size: 16px;
+	}
+
+	&:hover {
+		color: #fff;
+	}
 `
 
 const Footer = () => {
@@ -186,6 +209,11 @@ const Footer = () => {
 						<Link to="/datenschutz">Datenschutz</Link>
 						<Link to="/impressum">Impressum</Link>
 					</FooterText2>
+					<ScrollToTopBtn
+						onClick={() => {
+							window.scrollTo(0, 0)
+						}}
+					/>
 				</ContainerDatenschutzImperessum>
 			</FooterMainContainer2>
 		</FooterMainContainer0>
