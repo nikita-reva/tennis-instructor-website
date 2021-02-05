@@ -12,9 +12,8 @@ import {
 	InfoText,
 	InfoImageContainer,
 	InfoImage,
-	InfoLink1,
-	InfoLink2,
-	InfoLink3,
+	InfoDownloadLink,
+	InfoRouterLink,
 } from './Infos.elements'
 
 const Infos = ({ infos }) => {
@@ -56,33 +55,31 @@ const Infos = ({ infos }) => {
 								</InfoImageContainer>
 							)}
 						</InfoMediaContainer>
-						{info.link1To && (
-							<InfoLink1>
-								<a
-									href={info.link1To}
-									target="_blank"
-									rel="noreferrer"
-								>
-									{info.link1Text}
-								</a>
-							</InfoLink1>
-						)}
-						{info.link2To && (
-							<InfoLink2 to={info.link2To}>
-								{info.link2Text}
-							</InfoLink2>
-						)}
-						{info.link3To && (
-							<InfoLink3>
-								<a
-									href={info.link3To}
-									target="_blank"
-									rel="noreferrer"
-								>
-									{info.link3Text}
-								</a>
-							</InfoLink3>
-						)}
+						{info.links &&
+							info.links.map((link, index) =>
+								link.linkType === 'download' ? (
+									<InfoDownloadLink
+										linkcolor={link.linkColor}
+										key={index}
+									>
+										<a
+											href={link.linkTo}
+											target="_blank"
+											rel="noreferrer"
+										>
+											{link.linkText}
+										</a>
+									</InfoDownloadLink>
+								) : link.linkType === 'router' ? (
+									<InfoRouterLink
+										linkcolor={link.linkColor}
+										to={link.linkTo}
+										key={index}
+									>
+										{link.linkText}
+									</InfoRouterLink>
+								) : null
+							)}
 					</Info>
 				))}
 			</InfosWrapper>

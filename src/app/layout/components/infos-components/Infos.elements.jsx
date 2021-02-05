@@ -120,7 +120,7 @@ export const InfoImage = styled.img`
 	object-fit: cover;
 `
 
-export const InfoLink1 = styled.div`
+export const InfoDownloadLink = styled.div`
 	display: block;
 	align-self: flex-start;
 	width: 100%;
@@ -129,7 +129,14 @@ export const InfoLink1 = styled.div`
 	text-decoration: none;
 	cursor: pointer;
 	text-align: center;
-	background: var(--secondary-color);
+	background: ${({ linkcolor }) =>
+		linkcolor === 'red'
+			? 'var(--secondary-color)'
+			: linkcolor === 'blue'
+			? ' #079ce0'
+			: linkcolor === 'green'
+			? '#4db34d'
+			: 'var(--secondary-color)'};
 	border-radius: 6px;
 	padding: 6px 12px;
 	margin-top: 12px;
@@ -151,11 +158,18 @@ export const InfoLink1 = styled.div`
 	}
 
 	&:hover {
-		background: #b93434;
+		background: ${({ linkcolor }) =>
+			linkcolor === 'red'
+				? '#c74747'
+				: linkcolor === 'blue'
+				? ' #0886c0'
+				: linkcolor === 'green'
+				? '#459745'
+				: '#c74747'};
 	}
 `
 
-export const InfoLink2 = styled(Link)`
+export const InfoRouterLink = styled(Link)`
 	display: block;
 	align-self: flex-start;
 	width: 100%;
@@ -165,7 +179,14 @@ export const InfoLink2 = styled(Link)`
 	text-decoration: none;
 	text-align: center;
 	color: #fff;
-	background: #079ce0;
+	background: ${({ linkcolor }) =>
+		linkcolor === 'red'
+			? 'var(--secondary-color)'
+			: linkcolor === 'blue'
+			? ' #079ce0'
+			: linkcolor === 'green'
+			? '#4db34d'
+			: 'var(--secondary-color)'};
 	border-radius: 6px;
 	padding: 6px 12px;
 	margin-top: 12px;
@@ -182,41 +203,13 @@ export const InfoLink2 = styled(Link)`
 	}
 
 	&:hover {
-		background: #0886c0;
-	}
-`
-
-export const InfoLink3 = styled.div`
-	display: block;
-	align-self: flex-start;
-	width: 100%;
-	font-weight: 600;
-	letter-spacing: 0.04rem;
-	text-decoration: none;
-	text-align: center;
-	cursor: pointer;
-	background: #4db34d;
-	border-radius: 6px;
-	padding: 6px 12px;
-	margin-top: 12px;
-	transition: all 0.2s ease-in;
-
-	a {
-		text-decoration: none;
-		color: #fff;
-	}
-
-	@media screen and (min-width: 501px) {
-		width: 60%;
-		max-width: 250px;
-		margin-left: 9px;
-	}
-
-	@media screen and (min-width: 992px) {
-		margin-left: 18px;
-	}
-
-	&:hover {
-		background: #459745;
+		background: ${({ linkcolor }) =>
+			linkcolor === 'red'
+				? '#c74747'
+				: linkcolor === 'blue'
+				? ' #0886c0'
+				: linkcolor === 'green'
+				? '#459745'
+				: '#c74747'};
 	}
 `

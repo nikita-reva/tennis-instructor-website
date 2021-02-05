@@ -280,7 +280,7 @@ export const ServicesLink = styled(Link)`
 	margin: 6px 12px;
 
 	&:hover {
-		background: #b93434;
+		background: #c74747;
 	}
 `
 
@@ -300,7 +300,7 @@ export const DownloadLink = styled.div`
 		margin: 6px 12px;
 
 		&:hover {
-			background: #b93434;
+			background: #c74747;
 		}
 	}
 `
@@ -347,7 +347,7 @@ export const PDFLink = styled.div`
 		margin: 12px;
 
 		&:hover {
-			background: #b93434;
+			background: #c74747;
 			& > svg {
 				margin-left: 12px;
 			}

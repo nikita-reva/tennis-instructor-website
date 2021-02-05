@@ -95,12 +95,26 @@ export const InfosData = [
 			'Meldet euch jetzt für die kommende Tennistraining Saison im Sommer 2021 an. Der Anmeldeschluss ist der 28. März!',
 		image: require('../images/logo-web.jpg').default,
 		alt: 'tennis',
-		link1To: require('../images/tay-angebote.pdf').default,
-		link1Text: 'Angebote PDF',
-		link2To: '/anmeldung',
-		link2Text: 'Zur Anmeldung',
-		link3To: require('../images/tay-anmeldungsformular.pdf').default,
-		link3Text: 'Anmeldungsformular',
+		links: [
+			{
+				linkType: 'download',
+				linkColor: 'red',
+				linkTo: require('../images/tay-angebote.pdf').default,
+				linkText: 'Angebote PDF',
+			},
+			{
+				linkType: 'router',
+				linkColor: 'blue',
+				linkTo: '/anmeldung',
+				linkText: 'Zur Anmeldung',
+			},
+			{
+				linkType: 'download',
+				linkColor: 'green',
+				linkTo: require('../images/tay-anmeldungsformular.pdf').default,
+				linkText: 'Anmeldungsformular',
+			},
+		],
 	},
 	{
 		title: 'Professionelle Tennisausrüstung ',
@@ -154,8 +168,6 @@ export const InfosData = [
 				alt: 'tecnifibre',
 			},
 		],
-		link1To: '',
-		link1Text: '',
 	},
 	{
 		title: 'Ausrüstung & Bespannungsservice',
@@ -163,7 +175,13 @@ export const InfosData = [
 			'Die Tennis Academy Yasar bietet sorgfältige Tennisschläger- und Saitenbetreuung und einen profesionellen Bespannungsservice. Wir sind Bespannungspartner von mehreren Profis. Verschiedene Tennissaiten und Griffbänder stehen bei uns zur Auswahl. Bespannungspreis ab 10,- Eur.',
 		image: require('../images/strings.jpeg').default,
 		alt: '',
-		link1To: '/kontakt',
-		link1Text: 'Service anfragen',
+		links: [
+			{
+				linkType: 'router',
+				linkColor: 'red',
+				linkTo: '/kontakt',
+				linkText: 'Service anfragen',
+			},
+		],
 	},
 ]
