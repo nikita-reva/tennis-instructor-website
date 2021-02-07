@@ -24,7 +24,7 @@ import PricingScreen from './screens/PricingScreen/PricingScreen'
 
 function App() {
 	useEffect(() => {
-		ReactGA.initialize('G-SMB3J75M26')
+		ReactGA.initialize('G-8TLZQJDCL7')
 		ReactGA.pageview('/')
 	})
 
