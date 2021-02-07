@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 import ReactGA from 'react-ga'
 
 import ScrollToTop from './ScrollToTop'
@@ -22,10 +23,15 @@ import DatenschutzScreen from './screens/DatenschutzScreen/DatenschutzScreen'
 import ImperessumScreen from './screens/ImperessumScreen/ImperessumScreen'
 import PricingScreen from './screens/PricingScreen/PricingScreen'
 
+const history = createBrowserHistory()
+
 function App() {
 	useEffect(() => {
 		ReactGA.initialize('UA-189134177-2')
-		ReactGA.pageview('/')
+		history.listen((location) => {
+			ReactGA.set({ page: location.pathname }) // Update the user's current page
+			ReactGA.pageview(location.pathname) // Record a pageview for the given page
+		})
 	})
 
 	return (
