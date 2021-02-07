@@ -12,27 +12,32 @@ export const HeroHomeScreen = {
 export const ImageSliderData = [
 	{
 		image: require('../images/img1.JPG').default,
-		alt: 'Feliciano López',
+		alt:
+			'Feliciano López ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 		text: 'Ajdin & Feliciano López',
 	},
 	{
 		image: require('../images/img2.JPG').default,
-		alt: 'Jo-Wilfried Tsonga',
+		alt:
+			'Jo-Wilfried Tsonga ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 		text: 'Ajdin & Jo-Wilfried Tsonga',
 	},
 	{
 		image: require('../images/img3.JPG').default,
-		alt: 'Nick Kyrgios',
+		alt:
+			'Nick Kyrgios ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 		text: 'Ajdin & Nick Kyrgios',
 	},
 	{
 		image: require('../images/img4.jpeg').default,
-		alt: 'Bernard Tomic',
+		alt:
+			'Bernard Tomic ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 		text: 'Ajdin & Bernard Tomic',
 	},
 	{
 		image: require('../images/img5.jpg').default,
-		alt: 'Ajdin Yasar',
+		alt:
+			'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 		text: 'Ajdin Yasar',
 	},
 ]
@@ -94,7 +99,8 @@ export const InfosData = [
 		text:
 			'Meldet euch jetzt für die kommende Tennistraining Saison im Sommer 2021 an. Der Anmeldeschluss ist der 28. März!',
 		image: require('../images/logo-web.jpg').default,
-		alt: 'tennis',
+		alt:
+			'tennis academy yasar stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 		links: [
 			{
 				linkType: 'download',
@@ -125,47 +131,58 @@ export const InfosData = [
 		imageSlides: [
 			{
 				image: require('../images/product1.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product2.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product3.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product4.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product5.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product6.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product7.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product8.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product9.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/product10.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 			{
 				image: require('../images/schlaeger.jpg').default,
-				alt: 'tecnifibre',
+				alt:
+					'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 			},
 		],
 	},
@@ -174,7 +191,8 @@ export const InfosData = [
 		text:
 			'Die Tennis Academy Yasar bietet sorgfältige Tennisschläger- und Saitenbetreuung und einen profesionellen Bespannungsservice. Wir sind Bespannungspartner von mehreren Profis. Verschiedene Tennissaiten und Griffbänder stehen bei uns zur Auswahl. Bespannungspreis ab 10,- Eur.',
 		image: require('../images/strings.jpeg').default,
-		alt: '',
+		alt:
+			'ajdin yasar tennis academy stockach singen konstanz tutlingen schweiz thurgau sport tecnifibre',
 		links: [
 			{
 				linkType: 'router',
