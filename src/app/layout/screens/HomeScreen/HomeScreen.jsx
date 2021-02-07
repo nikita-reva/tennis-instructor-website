@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
+import ReactGA from 'react-ga'
 
 import ContentContainer from '../ContentContainer'
 import ContentSection from '../ContentSection'
@@ -50,7 +51,13 @@ const ImageSliderContainer = styled.div`
 	padding: 100px 0;
 `
 
-const HomeScreen = () => {
+const HomeScreen = ({ history }) => {
+	ReactGA.initialize('G-SMB3J75M26')
+	history.listen((location) => {
+		ReactGA.set({ page: location.pathname })
+		ReactGA.pageview(location.pathname)
+	})
+
 	return (
 		<ScreenContainer>
 			<ContentContainer>
