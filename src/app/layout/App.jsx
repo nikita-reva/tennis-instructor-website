@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import ReactGA from 'react-ga'
 
@@ -22,11 +22,10 @@ import DatenschutzScreen from './screens/DatenschutzScreen/DatenschutzScreen'
 import ImperessumScreen from './screens/ImperessumScreen/ImperessumScreen'
 import PricingScreen from './screens/PricingScreen/PricingScreen'
 
-function App({ history }) {
-	ReactGA.initialize('G-SMB3J75M26')
-	history.listen((location) => {
-		ReactGA.set({ page: location.pathname })
-		ReactGA.pageview(location.pathname)
+function App() {
+	useEffect(() => {
+		ReactGA.initialize('G-SMB3J75M26')
+		ReactGA.pageview('/')
 	})
 
 	return (
