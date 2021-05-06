@@ -74,7 +74,7 @@ function App() {
 				<Route exact path="/impressum" component={ImperessumScreen} /> */}
 			</Main>
 			{/* <Footer /> */}
-			{/* <Redirect from="*" to="/" /> */}
+			<Redirect from="*" to="/" />
 		</Router>
 	)
 }
