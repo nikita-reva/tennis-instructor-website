@@ -1,28 +1,28 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import ReactGA from 'react-ga'
 
 import ScrollToTop from './ScrollToTop'
 import './styles.css'
 import Main from './components/main-components/Main'
-// import Header from './components/header-components/Header'
-// import Footer from './components/footer-components/Footer'
+import Header from './components/header-components/Header'
+import Footer from './components/footer-components/Footer'
 
-// import HomeScreen from './screens/HomeScreen/HomeScreen'
-// import TeamScreen from './screens/TeamScreen/TeamScreen'
-// import EnrolmentScreen from './screens/EnrolmentScreen/EnrolmentScreen'
-// import CampsEnrolmentScreen from './screens/CampsEnrolmentScreen/CampsEnrolmentScreen'
-// import ContactScreen from './screens/ContactScreen/ContactScreen'
-// import CampsScreen from './screens/CampsScreen/CampsScreen'
-// import AthleticTrainingScreen from './screens/AthleticTrainingScreen/AthleticTrainingScreen'
-// import NewsScreen from './screens/NewsScreen/NewsScreen'
-// import GalleryScreen from './screens/GalleryScreen/GalleryScreen'
-// import PrintScreen from './screens/PrintScreen/PrintScreen'
-// import DatenschutzScreen from './screens/DatenschutzScreen/DatenschutzScreen'
-// import ImperessumScreen from './screens/ImperessumScreen/ImperessumScreen'
-// import PricingScreen from './screens/PricingScreen/PricingScreen'
-import UnderConstructionScreen from './screens/UnderConstrucionScreen/UnderConstructionScreen'
+import HomeScreen from './screens/HomeScreen/HomeScreen'
+import TeamScreen from './screens/TeamScreen/TeamScreen'
+import EnrolmentScreen from './screens/EnrolmentScreen/EnrolmentScreen'
+import CampsEnrolmentScreen from './screens/CampsEnrolmentScreen/CampsEnrolmentScreen'
+import ContactScreen from './screens/ContactScreen/ContactScreen'
+import CampsScreen from './screens/CampsScreen/CampsScreen'
+import AthleticTrainingScreen from './screens/AthleticTrainingScreen/AthleticTrainingScreen'
+import NewsScreen from './screens/NewsScreen/NewsScreen'
+import GalleryScreen from './screens/GalleryScreen/GalleryScreen'
+import PrintScreen from './screens/PrintScreen/PrintScreen'
+import DatenschutzScreen from './screens/DatenschutzScreen/DatenschutzScreen'
+import ImperessumScreen from './screens/ImperessumScreen/ImperessumScreen'
+import PricingScreen from './screens/PricingScreen/PricingScreen'
+// import UnderConstructionScreen from './screens/UnderConstrucionScreen/UnderConstructionScreen'
 
 const history = createBrowserHistory()
 
@@ -38,10 +38,10 @@ function App() {
 	return (
 		<Router>
 			<ScrollToTop />
-			{/* <Header /> */}
+			<Header />
 			<Main>
-				<Route path="/" component={UnderConstructionScreen} />
-				{/* <Route exact path="/" component={HomeScreen} />
+				{/* <Route path="/" component={UnderConstructionScreen} /> */}
+				<Route exact path="/" component={HomeScreen} />
 				<Route exact path="/team" component={TeamScreen} />
 
 				<Route exact path="/angebote" component={PricingScreen} />
@@ -71,10 +71,10 @@ function App() {
 					path="/datenschutz"
 					component={DatenschutzScreen}
 				/>
-				<Route exact path="/impressum" component={ImperessumScreen} /> */}
+				<Route exact path="/impressum" component={ImperessumScreen} />
 			</Main>
-			{/* <Footer /> */}
-			<Redirect from="*" to="/" />
+			<Footer />
+			{/* <Redirect from="*" to="/" /> */}
 		</Router>
 	)
 }
